@@ -1,0 +1,35 @@
+*
+*.xd
+*.ai
+*.png
+*.jpeg
+*.jpg
+*.avif
+*.webp
+!Adobe Illustrator
+!Adobe Illustrator/*.ai
+!Adobe XD
+!Adobe XD/*.xd
+!Adobe XD/Photo moodboard
+!Adobe XD/Photo moodboard/*.png
+!Adobe XD/Photo moodboard/*.jpg
+!Adobe XD/Photo moodboard/*.jpeg
+!Inspirations décors
+!Inspirations décors/*
+!Inspirations décors/Egypte/*.png
+!Inspirations décors/Egypte/*.jpg
+!Inspirations décors/Gaule/*.png
+!Inspirations décors/Grèce/*.png
+!Inspirations décors/Grèce/*.avif
+!Inspirations décors/Grèce/*.webp
+!Inspirations décors/Grèce/*.jpeg
+!Inspirations décors/Perse/*.webp
+!Inspirations décors/Perse/*.jpg
+!Inspirations décors/Perse/*.png
+!Inspirations décors/Rome/*.png
+!Inspirations décors/Rome/*.avif
+!wp-content/
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/portfolio
