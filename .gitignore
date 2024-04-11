@@ -6,14 +6,22 @@
 *.jpg
 *.avif
 *.webp
+
+
 !Adobe Illustrator
 !Adobe Illustrator/*.ai
+
+
 !Adobe XD
 !Adobe XD/*.xd
+
+
 !Adobe XD/Photo moodboard
 !Adobe XD/Photo moodboard/*.png
 !Adobe XD/Photo moodboard/*.jpg
 !Adobe XD/Photo moodboard/*.jpeg
+
+
 !Inspirations décors
 !Inspirations décors/*
 !Inspirations décors/Egypte/*.png
@@ -28,8 +36,15 @@
 !Inspirations décors/Perse/*.png
 !Inspirations décors/Rome/*.png
 !Inspirations décors/Rome/*.avif
+
+
 !wp-content/
 wp-content/*
 !wp-content/themes/
 wp-content/themes/*
 !wp-content/themes/portfolio
+!wp-content/themes/portfolio/*
+!wp-content/themes/portfolio/public/*
+!wp-content/themes/portfolio/public/css/*
+!wp-content/themes/portfolio/public/js/*
+!wp-content/themes/portfolio/public/sass/*
