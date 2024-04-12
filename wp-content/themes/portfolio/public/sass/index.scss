@@ -1,9 +1,186 @@
-h1 {
-  color: orange;
-}
+$base_red_color: #B50000;
+$dark_red_color: #5E0101;
+$white_color: #fff;
+$black_color: #000;
+$shadow_color: rgba(0, 0, 0, 0.1);
+
 
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;
   text-indent: -100000px !important;
+  position: absolute;
 }
+
+.no-text-decoration {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main_title {
+  font-size: 2.3em;
+  font-family: 'Trajan-Regular', serif;
+  transform: translateY(8em);
+  margin-left: 1em;
+}
+
+a {
+  color: $white_color;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+
+  #main_nav {
+    padding: 2em;
+    background-color: $base_red_color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Garamond-regular', serif;
+    font-size: 1.2em;
+
+    #logo {
+      background-image: url("../../resources/images/logo.svg");
+      background-repeat: no-repeat;
+      text-indent: -100000px;
+      display: inline-block;
+      background-position: left;
+      width: 80px;
+      height: 80px;
+    }
+
+    &_container {
+      position: absolute;
+      top: 1000px;
+    }
+
+    #burger_menu {
+      opacity: 0;
+
+      &:checked ~ #main_nav_container {
+        background-color: $dark_red_color;
+        box-shadow: inset 0 5px 6px $shadow_color;
+        transform: translateX(-2em);
+        top: 8.1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1em;
+        padding: 2em;
+        width: 100%;
+      }
+
+      &:checked ~ label .line {
+        background-color: transparent;
+      }
+
+      &:checked ~ label .line:before, &:checked ~ label .line:after {
+        background-color: #fff;
+      }
+
+      &:checked ~ label .line:before {
+        transform: rotate(-45deg);
+      }
+
+      &:checked ~ label .line:after {
+        transform: rotate(45deg);
+
+      }
+    }
+
+    label[for='burger_menu'] {
+      width: 2em;
+      height: 1.5em;
+      position: relative;
+      cursor: pointer;
+
+      .line {
+        width: 100%;
+        display: block;
+        height: 0.2em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        transition: background-color 0.2s ease-in-out;
+
+        &:before, &:after {
+          content: '';
+          height: 0.2em;
+          width: 100%;
+          background-color: #fff;
+          position: absolute;
+          transition: -webkit-transform 0.2s ease-in-out;
+        }
+
+        &:before {
+          transform: translateY(-0.5em);
+        }
+
+        &:after {
+          transform: translateY(0.5em);
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  transform: translateY(10em);
+  background-color: $base_red_color;
+  font-family: 'Garamond-regular', serif;
+  font-size: 1.2em;
+  padding: 2em;
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+
+    &_pages_container, &_socials_container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_pages_container {
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    &_socials_container {
+      flex-direction: row;
+      #Instagram, #Github, #Facebook {
+        background-position: 10px 60px,
+        left;
+        background-repeat: no-repeat, no-repeat;
+        display: inline-block;
+        text-indent: -100000px;
+        width: 75px;
+        height: 150px;
+      }
+
+      #Instagram {
+        background-image: url("../../resources/images/instagram.svg"), url("../../resources/images/jarre.svg");
+      }
+
+      #Github {
+        background-image: url("../../resources/images/github.svg"), url("../../resources/images/jarre.svg");
+      }
+
+      #Facebook {
+        background-image: url("../../resources/images/facebook.svg"), url("../../resources/images/jarre.svg");
+      }
+    }
+
+  }
+
+}
+

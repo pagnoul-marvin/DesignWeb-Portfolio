@@ -1,6 +1,8 @@
 <?php
 
 register_nav_menu('main', 'Navigation principale, en-tête du site');
+register_nav_menu('footer', 'Navigation de pied de page');
+register_nav_menu('socials', 'Navigation de réseaux sociaux');
 
 function dw_asset(string $file): string
 {

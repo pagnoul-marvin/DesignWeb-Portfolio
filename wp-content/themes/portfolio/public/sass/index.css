@@ -1,11 +1,154 @@
-h1 {
-  color: orange;
-}
-
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;
   text-indent: -100000px !important;
+  position: absolute;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}
+.no-text-decoration:hover {
+  text-decoration: underline;
+}
+
+.main_title {
+  font-size: 2.3em;
+  font-family: "Trajan-Regular", serif;
+  transform: translateY(8em);
+  margin-left: 1em;
+}
+
+a {
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+header #main_nav {
+  padding: 2em;
+  background-color: #B50000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Garamond-regular", serif;
+  font-size: 1.2em;
+}
+header #main_nav #logo {
+  background-image: url("../../resources/images/logo.svg");
+  background-repeat: no-repeat;
+  text-indent: -100000px;
+  display: inline-block;
+  background-position: left;
+  width: 80px;
+  height: 80px;
+}
+header #main_nav_container {
+  position: absolute;
+  top: 1000px;
+}
+header #main_nav #burger_menu {
+  opacity: 0;
+}
+header #main_nav #burger_menu:checked ~ #main_nav_container {
+  background-color: #5E0101;
+  box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.1);
+  transform: translateX(-2em);
+  top: 8.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 2em;
+  width: 100%;
+}
+header #main_nav #burger_menu:checked ~ label .line {
+  background-color: transparent;
+}
+header #main_nav #burger_menu:checked ~ label .line:before, header #main_nav #burger_menu:checked ~ label .line:after {
+  background-color: #fff;
+}
+header #main_nav #burger_menu:checked ~ label .line:before {
+  transform: rotate(-45deg);
+}
+header #main_nav #burger_menu:checked ~ label .line:after {
+  transform: rotate(45deg);
+}
+header #main_nav label[for=burger_menu] {
+  width: 2em;
+  height: 1.5em;
+  position: relative;
+  cursor: pointer;
+}
+header #main_nav label[for=burger_menu] .line {
+  width: 100%;
+  display: block;
+  height: 0.2em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+header #main_nav label[for=burger_menu] .line:before, header #main_nav label[for=burger_menu] .line:after {
+  content: "";
+  height: 0.2em;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  transition: -webkit-transform 0.2s ease-in-out;
+}
+header #main_nav label[for=burger_menu] .line:before {
+  transform: translateY(-0.5em);
+}
+header #main_nav label[for=burger_menu] .line:after {
+  transform: translateY(0.5em);
+}
+
+#footer {
+  transform: translateY(10em);
+  background-color: #B50000;
+  font-family: "Garamond-regular", serif;
+  font-size: 1.2em;
+  padding: 2em;
+}
+#footer_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+}
+#footer_container_pages_container, #footer_container_socials_container {
+  display: flex;
+  justify-content: space-between;
+}
+#footer_container_pages_container {
+  flex-wrap: wrap;
+  gap: 2em;
+}
+#footer_container_socials_container {
+  flex-direction: row;
+}
+#footer_container_socials_container #Instagram, #footer_container_socials_container #Github, #footer_container_socials_container #Facebook {
+  background-position: 10px 60px, left;
+  background-repeat: no-repeat, no-repeat;
+  display: inline-block;
+  text-indent: -100000px;
+  width: 75px;
+  height: 150px;
+}
+#footer_container_socials_container #Instagram {
+  background-image: url("../../resources/images/instagram.svg"), url("../../resources/images/jarre.svg");
+}
+#footer_container_socials_container #Github {
+  background-image: url("../../resources/images/github.svg"), url("../../resources/images/jarre.svg");
+}
+#footer_container_socials_container #Facebook {
+  background-image: url("../../resources/images/facebook.svg"), url("../../resources/images/jarre.svg");
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -37,7 +37,6 @@
 !Inspirations décors/Rome/*.png
 !Inspirations décors/Rome/*.avif
 
-
 !wp-content/
 wp-content/*
 !wp-content/themes/
@@ -48,3 +47,9 @@ wp-content/themes/*
 !wp-content/themes/portfolio/public/css/*
 !wp-content/themes/portfolio/public/js/*
 !wp-content/themes/portfolio/public/sass/*
+!wp-content/themes/portfolio/resources/*
+!wp-content/themes/portfolio/resources/fonts/*
+!wp-content/themes/portfolio/resources/fonts/garamond/*
+!wp-content/themes/portfolio/resources/fonts/trajan/*
+!wp-content/themes/portfolio/resources/images/*
+!wp-content/themes/portfolio/resources/images/decors/*
