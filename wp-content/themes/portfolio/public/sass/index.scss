@@ -1,9 +1,4 @@
-$base_red_color: #B50000;
-$dark_red_color: #5E0101;
-$white_color: #fff;
-$black_color: #000;
-$shadow_color: rgba(0, 0, 0, 0.1);
-
+@import "variables";
 
 .hidden {
   overflow: hidden !important;
@@ -23,8 +18,33 @@ $shadow_color: rgba(0, 0, 0, 0.1);
 .main_title {
   font-size: 2.3em;
   font-family: 'Trajan-Regular', serif;
-  transform: translateY(8em);
-  margin-left: 1em;
+  margin: 3.75em 0 3.75em 0.5em;
+  color: $white_color;
+  background-color: $dark_red_color;
+  display: inline-block;
+  padding: 1em;
+}
+
+.decoration {
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  z-index: -1;
+  top: 5.3em;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pages_button {
+  border: 1px solid $white_color;
+  padding: 1em;
+  display: inline-block;
+  width: 8em;
+  background-repeat: no-repeat;
+}
+
+#rome_decoration {
+  background-image: url("../../resources/images/decors/decors_rome.svg");
 }
 
 a {
@@ -38,7 +58,7 @@ header {
   z-index: 1;
 
   #main_nav {
-    padding: 2em;
+    padding: 1em;
     background-color: $base_red_color;
     display: flex;
     justify-content: space-between;
@@ -67,13 +87,13 @@ header {
       &:checked ~ #main_nav_container {
         background-color: $dark_red_color;
         box-shadow: inset 0 5px 6px $shadow_color;
-        transform: translateX(-2em);
-        top: 8.1em;
+        transform: translateX(-1em);
+        top: 6.1em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 1em;
-        padding: 2em;
+        padding: 1em;
         width: 100%;
       }
 
@@ -137,7 +157,7 @@ header {
   background-color: $base_red_color;
   font-family: 'Garamond-regular', serif;
   font-size: 1.2em;
-  padding: 2em;
+  padding: 1em;
 
   &_container {
     display: flex;
@@ -157,6 +177,7 @@ header {
 
     &_socials_container {
       flex-direction: row;
+
       #Instagram, #Github, #Facebook {
         background-position: 10px 60px,
         left;
@@ -179,8 +200,48 @@ header {
         background-image: url("../../resources/images/facebook.svg"), url("../../resources/images/jarre.svg");
       }
     }
-
   }
+}
 
+main {
+  padding: 1em;
+
+  #introduction {
+    color: $white_color;
+    font-family: 'Garamond-regular', serif;
+    font-size: 0.75em;
+
+    &_presentation {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5em;
+
+      img {
+        width: 125px;
+        height: auto;
+      }
+
+      &_text {
+        background-color: $dark_red_color;
+        padding: 1em;
+        line-height: 1.5em;
+        text-align: right;
+
+        & > p {
+          text-align: left;
+
+          &:first-child {
+            margin-bottom: 1em;
+          }
+        }
+
+        &_link {
+          margin-top: 1em;
+          background-image: url("../../resources/images/about_me_icon.svg");
+          background-position: 0.5em center;
+        }
+      }
+    }
+  }
 }
 

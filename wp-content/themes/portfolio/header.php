@@ -20,24 +20,24 @@ $home_page_link = get_permalink($home_page);
     <?php wp_head(); ?>
 </head>
 <body>
-<header>
-    <nav id="main_nav">
-        <h2 class="hidden">Navigation principale</h2>
+    <header>
+        <nav id="main_nav">
+            <h2 class="hidden">Navigation principale</h2>
 
-        <a id="logo" class="no-text-decoration" href="<?= $home_page_link; ?>">Accueil</a>
+            <a id="logo" class="no-text-decoration" href="<?= $home_page_link; ?>">Accueil</a>
 
-        <input type="checkbox" id="burger_menu">
-        <label for="burger_menu">
-            <span class="line"></span>
-        </label>
+            <input type="checkbox" id="burger_menu">
+            <label for="burger_menu">
+                <span class="line"></span>
+            </label>
 
-        <ul id="main_nav_container">
-            <?php foreach (dw_get_navigation_links('main') as $link): ?>
-                <li class="main_nav_container_item">
-                    <a class="no-text-decoration" href="<?= $link->url ?>"
-                       title="<?= $link->label ?>"><?= $link->label ?></a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </nav>
-</header>
+            <ul id="main_nav_container">
+                <?php foreach (dw_get_navigation_links('main') as $link): ?>
+                    <li class="main_nav_container_item">
+                        <a class="no-text-decoration" href="<?= $link->url ?>"
+                           title="<?= $link->label ?>"><?= $link->label ?></a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </nav>
+    </header>
