@@ -33,3 +33,12 @@ function dw_get_navigation_links(string $location): array
     // Retourner le tableau de liens formatés
     return $items;
 }
+
+function dw_get_image (string $file)
+{
+    $media_id = attachment_url_to_postid($file);
+
+    $image_info = wp_get_attachment_image_src($media_id, 'full');
+
+    return $image_info[0];
+}
