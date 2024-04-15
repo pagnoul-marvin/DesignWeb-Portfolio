@@ -47,15 +47,27 @@
   height: 100vh;
 }
 
-.pages_button {
+.pages_button, #cv {
   border: 1px solid $white_color;
-  margin-top: 1em;
-  padding: 0.5em 0 0.5em 1.5em;
   display: inline-block;
+  margin-top: 1.5em;
+}
+
+.pages_button, .nav_icon {
+  background-repeat: no-repeat;
+}
+
+.pages_button {
+  background-position: 1.5em center;
+  padding: 0.5em 0 0.5em 1.5em;
   width: 12em;
   text-align: center;
-  background-repeat: no-repeat;
-  background-position: 1.5em center;
+}
+
+.nav_icon {
+  background-position: left center;
+  text-indent: 1.5em;
+  display: block;
 }
 
 .red_background {
@@ -74,6 +86,26 @@
 
 #rome_decoration {
   background-image: url("../../resources/images/decors/decors_rome.svg");
+}
+
+#footer_container_pages_container li:first-child a {
+  background-image: url("../../resources/images/logo_icon.svg");
+}
+
+#introduction_presentation_text_link, #main_nav_container li:first-child a, #footer_container_pages_container li:nth-child(2) a {
+  background-image: url("../../resources/images/about_me_icon.svg");
+}
+
+#skills_button, #main_nav_container li:nth-child(2) a, #footer_container_pages_container li:nth-child(3) a {
+  background-image: url("../../resources/images/skills.svg");
+}
+
+#projects_button, #main_nav_container li:nth-child(3) a, #footer_container_pages_container li:nth-child(4) a {
+  background-image: url("../../resources/images/projects.svg");
+}
+
+#contact_button, #main_nav_container li:last-child a, #footer_container_pages_container li:last-child a {
+  background-image: url("../../resources/images/contact.svg");
 }
 
 a {
@@ -107,7 +139,7 @@ header {
 
     &_container {
       position: absolute;
-      top: 1000px;
+      bottom: 1000px;
     }
 
     #burger_menu {
@@ -117,13 +149,14 @@ header {
         background-color: $dark_red_color;
         box-shadow: inset 0 5px 6px $shadow_color;
         transform: translateX(-1em);
-        top: 6.1em;
+        bottom: -9em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 1em;
         padding: 1em;
         width: 100%;
+        transition: bottom 0.3s ease;
       }
 
       &:checked ~ label .line {
@@ -166,7 +199,7 @@ header {
           width: 100%;
           background-color: #fff;
           position: absolute;
-          transition: -webkit-transform 0.2s ease-in-out;
+          transition: transform 0.2s ease-in-out;
         }
 
         &:before {
@@ -189,22 +222,13 @@ header {
   padding: 1em;
 
   &_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2em;
-
-    &_pages_container, &_socials_container {
+    &_pages_container li:not(:last-child){
+        margin-bottom: 1em;
+    }
+    &_socials_container {
+      margin-top: 2em;
       display: flex;
       justify-content: space-between;
-    }
-
-    &_pages_container {
-      flex-wrap: wrap;
-      gap: 2em;
-    }
-
-    &_socials_container {
       flex-direction: row;
 
       #Instagram, #Github, #Facebook {
@@ -255,10 +279,6 @@ main {
             margin-bottom: 1em;
           }
         }
-
-        &_link {
-          background-image: url("../../resources/images/about_me_icon.svg");
-        }
       }
     }
   }
@@ -267,27 +287,12 @@ main {
     & > div:not(:last-child) {
       margin-bottom: 1.875em;
     }
-
-    #skills_button {
-      background-image: url("../../resources/images/skills.svg");
-    }
-
-    #projects_button {
-      background-image: url("../../resources/images/projects.svg");
-    }
-
-    #contact_button {
-      background-image: url("../../resources/images/contact.svg");
-    }
   }
 
   #more_over {
-
     #cv {
-      border: 1px solid $white_color;
       padding: 0.5em 2em;
-      display: inline-block;
-      margin-top: 1em;
+      width: initial;
     }
   }
 }

@@ -1,8 +1,3 @@
-<?php
-$home_page = get_page_by_path('Acceuil');
-$home_page_link = get_permalink($home_page);
-?>
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -24,7 +19,7 @@ $home_page_link = get_permalink($home_page);
         <nav id="main_nav">
             <h2 class="hidden">Navigation principale</h2>
 
-            <a id="logo" class="no-text-decoration" href="<?= $home_page_link; ?>">Accueil</a>
+            <a id="logo" href="<?= dw_get_page_path('Accueil'); ?>">Accueil</a>
 
             <input type="checkbox" id="burger_menu">
             <label for="burger_menu">
@@ -34,7 +29,7 @@ $home_page_link = get_permalink($home_page);
             <ul id="main_nav_container">
                 <?php foreach (dw_get_navigation_links('main') as $link): ?>
                     <li class="main_nav_container_item">
-                        <a class="no-text-decoration" href="<?= $link->url ?>"
+                        <a class="nav_icon no_text_decoration" href="<?= $link->url ?>"
                            title="<?= $link->label ?>"><?= $link->label ?></a>
                     </li>
                 <?php endforeach; ?>

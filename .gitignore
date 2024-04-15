@@ -43,11 +43,16 @@ wp-content/*
 wp-content/themes/*
 !wp-content/themes/portfolio
 !wp-content/themes/portfolio/*
+!wp-content/themes/portfolio/Core/*
+!wp-content/themes/portfolio/Core/helpers/*
 !wp-content/themes/portfolio/public/*
 !wp-content/themes/portfolio/public/css/*
 !wp-content/themes/portfolio/public/js/*
 !wp-content/themes/portfolio/public/sass/*
 !wp-content/themes/portfolio/resources/*
+!wp-content/themes/portfolio/resources/components/*
+!wp-content/themes/portfolio/resources/components/home/*
+!wp-content/themes/portfolio/resources/components/global/*
 !wp-content/themes/portfolio/resources/fonts/*
 !wp-content/themes/portfolio/resources/fonts/garamond/*
 !wp-content/themes/portfolio/resources/fonts/trajan/*
