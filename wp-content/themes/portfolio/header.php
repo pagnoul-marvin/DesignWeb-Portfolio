@@ -19,7 +19,7 @@
         <nav id="main_nav">
             <h2 class="hidden">Navigation principale</h2>
 
-            <a id="logo" href="<?= dw_get_page_path('Accueil'); ?>">Accueil</a>
+            <a id="logo" href="<?= go_to_other_pages(6) ?>">Accueil</a>
 
             <input type="checkbox" id="burger_menu">
             <label for="burger_menu">
@@ -30,7 +30,7 @@
                 <?php foreach (dw_get_navigation_links('main') as $link): ?>
                     <li class="main_nav_container_item">
                         <a class="nav_icon no_text_decoration" href="<?= $link->url ?>"
-                           title="<?= $link->label ?>"><?= $link->label ?></a>
+                           title="Aller vers la page <?= $link->label ?>"><?= $link->label ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>
