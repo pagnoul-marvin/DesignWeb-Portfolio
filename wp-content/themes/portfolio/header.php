@@ -15,7 +15,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>
+    <header class="<?php echo give_page_header_class(); ?>">
         <nav id="main_nav">
             <h2 class="hidden">Navigation principale</h2>
 
@@ -26,7 +26,7 @@
                 <span class="line"></span>
             </label>
 
-            <ul id="main_nav_container">
+            <ul class="<?php echo give_page_main_nav_container_class(); ?>" id="main_nav_container">
                 <?php foreach (dw_get_navigation_links('main') as $link): ?>
                     <li class="main_nav_container_item">
                         <a class="nav_icon no_text_decoration" href="<?= $link->url ?>"

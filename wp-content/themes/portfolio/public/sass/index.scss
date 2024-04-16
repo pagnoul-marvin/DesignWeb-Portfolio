@@ -15,20 +15,39 @@
   }
 }
 
-.main_title, .second_title {
+.main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
   color: $white_color;
-  background-color: $dark_red_color;
   display: inline-block;
   padding: 1em;
   font-family: 'Trajan-Regular', serif;
 }
 
-.main_title {
+.main_title_class, .second_title_class {
+  background-color: $dark_red_color;
+}
+
+.about_me_main_title_class, .about_me_second_title_class {
+  background-color: $dark_blue_color;
+}
+
+.contact_main_title_class, .contact_second_title_class {
+  background-color: $dark_orange_color;
+}
+
+.projects_main_title_class, .projects_second_title_class {
+  background-color: $dark_green_color;
+}
+
+.skills_main_title_class, .skills_second_title_class {
+  background-color: $dark_purple_color;
+}
+
+.main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .skills_main_title_class, {
   font-size: 2.3em;
   margin: 3.75em 0 3.75em 0.5em;
 }
 
-.second_title {
+.second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
   font-size: 1.25em;
   margin-bottom: 1.875em;
 }
@@ -80,12 +99,21 @@
   font-size: 0.75em;
 }
 
+.blue_background {
+  background-color: $dark_blue_color;
+  color: $white_color;
+}
+
 .align_left_text {
   text-align: left;
 }
 
 #rome_decoration {
   background-image: url("../../resources/images/decors/decors_rome.svg");
+}
+
+#greece_decoration {
+  background-image: url("../../resources/images/decors/decors_grece.svg");
 }
 
 #footer_container_pages_container li:first-child a {
@@ -117,10 +145,26 @@ header {
   width: 100%;
   top: 0;
   z-index: 1;
+  background-color: $base_red_color;
+
+  &.about_me_header_class {
+    background-color: $base_blue_color;
+  }
+
+  &.contact_header_class {
+    background-color: $base_orange_color;
+  }
+
+  &.projects_header_class {
+    background-color: $base_green_color;
+  }
+
+  &.skills_header_class {
+    background-color: $base_purple_color;
+  }
 
   #main_nav {
     padding: 1em;
-    background-color: $base_red_color;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -157,6 +201,22 @@ header {
         padding: 1em;
         width: 100%;
         transition: bottom 0.3s ease;
+
+        &.about_me_main_nav_container_class {
+          background-color: $dark_blue_color;
+        }
+
+        &.contact_main_nav_container_class {
+          background-color: $dark_orange_color;
+        }
+
+        &.projects_main_nav_container_class {
+          background-color: $dark_green_color;
+        }
+
+        &.skills_main_nav_container_class {
+          background-color: $dark_purple_color;
+        }
       }
 
       &:checked ~ label .line {
@@ -221,10 +281,27 @@ header {
   font-size: 1.2em;
   padding: 1em;
 
+  &.about_me_footer_class {
+    background-color: $base_blue_color;
+  }
+
+  &.contact_footer_class {
+    background-color: $base_orange_color;
+  }
+
+  &.projects_footer_class {
+    background-color: $base_green_color;
+  }
+
+  &.skills_footer_class {
+    background-color: $base_purple_color;
+  }
+
   &_container {
-    &_pages_container li:not(:last-child){
-        margin-bottom: 1em;
+    &_pages_container li:not(:last-child) {
+      margin-bottom: 1em;
     }
+
     &_socials_container {
       margin-top: 2em;
       display: flex;

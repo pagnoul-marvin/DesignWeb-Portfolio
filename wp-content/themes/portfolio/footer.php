@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer class="<?php echo give_page_footer_class(); ?>" id="footer">
     <nav id="footer_container">
 
         <ul id="footer_container_pages_container">

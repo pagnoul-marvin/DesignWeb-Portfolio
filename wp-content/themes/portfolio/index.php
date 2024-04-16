@@ -7,10 +7,12 @@ Template Name: Accueil
 <?php get_header(); ?>
 
 <?php component('global.main_title', [
-        'text' => 'Accueil'
+        'text' => get_the_title()
 ]); ?>
 
-<div class="decoration" id="rome_decoration"></div>
+<?php component('global.decoration', [
+        'id' => 'rome_decoration'
+]); ?>
 
     <main>
 
@@ -27,9 +29,9 @@ Template Name: Accueil
                 <img src="<?= dw_get_image('http://site.test/wp-content/uploads/2024/04/photo_moi-1.png'); ?>" alt="Photo de Marvin Pagnoul">
 
                 <div id="introduction_presentation_text" class="red_background">
-                    <p class="align_left_text">Salut&nbsp;! Moi, c&rsquo;est Marvin Pagnoul. Voici mon portfolio&nbsp;! Dans celui-ci, je vous partage plein d&rsquo;informations sur moi et mon m&eacute;tier de web developer tout en vous faisant plonger dans ma plus grande passion&nbsp;: l&rsquo;Histoire antique&nbsp;!</p>
+                    <p class="align_left_text">Salut&nbsp;! Moi, c&rsquo;est Marvin Pagnoul. Voici mon portfolio&nbsp;! Dans celui&hyphen;ci, je vous partage plein d&rsquo;informations sur moi et mon m&eacute;tier de Web Developer tout en vous faisant plonger dans ma plus grande passion&nbsp;: l&rsquo;Histoire antique&nbsp;!</p>
 
-                    <p class="align_left_text">Pour commencer en savoir plus sur moi, plongez dans la Perse antique&nbsp;:</p>
+                    <p class="align_left_text">Pour commencer en savoir plus sur moi, plongez dans l&rsquo;Egypte antique&nbsp;:</p>
 
                     <a id="introduction_presentation_text_link" class="pages_button no_text_decoration" title="Se diriger vers la page À propos de moi" href="<?php go_to_other_pages(9) ?>">&Agrave; propos de moi</a>
 
@@ -42,14 +44,14 @@ Template Name: Accueil
         <section id="go_to_other_pages" class="section">
 
             <?php component('global.second_title', [
-                'class' => 'second_title',
-                'text' => 'Pour les impatiens ...'
+                    'class' => '',
+                    'text' => 'Pour les impatiens ...'
             ]);
             ?>
 
             <?php
             component('home.div', [
-                'text' => 'Je suis une personne aux nombreux talents. Si vous êtes plus intéressés par mes compétences, je vous invite à découvrir l’Egypte antique :',
+                'text' => 'Je suis une personne aux nombreux talents. Si vous êtes plus intéressés par mes compétences, je vous invite à découvrir la Perse antique :',
                 'link_href' =>  go_to_other_pages(11),
                 'link_id' => 'skills_button',
                 'link_title' => 'Aller vers la page Mes compétences',
@@ -57,7 +59,7 @@ Template Name: Accueil
             ]);
 
             component('home.div', [
-                'text' => 'Au cours de mes nombreuses années d’études, j’ai réalisé de nombreux projets dont je vous invite à y jeter un oeil à travers la Gaule :',
+                'text' => 'Au cours de mes nombreuses années d’études, j’ai réalisé de nombreux projets dont je vous invite à y jeter un oeil à travers la Gaule antique :',
                 'link_href' => go_to_other_pages(13),
                 'link_id' => 'projects_button',
                 'link_title' => 'Aller vers la page Mes projets',
@@ -78,8 +80,8 @@ Template Name: Accueil
         <section id="more_over" class="section">
 
             <?php component('global.second_title', [
-                'class' => 'second_title',
-                'text' => 'Aller voir aussi ...'
+                    'class' => '',
+                    'text' => 'Aller voir aussi ...'
             ]);
             ?>
 

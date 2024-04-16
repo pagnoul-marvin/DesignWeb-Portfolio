@@ -12,20 +12,39 @@
   text-decoration: underline;
 }
 
-.main_title, .second_title {
+.main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
   color: #fff;
-  background-color: #5E0101;
   display: inline-block;
   padding: 1em;
   font-family: "Trajan-Regular", serif;
 }
 
-.main_title {
+.main_title_class, .second_title_class {
+  background-color: #5E0101;
+}
+
+.about_me_main_title_class, .about_me_second_title_class {
+  background-color: #003C53;
+}
+
+.contact_main_title_class, .contact_second_title_class {
+  background-color: #4D2C00;
+}
+
+.projects_main_title_class, .projects_second_title_class {
+  background-color: #014E00;
+}
+
+.skills_main_title_class, .skills_second_title_class {
+  background-color: #490055;
+}
+
+.main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .skills_main_title_class {
   font-size: 2.3em;
   margin: 3.75em 0 3.75em 0.5em;
 }
 
-.second_title {
+.second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
   font-size: 1.25em;
   margin-bottom: 1.875em;
 }
@@ -77,12 +96,21 @@
   font-size: 0.75em;
 }
 
+.blue_background {
+  background-color: #003C53;
+  color: #fff;
+}
+
 .align_left_text {
   text-align: left;
 }
 
 #rome_decoration {
   background-image: url("../../resources/images/decors/decors_rome.svg");
+}
+
+#greece_decoration {
+  background-image: url("../../resources/images/decors/decors_grece.svg");
 }
 
 #footer_container_pages_container li:first-child a {
@@ -114,10 +142,22 @@ header {
   width: 100%;
   top: 0;
   z-index: 1;
+  background-color: #B50000;
+}
+header.about_me_header_class {
+  background-color: #0081B4;
+}
+header.contact_header_class {
+  background-color: #C37400;
+}
+header.projects_header_class {
+  background-color: #02A900;
+}
+header.skills_header_class {
+  background-color: #A000BA;
 }
 header #main_nav {
   padding: 1em;
-  background-color: #B50000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -152,6 +192,18 @@ header #main_nav #burger_menu:checked ~ #main_nav_container {
   padding: 1em;
   width: 100%;
   transition: bottom 0.3s ease;
+}
+header #main_nav #burger_menu:checked ~ #main_nav_container.about_me_main_nav_container_class {
+  background-color: #003C53;
+}
+header #main_nav #burger_menu:checked ~ #main_nav_container.contact_main_nav_container_class {
+  background-color: #4D2C00;
+}
+header #main_nav #burger_menu:checked ~ #main_nav_container.projects_main_nav_container_class {
+  background-color: #014E00;
+}
+header #main_nav #burger_menu:checked ~ #main_nav_container.skills_main_nav_container_class {
+  background-color: #490055;
 }
 header #main_nav #burger_menu:checked ~ label .line {
   background-color: transparent;
@@ -202,6 +254,18 @@ header #main_nav label[for=burger_menu] .line:after {
   font-family: "Garamond-regular", serif;
   font-size: 1.2em;
   padding: 1em;
+}
+#footer.about_me_footer_class {
+  background-color: #0081B4;
+}
+#footer.contact_footer_class {
+  background-color: #C37400;
+}
+#footer.projects_footer_class {
+  background-color: #02A900;
+}
+#footer.skills_footer_class {
+  background-color: #A000BA;
 }
 #footer_container_pages_container li:not(:last-child) {
   margin-bottom: 1em;

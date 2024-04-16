@@ -3,11 +3,22 @@
 Template Name: À propos de moi
 */
 ?>
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
 
-<?php get_header(); ?>
+    <?php get_header(); ?>
 
-    <main>
+    <?php component('global.main_title', [
+            'text' => get_the_title()
+    ]); ?>
 
-    </main>
+    <?php component('global.decoration', [
+            'id' => 'greece_decoration'
+    ]); ?>
 
-<?php get_footer(); ?>
+        <main>
+            <?= get_the_content(); ?>
+        </main>
+
+    <?php get_footer(); ?>
+
+<?php endwhile; endif; ?>

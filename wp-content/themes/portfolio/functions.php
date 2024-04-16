@@ -62,5 +62,110 @@ function go_to_other_pages($page_id): string
     return esc_url($page_url);
 }
 
+function give_page_header_class() : string
+{
+    $page_id = get_the_ID();
 
+    $header_class = '';
 
+    if ($page_id === 9) {
+        $header_class .= 'about_me_header_class';
+    } elseif ($page_id === 15) {
+        $header_class .= 'contact_header_class';
+    } elseif ($page_id === 13) {
+        $header_class .= 'projects_header_class';
+    } elseif ($page_id === 11) {
+        $header_class .= 'skills_header_class';
+    }
+    return $header_class;
+}
+
+function give_page_footer_class() :string
+{
+    $page_id = get_the_ID();
+
+    $footer_class = '';
+
+    if ($page_id === 9) {
+        $footer_class .= 'about_me_footer_class';
+    } elseif ($page_id === 15) {
+        $footer_class .= 'contact_footer_class';
+    } elseif ($page_id === 13) {
+        $footer_class .= 'projects_footer_class';
+    } elseif ($page_id === 11) {
+        $footer_class .= 'skills_footer_class';
+    }
+
+    return $footer_class;
+}
+function give_page_main_title_class() :string
+{
+    $page_id = get_the_ID();
+
+    $main_title_class = '';
+
+    if ($page_id === 9) {
+        $main_title_class .= 'about_me_main_title_class';
+    } elseif ($page_id === 15) {
+        $main_title_class .= 'contact_main_title_class';
+    } elseif ($page_id === 13) {
+        $main_title_class .= 'projects_main_title_class';
+    } elseif ($page_id === 11) {
+        $main_title_class .= 'skills_main_title_class';
+    } elseif ($page_id === 6) {
+        $main_title_class .= 'main_title_class';
+    }
+
+    return $main_title_class;
+}
+function give_page_second_title_class() :string
+{
+    $page_id = get_the_ID();
+
+    $second_title_class = '';
+
+    if ($page_id === 9) {
+        $second_title_class .= 'about_me_second_title_class';
+    } elseif ($page_id === 15) {
+        $second_title_class .= 'contact_second_title_class';
+    } elseif ($page_id === 13) {
+        $second_title_class .= 'projects_second_title_class';
+    } elseif ($page_id === 11) {
+        $second_title_class .= 'skills_second_title_class';
+    } elseif ($page_id === 6) {
+        $second_title_class .= 'second_title_class';
+    }
+
+    return $second_title_class;
+}
+
+function give_page_main_nav_container_class() :string
+{
+    $page_id = get_the_ID();
+
+    $main_nav_container_class = '';
+
+    if ($page_id === 9) {
+        $main_nav_container_class .= 'about_me_main_nav_container_class';
+    } elseif ($page_id === 15) {
+        $main_nav_container_class .= 'contact_main_nav_container_class';
+    } elseif ($page_id === 13) {
+        $main_nav_container_class .= 'projects_main_nav_container_class';
+    } elseif ($page_id === 11) {
+        $main_nav_container_class .= 'skills_main_nav_container_class';
+    }
+
+    return $main_nav_container_class;
+}
+
+function get_section_from_page($page_id, $section_number) {
+    $content = get_post_field('post_content', $page_id);
+    $matches = array();
+    preg_match('/<section[^>]*id="' . $section_number . '"[^>]*>(.*?)<\/section>/s', $content, $matches);
+
+    if (!empty($matches) && isset($matches[$section_number])) {
+        return $matches[$section_number];
+    } else {
+        return 'il y a rien';
+    }
+}
