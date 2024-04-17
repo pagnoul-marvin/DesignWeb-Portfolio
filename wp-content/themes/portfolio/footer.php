@@ -1,6 +1,9 @@
 <footer class="<?php echo give_page_footer_class(); ?>" id="footer">
     <nav id="footer_container">
-
+        <?php component('global.second_title', [
+                'class' => 'hidden',
+                'text' => 'Navigation de pied de page'
+        ]); ?>
         <ul id="footer_container_pages_container">
             <?php foreach (dw_get_navigation_links('footer') as $link): ?>
                 <li class="footer_container_pages_container_item">

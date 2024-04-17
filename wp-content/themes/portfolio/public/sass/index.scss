@@ -45,6 +45,7 @@
 .main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .skills_main_title_class, {
   font-size: 2.3em;
   margin: 3.75em 0 3.75em 0.5em;
+  max-width: 7.7em;
 }
 
 .second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
@@ -114,6 +115,18 @@
 
 #greece_decoration {
   background-image: url("../../resources/images/decors/decors_grece.svg");
+}
+
+#egypt_decoration {
+  background-image: url("../../resources/images/decors/decors_egypte.svg");
+}
+
+#persian_decoration {
+  background-image: url("../../resources/images/decors/decors_perse.svg");
+}
+
+#celtic_decoration {
+  background-image: url("../../resources/images/decors/decors_gaule.svg");
 }
 
 #footer_container_pages_container li:first-child a {
@@ -370,6 +383,28 @@ main {
     #cv {
       padding: 0.5em 2em;
       width: initial;
+    }
+  }
+
+  section {
+    color: $white_color;
+    font-family: 'Garamond-regular', serif;
+    font-size: 0.75em;
+    padding: 0.5em;
+    line-height: 1.5em;
+
+    #show_off {
+      &_title {
+        margin-bottom: 1.25em;
+        font-size: 0.9375em;
+        font-family: 'Garamond-Bold', serif;
+
+        span {
+          font-family: 'Garamond-regular', serif;
+          font-size: 1.125em;
+          display: block;
+        }
+      }
     }
   }
 }

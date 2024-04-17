@@ -6,10 +6,6 @@ Template Name: Accueil
 
 <?php get_header(); ?>
 
-<?php component('global.main_title', [
-        'text' => get_the_title()
-]); ?>
-
 <?php component('global.decoration', [
         'id' => 'rome_decoration'
 ]); ?>

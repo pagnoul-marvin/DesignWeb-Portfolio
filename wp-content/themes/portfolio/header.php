@@ -15,6 +15,9 @@
     <?php wp_head(); ?>
 </head>
 <body>
+    <?php component('global.main_title', [
+        'text' => get_the_title()
+    ]); ?>
     <header class="<?php echo give_page_header_class(); ?>">
         <nav id="main_nav">
             <h2 class="hidden">Navigation principale</h2>
