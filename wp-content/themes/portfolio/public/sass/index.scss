@@ -7,7 +7,7 @@
   position: absolute;
 }
 
-.no_text_decoration {
+.no_text_decoration, abbr {
   text-decoration: none;
 
   &:hover {
@@ -49,7 +49,7 @@
 }
 
 .second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
-  font-size: 1.25em;
+  font-size: 1.5em;
   margin-bottom: 1.875em;
 }
 
@@ -97,7 +97,7 @@
   line-height: 1.5em;
   color: $white_color;
   font-family: 'Garamond-regular', serif;
-  font-size: 0.75em;
+  font-size: 1em;
 }
 
 .blue_background {
@@ -351,13 +351,8 @@ main {
 
   #introduction {
     &_presentation {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.5em;
-
       img {
-        width: 125px;
-        height: auto;
+        width: 100%;
       }
 
       &_text {
@@ -387,23 +382,70 @@ main {
   }
 
   section {
-    color: $white_color;
     font-family: 'Garamond-regular', serif;
-    font-size: 0.75em;
-    padding: 0.5em;
+    font-size: 1em;
     line-height: 1.5em;
+    max-width: 100%;
 
-    #show_off {
-      &_title {
+    &#show_off {
+      padding: 0.5em;
+      #show_off_title {
         margin-bottom: 1.25em;
-        font-size: 0.9375em;
+        font-size: 1.2em;
         font-family: 'Garamond-Bold', serif;
 
         span {
           font-family: 'Garamond-regular', serif;
-          font-size: 1.125em;
+          font-size: 1.5em;
           display: block;
+          margin-bottom: 0.5em;
         }
+      }
+    }
+
+    &#school_career {
+      .timeline {
+        background-image: url("../../resources/images/timeline_arrow.svg");
+        background-position: 0.5em center;
+        background-repeat: no-repeat;
+        min-height: 43.75em;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 0.5em 0.5em 0.5em 3.7em;
+        .timeline_item {
+          border: 1px solid $white_color;
+          position: relative;
+          padding: 0.5em;
+          &:before {
+            content: '';
+            width: 1.5em;
+            height: 0.2em;
+            background-color: $white_color;
+            display: inline-block;
+            position: absolute;
+            top: 1.9em;
+            left: -2.5em;
+          }
+        }
+      }
+    }
+
+    &#hobbies {
+      .hobbies_item {
+        padding: 0.5em;
+        h3 {
+          font-family: 'Trajan-Regular', serif;
+          font-size: 1.2em;
+          margin-bottom: 1.875em;
+          background-image: url("../../resources/images/sword.svg");
+          background-repeat: no-repeat;
+          background-position: left;
+          text-indent: 1em;
+        }
+      }
+      .hobbies_item:not(:last-child) {
+        margin-bottom: 1.875em;
       }
     }
   }
