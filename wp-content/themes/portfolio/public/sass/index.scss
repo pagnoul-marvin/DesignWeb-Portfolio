@@ -7,11 +7,19 @@
   position: absolute;
 }
 
-.no_text_decoration, abbr {
+.no_text_decoration {
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+abbr {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline dotted;
   }
 }
 
@@ -50,7 +58,7 @@
 }
 
 .second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin-bottom: 1.875em;
   line-height: 1.5em;
 }
@@ -100,6 +108,15 @@
   color: $white_color;
   font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
   font-size: 1em;
+}
+
+.purple_background {
+  background-color: $dark_purple_color;
+  color: $white_color;
+  padding: 2em;
+  min-height: 150px;
+  width: 150px;
+  text-align: center;
 }
 
 .blue_background {
@@ -453,59 +470,24 @@ main {
       }
     }
 
-    &#skills_web {
+    .skills_2D_flex_container, .skills_web_flex_container {
+      font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
+      font-size: 1.2em;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       row-gap: 2em;
 
-      .skills_web_item {
-        background-color: $dark_purple_color;
-        color: $white_color;
-        padding: 2em;
-        min-height: 150px;
-        min-width: 150px;
-
-        &_text {
-          text-align: center;
-          margin-bottom: 1em;
-        }
-
-        figure {
-          text-align: center;
-        }
+      .skills_2D_item_text, .skills_web_item_text {
+        margin-bottom: 1em;
       }
 
-      img {
-        width: 50px;
-        height: 50px;
-      }
-    }
+      .skills_2D_item, .skills_web_item {
+        transition: 0.3s ease-in-out;
 
-    &#skills_2D {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      row-gap: 2em;
-
-      .skills_2D_item {
-        background-color: $dark_purple_color;
-        color: $white_color;
-        padding: 2em;
-        min-height: 150px;
-        min-width: 150px;
-
-        &_text {
-          text-align: center;
-          margin-bottom: 1em;
-        }
-
-        figure {
-          text-align: center;
-        }
-        img {
-          width: 50px;
-          height: 50px;
+        &:hover, &:hover {
+          transform: scale(1.1);
+          filter: contrast(150%);
         }
       }
     }

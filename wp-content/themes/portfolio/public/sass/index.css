@@ -5,11 +5,18 @@
   position: absolute;
 }
 
-.no_text_decoration, abbr {
+.no_text_decoration {
   text-decoration: none;
 }
-.no_text_decoration:hover, abbr:hover {
+.no_text_decoration:hover {
   text-decoration: underline;
+}
+
+abbr {
+  text-decoration: none;
+}
+abbr:hover {
+  text-decoration: underline dotted;
 }
 
 .main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
@@ -47,7 +54,7 @@
 }
 
 .second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin-bottom: 1.875em;
   line-height: 1.5em;
 }
@@ -97,6 +104,15 @@
   color: #fff;
   font-family: "Garamond-Regular", "Granjon-Regular", serif;
   font-size: 1em;
+}
+
+.purple_background {
+  background-color: #490055;
+  color: #fff;
+  padding: 2em;
+  min-height: 150px;
+  width: 150px;
+  text-align: center;
 }
 
 .blue_background {
@@ -383,53 +399,23 @@ main section#hobbies .hobbies_item h3 {
 main section#hobbies .hobbies_item:not(:last-child) {
   margin-bottom: 1.875em;
 }
-main section#skills_web {
+main section .skills_2D_flex_container, main section .skills_web_flex_container {
+  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+  font-size: 1.2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 2em;
 }
-main section#skills_web .skills_web_item {
-  background-color: #490055;
-  color: #fff;
-  padding: 2em;
-  min-height: 150px;
-  min-width: 150px;
-}
-main section#skills_web .skills_web_item_text {
-  text-align: center;
+main section .skills_2D_flex_container .skills_2D_item_text, main section .skills_2D_flex_container .skills_web_item_text, main section .skills_web_flex_container .skills_2D_item_text, main section .skills_web_flex_container .skills_web_item_text {
   margin-bottom: 1em;
 }
-main section#skills_web .skills_web_item figure {
-  text-align: center;
+main section .skills_2D_flex_container .skills_2D_item, main section .skills_2D_flex_container .skills_web_item, main section .skills_web_flex_container .skills_2D_item, main section .skills_web_flex_container .skills_web_item {
+  transition: 0.3s ease-in-out;
 }
-main section#skills_web img {
-  width: 50px;
-  height: 50px;
-}
-main section#skills_2D {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 2em;
-}
-main section#skills_2D .skills_2D_item {
-  background-color: #490055;
-  color: #fff;
-  padding: 2em;
-  min-height: 150px;
-  min-width: 150px;
-}
-main section#skills_2D .skills_2D_item_text {
-  text-align: center;
-  margin-bottom: 1em;
-}
-main section#skills_2D .skills_2D_item figure {
-  text-align: center;
-}
-main section#skills_2D .skills_2D_item img {
-  width: 50px;
-  height: 50px;
+main section .skills_2D_flex_container .skills_2D_item:hover, main section .skills_2D_flex_container .skills_2D_item:hover, main section .skills_2D_flex_container .skills_web_item:hover, main section .skills_2D_flex_container .skills_web_item:hover, main section .skills_web_flex_container .skills_2D_item:hover, main section .skills_web_flex_container .skills_2D_item:hover, main section .skills_web_flex_container .skills_web_item:hover, main section .skills_web_flex_container .skills_web_item:hover {
+  transform: scale(1.1);
+  filter: contrast(150%);
 }
 
 /*# sourceMappingURL=index.css.map */
