@@ -465,10 +465,12 @@ main {
         padding: 2em;
         min-height: 150px;
         min-width: 150px;
+
         &_text {
           text-align: center;
           margin-bottom: 1em;
         }
+
         figure {
           text-align: center;
         }
@@ -481,7 +483,31 @@ main {
     }
 
     &#skills_2D {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 2em;
 
+      .skills_2D_item {
+        background-color: $dark_purple_color;
+        color: $white_color;
+        padding: 2em;
+        min-height: 150px;
+        min-width: 150px;
+
+        &_text {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+
+        figure {
+          text-align: center;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
     }
   }
 }
