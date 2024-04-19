@@ -131,6 +131,13 @@ table {
 }
 
 @font-face {
+  font-family: 'Jenson-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../resources/fonts/jenson/Adobe Jenson Pro Regular.otf') format('OpenType');
+}
+
+@font-face {
   font-family: 'Garamond-Bold';
   font-style: normal;
   font-weight: bold;
@@ -145,8 +152,23 @@ table {
 }
 
 @font-face {
-  font-family: 'Garamond-regular';
+  font-family: 'Garamond-Regular';
   font-style: normal;
   font-weight: normal;
   src: url('../../resources/fonts/garamond/EBGaramond-Regular.ttf') format('TrueType');
 }
+
+@font-face {
+  font-family: 'Granjon-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../resources/fonts/granjon/GranjonLTStd.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Granjon-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../resources/fonts/granjon/GranjonLTStd-Bold.ttf') format('TrueType');
+}
+

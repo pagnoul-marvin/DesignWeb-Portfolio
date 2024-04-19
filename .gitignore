@@ -21,6 +21,10 @@
 !Adobe XD/Photo moodboard/*.jpg
 !Adobe XD/Photo moodboard/*.jpeg
 
+!Fichers Photoshop
+!Fichers Photoshop/images de références
+!Fichers Photoshop/images de références/*
+
 
 !Inspirations décors
 !Inspirations décors/*
@@ -57,5 +61,7 @@ wp-content/themes/*
 !wp-content/themes/portfolio/resources/fonts/*
 !wp-content/themes/portfolio/resources/fonts/garamond/*
 !wp-content/themes/portfolio/resources/fonts/trajan/*
+!wp-content/themes/portfolio/resources/fonts/granjon/*
+!wp-content/themes/portfolio/resources/fonts/jenson/*
 !wp-content/themes/portfolio/resources/images/*
 !wp-content/themes/portfolio/resources/images/decors/*

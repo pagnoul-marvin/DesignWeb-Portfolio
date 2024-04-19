@@ -19,7 +19,8 @@
   color: $white_color;
   display: inline-block;
   padding: 1em;
-  font-family: 'Trajan-Regular', serif;
+  font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
+  line-height: 1.2em;
 }
 
 .main_title_class, .second_title_class {
@@ -51,6 +52,7 @@
 .second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
   font-size: 1.5em;
   margin-bottom: 1.875em;
+  line-height: 1.5em;
 }
 
 .section {
@@ -96,13 +98,14 @@
   padding: 1em;
   line-height: 1.5em;
   color: $white_color;
-  font-family: 'Garamond-regular', serif;
+  font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
   font-size: 1em;
 }
 
 .blue_background {
   background-color: $dark_blue_color;
   color: $white_color;
+  padding: 1em;
 }
 
 .align_left_text {
@@ -181,7 +184,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Garamond-regular', serif;
+    font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
     font-size: 1.2em;
 
     #logo {
@@ -290,7 +293,7 @@ header {
 #footer {
   transform: translateY(10em);
   background-color: $base_red_color;
-  font-family: 'Garamond-regular', serif;
+  font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
   font-size: 1.2em;
   padding: 1em;
 
@@ -382,20 +385,19 @@ main {
   }
 
   section {
-    font-family: 'Garamond-regular', serif;
+    font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
     font-size: 1em;
     line-height: 1.5em;
     max-width: 100%;
 
     &#show_off {
-      padding: 0.5em;
       #show_off_title {
         margin-bottom: 1.25em;
         font-size: 1.2em;
-        font-family: 'Garamond-Bold', serif;
+        font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
 
         span {
-          font-family: 'Garamond-regular', serif;
+          font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
           font-size: 1.5em;
           display: block;
           margin-bottom: 0.5em;
@@ -406,17 +408,19 @@ main {
     &#school_career {
       .timeline {
         background-image: url("../../resources/images/timeline_arrow.svg");
-        background-position: 0.5em center;
+        background-position: 1em center;
         background-repeat: no-repeat;
         min-height: 43.75em;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
-        padding: 0.5em 0.5em 0.5em 3.7em;
+        padding: 1em 1em 1em 3.7em;
+
         .timeline_item {
           border: 1px solid $white_color;
           position: relative;
-          padding: 0.5em;
+          padding: 1em;
+
           &:before {
             content: '';
             width: 1.5em;
@@ -424,8 +428,8 @@ main {
             background-color: $white_color;
             display: inline-block;
             position: absolute;
-            top: 1.9em;
-            left: -2.5em;
+            top: 2.4em;
+            left: -2em;
           }
         }
       }
@@ -433,9 +437,8 @@ main {
 
     &#hobbies {
       .hobbies_item {
-        padding: 0.5em;
         h3 {
-          font-family: 'Trajan-Regular', serif;
+          font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
           font-size: 1.2em;
           margin-bottom: 1.875em;
           background-image: url("../../resources/images/sword.svg");
@@ -444,9 +447,41 @@ main {
           text-indent: 1em;
         }
       }
+
       .hobbies_item:not(:last-child) {
         margin-bottom: 1.875em;
       }
+    }
+
+    &#skills_web {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 2em;
+
+      .skills_web_item {
+        background-color: $dark_purple_color;
+        color: $white_color;
+        padding: 2em;
+        min-height: 150px;
+        min-width: 150px;
+        &_text {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+        figure {
+          text-align: center;
+        }
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &#skills_2D {
+
     }
   }
 }
