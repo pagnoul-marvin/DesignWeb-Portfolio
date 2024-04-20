@@ -71,12 +71,32 @@ abbr:hover {
   top: 5.3em;
   width: 100vw;
   height: 100vh;
+  background-size: cover;
 }
 
 .pages_button, #cv {
   border: 1px solid #fff;
   display: inline-block;
   margin-top: 1.5em;
+  position: relative;
+}
+.pages_button:before, .pages_button:before, #cv:before, #cv:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #fff;
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  left: -16px;
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.pages_button:hover:before, .pages_button:hover:before, #cv:hover:before, #cv:hover:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  opacity: 1;
 }
 
 .pages_button, .nav_icon {
@@ -111,12 +131,24 @@ abbr:hover {
   color: #fff;
   padding: 2em;
   min-height: 150px;
-  width: 150px;
   text-align: center;
+  width: 170px;
 }
 
 .blue_background {
   background-color: #003C53;
+  color: #fff;
+  padding: 1em;
+}
+
+.orange_background {
+  background-color: #4D2C00;
+  color: #fff;
+  padding: 1em;
+}
+
+.green_background {
+  background-color: #014E00;
   color: #fff;
   padding: 1em;
 }
@@ -415,7 +447,19 @@ main section .skills_2D_flex_container .skills_2D_item, main section .skills_2D_
 }
 main section .skills_2D_flex_container .skills_2D_item:hover, main section .skills_2D_flex_container .skills_2D_item:hover, main section .skills_2D_flex_container .skills_web_item:hover, main section .skills_2D_flex_container .skills_web_item:hover, main section .skills_web_flex_container .skills_2D_item:hover, main section .skills_web_flex_container .skills_2D_item:hover, main section .skills_web_flex_container .skills_web_item:hover, main section .skills_web_flex_container .skills_web_item:hover {
   transform: scale(1.1);
-  filter: contrast(150%);
+}
+main section#phone_contact article {
+  text-align: right;
+}
+main section#phone_contact article p {
+  text-align: left;
+}
+main section#phone_contact article a {
+  padding: 0.5em;
+}
+
+.opacity {
+  filter: brightness(40%);
 }
 
 /*# sourceMappingURL=index.css.map */

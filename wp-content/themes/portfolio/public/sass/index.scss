@@ -75,12 +75,34 @@ abbr {
   top: 5.3em;
   width: 100vw;
   height: 100vh;
+  background-size: cover;
 }
 
 .pages_button, #cv {
   border: 1px solid $white_color;
   display: inline-block;
   margin-top: 1.5em;
+  position: relative;
+
+  &:before, &:before {
+    content: "";
+    position: absolute;
+    border: 3px solid $white_color;
+    top: -16px;
+    right: -16px;
+    bottom: -16px;
+    left: -16px;
+    opacity: 0;
+    transition-duration: 0.3s;
+  }
+
+  &:hover:before, &:hover:before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    opacity: 1;
+  }
 }
 
 .pages_button, .nav_icon {
@@ -115,12 +137,24 @@ abbr {
   color: $white_color;
   padding: 2em;
   min-height: 150px;
-  width: 150px;
   text-align: center;
+  width: 170px;
 }
 
 .blue_background {
   background-color: $dark_blue_color;
+  color: $white_color;
+  padding: 1em;
+}
+
+.orange_background {
+  background-color: $dark_orange_color;
+  color: $white_color;
+  padding: 1em;
+}
+
+.green_background {
+  background-color: $dark_green_color;
   color: $white_color;
   padding: 1em;
 }
@@ -487,10 +521,27 @@ main {
 
         &:hover, &:hover {
           transform: scale(1.1);
-          filter: contrast(150%);
+        }
+      }
+    }
+
+    &#phone_contact {
+      & article {
+        text-align: right;
+
+        p {
+          text-align: left;
+        }
+
+        a {
+          padding: 0.5em;
         }
       }
     }
   }
+}
+
+.opacity {
+  filter: brightness(40%);
 }
 

@@ -59,7 +59,7 @@ Template Name: Accueil
                 'link_href' => go_to_other_pages(13),
                 'link_id' => 'projects_button',
                 'link_title' => 'Aller vers la page Mes projets',
-                'link_text' => 'Mes projets'
+                'link_text' => 'Mes projets/expériences'
             ]);
 
             component('home.div', [
