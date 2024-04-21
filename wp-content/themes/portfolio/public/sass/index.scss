@@ -156,11 +156,18 @@ abbr {
 .green_background {
   background-color: $dark_green_color;
   color: $white_color;
-  padding: 1em;
+  padding: 2em;
+  min-height: 150px;
+  text-align: center;
+  width: 170px;
 }
 
 .align_left_text {
   text-align: left;
+}
+
+.opacity {
+  filter: brightness(40%);
 }
 
 #rome_decoration {
@@ -504,25 +511,13 @@ main {
       }
     }
 
-    .skills_2D_flex_container, .skills_web_flex_container {
+    .flex_container {
       font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
       font-size: 1.2em;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       row-gap: 2em;
-
-      .skills_2D_item_text, .skills_web_item_text {
-        margin-bottom: 1em;
-      }
-
-      .skills_2D_item, .skills_web_item {
-        transition: 0.3s ease-in-out;
-
-        &:hover, &:hover {
-          transform: scale(1.1);
-        }
-      }
     }
 
     &#phone_contact {
@@ -538,10 +533,31 @@ main {
         }
       }
     }
-  }
-}
 
-.opacity {
-  filter: brightness(40%);
+    &#project, &#experience {
+      article{
+        p{
+          a {
+            text-decoration: none;
+            img {
+              margin-top: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .skills_2D_item_text, .skills_web_item_text {
+      margin-bottom: 1em;
+    }
+
+    .skills_2D_item, .skills_web_item, .project_item, .experience_item {
+      transition: 0.3s ease-in-out;
+
+      &:hover, &:hover, &:hover, &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 }
 

@@ -150,11 +150,18 @@ abbr:hover {
 .green_background {
   background-color: #014E00;
   color: #fff;
-  padding: 1em;
+  padding: 2em;
+  min-height: 150px;
+  text-align: center;
+  width: 170px;
 }
 
 .align_left_text {
   text-align: left;
+}
+
+.opacity {
+  filter: brightness(40%);
 }
 
 #rome_decoration {
@@ -431,22 +438,13 @@ main section#hobbies .hobbies_item h3 {
 main section#hobbies .hobbies_item:not(:last-child) {
   margin-bottom: 1.875em;
 }
-main section .skills_2D_flex_container, main section .skills_web_flex_container {
+main section .flex_container {
   font-family: "Garamond-Bold", "Granjon-Bold", serif;
   font-size: 1.2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 2em;
-}
-main section .skills_2D_flex_container .skills_2D_item_text, main section .skills_2D_flex_container .skills_web_item_text, main section .skills_web_flex_container .skills_2D_item_text, main section .skills_web_flex_container .skills_web_item_text {
-  margin-bottom: 1em;
-}
-main section .skills_2D_flex_container .skills_2D_item, main section .skills_2D_flex_container .skills_web_item, main section .skills_web_flex_container .skills_2D_item, main section .skills_web_flex_container .skills_web_item {
-  transition: 0.3s ease-in-out;
-}
-main section .skills_2D_flex_container .skills_2D_item:hover, main section .skills_2D_flex_container .skills_2D_item:hover, main section .skills_2D_flex_container .skills_web_item:hover, main section .skills_2D_flex_container .skills_web_item:hover, main section .skills_web_flex_container .skills_2D_item:hover, main section .skills_web_flex_container .skills_2D_item:hover, main section .skills_web_flex_container .skills_web_item:hover, main section .skills_web_flex_container .skills_web_item:hover {
-  transform: scale(1.1);
 }
 main section#phone_contact article {
   text-align: right;
@@ -457,9 +455,20 @@ main section#phone_contact article p {
 main section#phone_contact article a {
   padding: 0.5em;
 }
-
-.opacity {
-  filter: brightness(40%);
+main section#project article p a, main section#experience article p a {
+  text-decoration: none;
+}
+main section#project article p a img, main section#experience article p a img {
+  margin-top: 1em;
+}
+main section .skills_2D_item_text, main section .skills_web_item_text {
+  margin-bottom: 1em;
+}
+main section .skills_2D_item, main section .skills_web_item, main section .project_item, main section .experience_item {
+  transition: 0.3s ease-in-out;
+}
+main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=index.css.map */
