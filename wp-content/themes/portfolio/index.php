@@ -51,7 +51,8 @@ Template Name: Accueil
                 'link_href' =>  go_to_other_pages(11),
                 'link_id' => 'skills_button',
                 'link_title' => 'Aller vers la page Mes compétences',
-                'link_text' => 'Mes compétences'
+                'link_text' => 'Mes compétences',
+                'link_class' => ''
             ]);
 
             component('home.div', [
@@ -59,7 +60,8 @@ Template Name: Accueil
                 'link_href' => go_to_other_pages(13),
                 'link_id' => 'projects_button',
                 'link_title' => 'Aller vers la page Mes projets',
-                'link_text' => 'Mes projets/expériences'
+                'link_text' => 'Mes projets/expériences',
+                'link_class' => ''
             ]);
 
             component('home.div', [
@@ -67,7 +69,8 @@ Template Name: Accueil
                 'link_href' => go_to_other_pages(15),
                 'link_id' => 'contact_button',
                 'link_title' => 'Aller vers la page Me contacter',
-                'link_text' => 'Me contacter'
+                'link_text' => 'Me contacter',
+                'link_class' => ''
             ]);
             ?>
 
@@ -87,7 +90,8 @@ Template Name: Accueil
                 'link_href' => 'https://marvinpagnoul.be',
                 'link_id' => 'cv',
                 'link_title' => 'Aller visiter mon CV',
-                'link_text' => 'Visiter le site de mon CV'
+                'link_text' => 'Visiter le site de mon CV',
+                'link_class' => ''
             ]);
             ?>
 

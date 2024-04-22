@@ -114,6 +114,16 @@ document.querySelectorAll('.flex_container article').forEach(articleElt => {
 });
 
 
+document.querySelectorAll('.pages_button').forEach(buttonElt => {
+    buttonElt.addEventListener('mouseenter', (e) => {
+        e.currentTarget.classList.add('animate__animated', 'animate__pulse', 'animate__infinite');
+    });
+    buttonElt.addEventListener('mouseout', (e) => {
+        e.currentTarget.classList.remove('animate__animated', 'animate__pulse', 'animate__infinite');
+    });
+});
+
+
 
 
 

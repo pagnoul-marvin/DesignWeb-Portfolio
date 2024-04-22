@@ -11,6 +11,7 @@ Template Name: Project and experience item
 ]); ?>
 
     <main>
-        <?php get_the_content(); ?>
+        <?= get_the_content(); ?>
+        <?php component('global.contact_me'); ?>
     </main>
 <?php get_footer(); ?>

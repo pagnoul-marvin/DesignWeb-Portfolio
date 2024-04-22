@@ -1,3 +1,4 @@
+@import "../../../../../node_modules/animate.css/animate.css";
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;
@@ -112,6 +113,10 @@ abbr:hover {
   text-align: center;
 }
 
+.animate__animated.animate__pulse {
+  --animate__infinite: infinite;
+}
+
 .nav_icon {
   background-position: left center;
   text-indent: 1.5em;
@@ -152,9 +157,7 @@ abbr:hover {
 .green_background {
   background-color: #014E00;
   color: #fff;
-  padding: 2em;
-  text-align: center;
-  width: 170px;
+  padding: 1em;
 }
 
 .align_left_text {
@@ -201,7 +204,7 @@ abbr:hover {
   background-image: url("../../resources/images/projects.svg");
 }
 
-#contact_button, #main_nav_container li:last-child a, #footer_container_pages_container li:last-child a {
+#contact_button, #main_nav_container li:last-child a, #footer_container_pages_container li:last-child a, #contact_me a {
   background-image: url("../../resources/images/contact.svg");
 }
 
@@ -456,6 +459,11 @@ main section#phone_contact article p {
 main section#phone_contact article a {
   padding: 0.5em;
 }
+main section#project article, main section#experience article {
+  padding: 2em;
+  text-align: center;
+  width: 170px;
+}
 main section#project article img, main section#experience article img {
   margin-top: 1em;
 }
@@ -467,6 +475,36 @@ main section .skills_2D_item, main section .skills_web_item, main section .proje
 }
 main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover {
   transform: scale(1.1);
+}
+main section#presentation div {
+  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: right;
+}
+main section#presentation div p {
+  text-align: left;
+}
+main section#presentation div a {
+  padding: 0.5em;
+}
+main section#presentation, main section#language_chosen, main section#conclusion {
+  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+main section#contact_me {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+main section#contact_me p:first-child {
+  font-family: "Garamond-regular", "Granjon-Regular", serif;
+}
+main section#contact_me p:nth-child(2) {
+  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+  font-size: 1.5em;
+  margin: 0.5em 0 1em 0;
 }
 
 /*# sourceMappingURL=index.css.map */

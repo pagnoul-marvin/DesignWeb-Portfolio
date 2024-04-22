@@ -1,4 +1,6 @@
+//sass --watch index.scss:../css/index.css
 @import "variables";
+@import "../../../../../node_modules/animate.css/animate.css";
 
 .hidden {
   overflow: hidden !important;
@@ -118,6 +120,10 @@ abbr {
   text-align: center;
 }
 
+.animate__animated.animate__pulse {
+  --animate__infinite: infinite;
+}
+
 .nav_icon {
   background-position: left center;
   text-indent: 1.5em;
@@ -158,9 +164,7 @@ abbr {
 .green_background {
   background-color: $dark_green_color;
   color: $white_color;
-  padding: 2em;
-  text-align: center;
-  width: 170px;
+  padding: 1em;
 }
 
 .align_left_text {
@@ -207,7 +211,7 @@ abbr {
   background-image: url("../../resources/images/projects.svg");
 }
 
-#contact_button, #main_nav_container li:last-child a, #footer_container_pages_container li:last-child a {
+#contact_button, #main_nav_container li:last-child a, #footer_container_pages_container li:last-child a, #contact_me a {
   background-image: url("../../resources/images/contact.svg");
 }
 
@@ -537,6 +541,10 @@ main {
 
     &#project, &#experience {
       article {
+        padding: 2em;
+        text-align: center;
+        width: 170px;
+
         img {
           margin-top: 1em;
         }
@@ -552,6 +560,45 @@ main {
 
       &:hover, &:hover, &:hover, &:hover {
         transform: scale(1.1);
+      }
+    }
+
+    &#presentation {
+      div {
+        font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        text-align: right;
+
+        p {
+          text-align: left;
+        }
+
+        a {
+          padding: 0.5em;
+        }
+      }
+    }
+
+    &#presentation, &#language_chosen, &#conclusion {
+      font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    &#contact_me {
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1.5em;
+
+      & p:first-child {
+        font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+      }
+
+      & p:nth-child(2) {
+        font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
+        font-size: 1.5em;
+        margin: 0.5em 0 1em 0;
       }
     }
   }
