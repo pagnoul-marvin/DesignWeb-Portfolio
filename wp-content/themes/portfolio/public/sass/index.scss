@@ -8,18 +8,20 @@
 }
 
 .no_text_decoration {
-  text-decoration: none;
+  text-decoration: underline transparent;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: underline $white_color;
   }
 }
 
 abbr {
-  text-decoration: none;
+  text-decoration: underline dotted transparent;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    text-decoration: underline dotted;
+    text-decoration: underline dotted $white_color;
   }
 }
 
@@ -157,7 +159,6 @@ abbr {
   background-color: $dark_green_color;
   color: $white_color;
   padding: 2em;
-  min-height: 150px;
   text-align: center;
   width: 170px;
 }
@@ -535,14 +536,9 @@ main {
     }
 
     &#project, &#experience {
-      article{
-        p{
-          a {
-            text-decoration: none;
-            img {
-              margin-top: 1em;
-            }
-          }
+      article {
+        img {
+          margin-top: 1em;
         }
       }
     }
@@ -560,4 +556,3 @@ main {
     }
   }
 }
-

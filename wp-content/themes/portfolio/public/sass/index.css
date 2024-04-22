@@ -6,17 +6,19 @@
 }
 
 .no_text_decoration {
-  text-decoration: none;
+  text-decoration: underline transparent;
+  transition: all 0.3s ease-in-out;
 }
 .no_text_decoration:hover {
-  text-decoration: underline;
+  text-decoration: underline #fff;
 }
 
 abbr {
-  text-decoration: none;
+  text-decoration: underline dotted transparent;
+  transition: all 0.3s ease-in-out;
 }
 abbr:hover {
-  text-decoration: underline dotted;
+  text-decoration: underline dotted #fff;
 }
 
 .main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
@@ -151,7 +153,6 @@ abbr:hover {
   background-color: #014E00;
   color: #fff;
   padding: 2em;
-  min-height: 150px;
   text-align: center;
   width: 170px;
 }
@@ -455,10 +456,7 @@ main section#phone_contact article p {
 main section#phone_contact article a {
   padding: 0.5em;
 }
-main section#project article p a, main section#experience article p a {
-  text-decoration: none;
-}
-main section#project article p a img, main section#experience article p a img {
+main section#project article img, main section#experience article img {
   margin-top: 1em;
 }
 main section .skills_2D_item_text, main section .skills_web_item_text {
