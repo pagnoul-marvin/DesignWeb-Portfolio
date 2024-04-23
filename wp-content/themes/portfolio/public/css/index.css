@@ -492,16 +492,16 @@ main section .skills_2D_item, main section .skills_web_item, main section .proje
 main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover {
   transform: scale(1.1);
 }
-main section#cv_presentation div {
+main section#cv_presentation div, main section#instagram_presentation div {
   font-family: "Garamond-regular", "Granjon-Regular", serif;
   font-size: 1em;
   line-height: 1.5em;
   text-align: right;
 }
-main section#cv_presentation div p {
+main section#cv_presentation div p, main section#instagram_presentation div p {
   text-align: left;
 }
-main section#cv_presentation div a {
+main section#cv_presentation div a, main section#instagram_presentation div a {
   padding: 0.5em;
 }
 main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned {
