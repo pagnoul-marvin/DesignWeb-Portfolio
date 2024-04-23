@@ -108,12 +108,14 @@ function give_page_main_title_class() :string
         $main_title_class .= 'about_me_main_title_class';
     } elseif ($page_id === 15) {
         $main_title_class .= 'contact_main_title_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 13) {
         $main_title_class .= 'projects_main_title_class';
     } elseif ($page_id === 11) {
         $main_title_class .= 'skills_main_title_class';
     } elseif ($page_id === 6) {
         $main_title_class .= 'main_title_class';
+    } elseif ($page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+        $main_title_class .= 'projects_item_main_title_class';
     }
 
     return $main_title_class;

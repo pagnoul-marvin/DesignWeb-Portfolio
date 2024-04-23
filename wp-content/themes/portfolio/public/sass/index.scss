@@ -27,7 +27,7 @@ abbr {
   }
 }
 
-.main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
+.main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_item_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
   color: $white_color;
   display: inline-block;
   padding: 1em;
@@ -47,7 +47,7 @@ abbr {
   background-color: $dark_orange_color;
 }
 
-.projects_main_title_class, .projects_second_title_class {
+.projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class, {
   background-color: $dark_green_color;
 }
 
@@ -55,7 +55,7 @@ abbr {
   background-color: $dark_purple_color;
 }
 
-.main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .skills_main_title_class, {
+.main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .projects_item_main_title_class, .skills_main_title_class, {
   font-size: 2.3em;
   margin: 3.75em 0 3.75em 0.5em;
   max-width: 7.7em;
@@ -65,6 +65,10 @@ abbr {
   font-size: 1.7em;
   margin-bottom: 1.875em;
   line-height: 1.5em;
+}
+
+.projects_item_main_title_class {
+  margin-bottom: 1em;
 }
 
 .section {
@@ -213,6 +217,20 @@ abbr {
 
 #contact_button, #main_nav_container li:last-child a, #footer_container_pages_container li:last-child a, #contact_me a {
   background-image: url("../../resources/images/contact.svg");
+}
+
+#go_back {
+  a {
+    font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+    font-size: 1em;
+    margin-top: 0;
+    width: initial;
+    background-image: url("../../resources/images/button_arrow.svg");
+    background-position: 0 center;
+    padding-left: 5em;
+    padding-right: 0.5em;
+    background-repeat: no-repeat;
+  }
 }
 
 a {
@@ -413,7 +431,7 @@ header {
 }
 
 main {
-  padding: 1em;
+  padding: 0 1em;
 
   #introduction {
     &_presentation {
@@ -563,7 +581,7 @@ main {
       }
     }
 
-    &#presentation {
+    &#cv_presentation {
       div {
         font-family: 'Garamond-regular', 'Granjon-Regular', serif;
         font-size: 1em;
@@ -580,7 +598,7 @@ main {
       }
     }
 
-    &#presentation, &#language_chosen, &#conclusion {
+    &#cv_presentation, &#cv_language_chosen, &#cv_conclusion_and_comparison, &#jiri_presentation, &#jiri_learned {
       font-family: 'Garamond-regular', 'Granjon-Regular', serif;
       font-size: 1em;
       line-height: 1.5em;
@@ -599,6 +617,49 @@ main {
         font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
         font-size: 1.5em;
         margin: 0.5em 0 1em 0;
+      }
+    }
+
+    &#cv_conclusion_and_comparison {
+      p {
+        margin-bottom: 1.5em;
+      }
+
+      figure:nth-child(1) {
+        margin-bottom: 3em;
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -20%;
+          left: 45%;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 20px solid $white_color;
+        }
+      }
+    }
+
+    &#jiri_learned {
+      p {
+        margin-bottom: 1em;
+      }
+
+      .learned_list {
+        &_item {
+          margin-left: 1em;
+          list-style: url("../../resources/images/small_sword.svg");
+          transition: transform 0.3s;
+
+          &:not(:last-child) {
+            margin-bottom: 1em;
+          }
+
+          &:hover {
+            transform: scale(1.1) translateX(10%);
+          }
+        }
       }
     }
   }

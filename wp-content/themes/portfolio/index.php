@@ -29,7 +29,7 @@ Template Name: Accueil
 
                     <p class="align_left_text">Pour commencer en savoir plus sur moi, plongez dans l&rsquo;Egypte antique&nbsp;:</p>
 
-                    <a id="introduction_presentation_text_link" class="pages_button no_text_decoration" title="Se diriger vers la page À propos de moi" href="<?php go_to_other_pages(9) ?>">&Agrave; propos de moi</a>
+                    <a id="introduction_presentation_text_link" class="pages_button no_text_decoration" title="Se diriger vers la page À propos de moi" href="<?= go_to_other_pages(9) ?>">&Agrave; propos de moi</a>
 
                 </div>
 

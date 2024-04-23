@@ -22,7 +22,7 @@ abbr:hover {
   text-decoration: underline dotted #fff;
 }
 
-.main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
+.main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_item_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
   color: #fff;
   display: inline-block;
   padding: 1em;
@@ -42,7 +42,7 @@ abbr:hover {
   background-color: #4D2C00;
 }
 
-.projects_main_title_class, .projects_second_title_class {
+.projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class {
   background-color: #014E00;
 }
 
@@ -50,7 +50,7 @@ abbr:hover {
   background-color: #490055;
 }
 
-.main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .skills_main_title_class {
+.main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .projects_item_main_title_class, .skills_main_title_class {
   font-size: 2.3em;
   margin: 3.75em 0 3.75em 0.5em;
   max-width: 7.7em;
@@ -60,6 +60,10 @@ abbr:hover {
   font-size: 1.7em;
   margin-bottom: 1.875em;
   line-height: 1.5em;
+}
+
+.projects_item_main_title_class {
+  margin-bottom: 1em;
 }
 
 .section {
@@ -206,6 +210,18 @@ abbr:hover {
 
 #contact_button, #main_nav_container li:last-child a, #footer_container_pages_container li:last-child a, #contact_me a {
   background-image: url("../../resources/images/contact.svg");
+}
+
+#go_back a {
+  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-size: 1em;
+  margin-top: 0;
+  width: initial;
+  background-image: url("../../resources/images/button_arrow.svg");
+  background-position: 0 center;
+  padding-left: 5em;
+  padding-right: 0.5em;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -370,7 +386,7 @@ header #main_nav label[for=burger_menu] .line:after {
 }
 
 main {
-  padding: 1em;
+  padding: 0 1em;
 }
 main #introduction_presentation img {
   width: 100%;
@@ -476,19 +492,19 @@ main section .skills_2D_item, main section .skills_web_item, main section .proje
 main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover {
   transform: scale(1.1);
 }
-main section#presentation div {
+main section#cv_presentation div {
   font-family: "Garamond-regular", "Granjon-Regular", serif;
   font-size: 1em;
   line-height: 1.5em;
   text-align: right;
 }
-main section#presentation div p {
+main section#cv_presentation div p {
   text-align: left;
 }
-main section#presentation div a {
+main section#cv_presentation div a {
   padding: 0.5em;
 }
-main section#presentation, main section#language_chosen, main section#conclusion {
+main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned {
   font-family: "Garamond-regular", "Granjon-Regular", serif;
   font-size: 1em;
   line-height: 1.5em;
@@ -505,6 +521,36 @@ main section#contact_me p:nth-child(2) {
   font-family: "Garamond-Bold", "Granjon-Bold", serif;
   font-size: 1.5em;
   margin: 0.5em 0 1em 0;
+}
+main section#cv_conclusion_and_comparison p {
+  margin-bottom: 1.5em;
+}
+main section#cv_conclusion_and_comparison figure:nth-child(1) {
+  margin-bottom: 3em;
+  position: relative;
+}
+main section#cv_conclusion_and_comparison figure:nth-child(1):after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 45%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #fff;
+}
+main section#jiri_learned p {
+  margin-bottom: 1em;
+}
+main section#jiri_learned .learned_list_item {
+  margin-left: 1em;
+  list-style: url("../../resources/images/small_sword.svg");
+  transition: transform 0.3s;
+}
+main section#jiri_learned .learned_list_item:not(:last-child) {
+  margin-bottom: 1em;
+}
+main section#jiri_learned .learned_list_item:hover {
+  transform: scale(1.1) translateX(10%);
 }
 
 /*# sourceMappingURL=index.css.map */
