@@ -14,10 +14,11 @@
     <script type="module" src="<?= dw_asset('js/main.js'); ?>"></script>
     <?php wp_head(); ?>
 </head>
-<body>
+<body id="landing">
     <?php component('global.main_title', [
         'text' => get_the_title()
     ]); ?>
+
     <header class="<?php echo give_page_header_class(); ?>">
         <nav id="main_nav">
             <h2 class="hidden">Navigation principale</h2>
@@ -39,3 +40,8 @@
             </ul>
         </nav>
     </header>
+
+    <?php component('global.go_up_button', [
+        'link_href' => '#landing',
+        'link_text' => 'Revenir en haut'
+    ]); ?>

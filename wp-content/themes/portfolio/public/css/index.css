@@ -14,14 +14,6 @@
   text-decoration: underline #fff;
 }
 
-abbr {
-  text-decoration: underline dotted transparent;
-  transition: all 0.3s ease-in-out;
-}
-abbr:hover {
-  text-decoration: underline dotted #fff;
-}
-
 .main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_item_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
   color: #fff;
   display: inline-block;
@@ -172,6 +164,21 @@ abbr:hover {
   filter: brightness(40%);
 }
 
+.list_styled {
+  margin-top: 1em;
+}
+.list_styled_item {
+  margin-left: 1em;
+  list-style: url("../../resources/images/small_sword.svg");
+  transition: transform 0.3s;
+}
+.list_styled_item:not(:last-child) {
+  margin-bottom: 1em;
+}
+.list_styled_item:hover {
+  transform: scale(1.1) translateX(10%);
+}
+
 #rome_decoration {
   background-image: url("../../resources/images/decors/decors_rome.svg");
 }
@@ -212,20 +219,48 @@ abbr:hover {
   background-image: url("../../resources/images/contact.svg");
 }
 
-#go_back a {
+#go_back_button {
   font-family: "Garamond-regular", "Granjon-Regular", serif;
   font-size: 1em;
   margin-top: 0;
   width: initial;
-  background-image: url("../../resources/images/button_arrow.svg");
+  background-image: url("../../resources/images/go_back_button_arrow.svg");
   background-position: 0 center;
   padding-left: 5em;
   padding-right: 0.5em;
   background-repeat: no-repeat;
 }
 
+#go_up_button {
+  background-color: #014E00;
+  background-image: url("../../resources/images/go_up_button_arrow.svg");
+  background-position: center;
+  width: 30px;
+  height: 60px;
+  text-indent: 1000000px;
+  text-wrap: nowrap;
+  padding: 1em;
+  margin: 0;
+  right: 1em;
+  bottom: 1em;
+  z-index: 2;
+  position: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #fff;
+}
+
+abbr {
+  text-decoration: underline dotted transparent;
+  transition: all 0.3s ease-in-out;
+}
+abbr:hover {
+  text-decoration: underline dotted #fff;
 }
 
 header {
@@ -504,7 +539,7 @@ main section#cv_presentation div p, main section#instagram_presentation div p {
 main section#cv_presentation div a, main section#instagram_presentation div a {
   padding: 0.5em;
 }
-main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned {
+main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned, main section#instagram_presentation, main section#instagram_creations {
   font-family: "Garamond-regular", "Granjon-Regular", serif;
   font-size: 1em;
   line-height: 1.5em;
@@ -538,19 +573,11 @@ main section#cv_conclusion_and_comparison figure:nth-child(1):after {
   border-right: 10px solid transparent;
   border-top: 20px solid #fff;
 }
-main section#jiri_learned p {
+main section#instagram_creations .creation:not(:last-child) {
   margin-bottom: 1em;
 }
-main section#jiri_learned .learned_list_item {
-  margin-left: 1em;
-  list-style: url("../../resources/images/small_sword.svg");
-  transition: transform 0.3s;
-}
-main section#jiri_learned .learned_list_item:not(:last-child) {
-  margin-bottom: 1em;
-}
-main section#jiri_learned .learned_list_item:hover {
-  transform: scale(1.1) translateX(10%);
+main section#instagram_creations .creation_information {
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=index.css.map */

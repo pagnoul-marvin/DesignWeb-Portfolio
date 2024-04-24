@@ -18,15 +18,6 @@
   }
 }
 
-abbr {
-  text-decoration: underline dotted transparent;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    text-decoration: underline dotted $white_color;
-  }
-}
-
 .main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_item_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
   color: $white_color;
   display: inline-block;
@@ -179,6 +170,24 @@ abbr {
   filter: brightness(40%);
 }
 
+.list_styled {
+  margin-top: 1em;
+
+  &_item {
+    margin-left: 1em;
+    list-style: url("../../resources/images/small_sword.svg");
+    transition: transform 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    &:hover {
+      transform: scale(1.1) translateX(10%);
+    }
+  }
+}
+
 #rome_decoration {
   background-image: url("../../resources/images/decors/decors_rome.svg");
 }
@@ -220,12 +229,12 @@ abbr {
 }
 
 #go_back {
-  a {
+  &_button {
     font-family: 'Garamond-regular', 'Granjon-Regular', serif;
     font-size: 1em;
     margin-top: 0;
     width: initial;
-    background-image: url("../../resources/images/button_arrow.svg");
+    background-image: url("../../resources/images/go_back_button_arrow.svg");
     background-position: 0 center;
     padding-left: 5em;
     padding-right: 0.5em;
@@ -233,8 +242,39 @@ abbr {
   }
 }
 
+#go_up {
+  &_button {
+    background-color: $dark_green_color;
+    background-image: url("../../resources/images/go_up_button_arrow.svg");
+    background-position: center;
+    width: 30px;
+    height: 60px;
+    text-indent: 1000000px;
+    text-wrap: nowrap;
+    padding: 1em;
+    margin: 0;
+    right: 1em;
+    bottom: 1em;
+    z-index: 2;
+    position: fixed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: $white_color;
+}
+
+abbr {
+  text-decoration: underline dotted transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    text-decoration: underline dotted $white_color;
+  }
 }
 
 header {
@@ -598,7 +638,7 @@ main {
       }
     }
 
-    &#cv_presentation, &#cv_language_chosen, &#cv_conclusion_and_comparison, &#jiri_presentation, &#jiri_learned {
+    &#cv_presentation, &#cv_language_chosen, &#cv_conclusion_and_comparison, &#jiri_presentation, &#jiri_learned, &#instagram_presentation, &#instagram_creations {
       font-family: 'Garamond-regular', 'Granjon-Regular', serif;
       font-size: 1em;
       line-height: 1.5em;
@@ -641,24 +681,14 @@ main {
       }
     }
 
-    &#jiri_learned {
-      p {
+    &#instagram_creations {
+      .creation:not(:last-child) {
         margin-bottom: 1em;
       }
 
-      .learned_list {
-        &_item {
-          margin-left: 1em;
-          list-style: url("../../resources/images/small_sword.svg");
-          transition: transform 0.3s;
-
-          &:not(:last-child) {
-            margin-bottom: 1em;
-          }
-
-          &:hover {
-            transform: scale(1.1) translateX(10%);
-          }
+      .creation {
+        &_information {
+          margin-top: 1em;
         }
       }
     }
