@@ -43,5 +43,6 @@
 
     <?php component('global.go_up_button', [
         'link_href' => '#landing',
-        'link_text' => 'Revenir en haut'
+        'link_text' => 'Revenir en haut',
+        'link_class' => give_go_up_button_class()
     ]); ?>

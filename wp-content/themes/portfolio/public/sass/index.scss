@@ -30,19 +30,19 @@
   background-color: $dark_red_color;
 }
 
-.about_me_main_title_class, .about_me_second_title_class {
+.about_me_main_title_class, .about_me_second_title_class, #go_up_button.about_me_go_up_button_class {
   background-color: $dark_blue_color;
 }
 
-.contact_main_title_class, .contact_second_title_class {
+.contact_main_title_class, .contact_second_title_class, #go_up_button.contact_go_up_button_class {
   background-color: $dark_orange_color;
 }
 
-.projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class, {
+.projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class, #go_up_button.projects_go_up_button_class {
   background-color: $dark_green_color;
 }
 
-.skills_main_title_class, .skills_second_title_class {
+.skills_main_title_class, .skills_second_title_class, #go_up_button.skills_go_up_button_class {
   background-color: $dark_purple_color;
 }
 
@@ -244,7 +244,7 @@
 
 #go_up {
   &_button {
-    background-color: $dark_green_color;
+    background-color: $dark_red_color;
     background-image: url("../../resources/images/go_up_button_arrow.svg");
     background-position: center;
     width: 30px;
@@ -275,6 +275,10 @@ abbr {
   &:hover {
     text-decoration: underline dotted $white_color;
   }
+}
+
+h1, h2 {
+  background-color: $dark_red_color;
 }
 
 header {
@@ -599,15 +603,47 @@ main {
 
     &#project, &#experience {
       article {
-        padding: 2em;
         text-align: center;
         width: 170px;
 
-        img {
-          margin-top: 1em;
+        a {
+          background-position: center 3em;
+          display: block;
+          height: 200px;
+          background-repeat: no-repeat;
+          background-size: contain;
         }
       }
     }
+
+    &#project {
+      article:first-child {
+        a {
+          background-image: url("../../resources/images/logo_du_cv.svg");
+        }
+      }
+
+      article:last-child {
+        a {
+          background-image: url("../../resources/images/jiri.svg");
+        }
+      }
+    }
+
+    &#experience {
+      article:first-child {
+        a {
+          background-image: url("../../resources/images/instagram_account.svg");
+        }
+      }
+
+      article:last-child {
+        a {
+          background-image: url("../../resources/images/logo_kperform.svg");
+        }
+      }
+    }
+
 
     .skills_2D_item_text, .skills_web_item_text {
       margin-bottom: 1em;

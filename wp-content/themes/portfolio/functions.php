@@ -159,3 +159,22 @@ function give_page_main_nav_container_class() :string
 
     return $main_nav_container_class;
 }
+
+function give_go_up_button_class() :string
+{
+    $page_id = get_the_ID();
+
+    $go_up_button_class = '';
+
+    if ($page_id === 9) {
+        $go_up_button_class .= 'about_me_go_up_button_class';
+    } elseif ($page_id === 15) {
+        $go_up_button_class .= 'contact_go_up_button_class';
+    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+        $go_up_button_class .= 'projects_go_up_button_class';
+    } elseif ($page_id === 11) {
+        $go_up_button_class .= 'skills_go_up_button_class';
+    }
+
+    return $go_up_button_class;
+}

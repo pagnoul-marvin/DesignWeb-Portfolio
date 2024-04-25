@@ -26,19 +26,19 @@
   background-color: #5E0101;
 }
 
-.about_me_main_title_class, .about_me_second_title_class {
+.about_me_main_title_class, .about_me_second_title_class, #go_up_button.about_me_go_up_button_class {
   background-color: #003C53;
 }
 
-.contact_main_title_class, .contact_second_title_class {
+.contact_main_title_class, .contact_second_title_class, #go_up_button.contact_go_up_button_class {
   background-color: #4D2C00;
 }
 
-.projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class {
+.projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class, #go_up_button.projects_go_up_button_class {
   background-color: #014E00;
 }
 
-.skills_main_title_class, .skills_second_title_class {
+.skills_main_title_class, .skills_second_title_class, #go_up_button.skills_go_up_button_class {
   background-color: #490055;
 }
 
@@ -232,7 +232,7 @@
 }
 
 #go_up_button {
-  background-color: #014E00;
+  background-color: #5E0101;
   background-image: url("../../resources/images/go_up_button_arrow.svg");
   background-position: center;
   width: 30px;
@@ -261,6 +261,10 @@ abbr {
 }
 abbr:hover {
   text-decoration: underline dotted #fff;
+}
+
+h1, h2 {
+  background-color: #5E0101;
 }
 
 header {
@@ -511,12 +515,27 @@ main section#phone_contact article a {
   padding: 0.5em;
 }
 main section#project article, main section#experience article {
-  padding: 2em;
   text-align: center;
   width: 170px;
 }
-main section#project article img, main section#experience article img {
-  margin-top: 1em;
+main section#project article a, main section#experience article a {
+  background-position: center 3em;
+  display: block;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+main section#project article:first-child a {
+  background-image: url("../../resources/images/logo_du_cv.svg");
+}
+main section#project article:last-child a {
+  background-image: url("../../resources/images/jiri.svg");
+}
+main section#experience article:first-child a {
+  background-image: url("../../resources/images/instagram_account.svg");
+}
+main section#experience article:last-child a {
+  background-image: url("../../resources/images/logo_kperform.svg");
 }
 main section .skills_2D_item_text, main section .skills_web_item_text {
   margin-bottom: 1em;
