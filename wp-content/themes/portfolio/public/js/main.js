@@ -124,7 +124,16 @@ document.querySelectorAll('.pages_button').forEach(buttonElt => {
 });
 
 
+let timeToReAppear;
+window.addEventListener('scroll', () => {
+    document.getElementById('go_up').classList.add('delayed_visibility');
 
+    clearTimeout(timeToReAppear);
+
+    timeToReAppear = setTimeout(function () {
+        document.getElementById('go_up').classList.remove('delayed_visibility');
+    }, 300);
+});
 
 
 

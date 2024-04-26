@@ -23,23 +23,23 @@
 }
 
 .main_title_class, .second_title_class {
-  background-color: #5E0101;
+  background-color: #700000;
 }
 
 .about_me_main_title_class, .about_me_second_title_class, #go_up_button.about_me_go_up_button_class {
-  background-color: #003C53;
+  background-color: #00626F;
 }
 
 .contact_main_title_class, .contact_second_title_class, #go_up_button.contact_go_up_button_class {
-  background-color: #4D2C00;
+  background-color: #704100;
 }
 
 .projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class, #go_up_button.projects_go_up_button_class {
-  background-color: #014E00;
+  background-color: #007002;
 }
 
 .skills_main_title_class, .skills_second_title_class, #go_up_button.skills_go_up_button_class {
-  background-color: #490055;
+  background-color: #700069;
 }
 
 .main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .projects_item_main_title_class, .skills_main_title_class {
@@ -120,7 +120,7 @@
 }
 
 .red_background {
-  background-color: #5E0101;
+  background-color: #330000;
   text-align: right;
   padding: 1em;
   line-height: 1.5em;
@@ -130,7 +130,7 @@
 }
 
 .purple_background {
-  background-color: #490055;
+  background-color: #310033;
   color: #fff;
   padding: 2em;
   min-height: 150px;
@@ -139,19 +139,19 @@
 }
 
 .blue_background {
-  background-color: #003C53;
+  background-color: #003133;
   color: #fff;
   padding: 1em;
 }
 
 .orange_background {
-  background-color: #4D2C00;
+  background-color: #331F00;
   color: #fff;
   padding: 1em;
 }
 
 .green_background {
-  background-color: #014E00;
+  background-color: #013400;
   color: #fff;
   padding: 1em;
 }
@@ -170,13 +170,16 @@
 .list_styled_item {
   margin-left: 1em;
   list-style: url("../../resources/images/small_sword.svg");
-  transition: transform 0.3s;
 }
 .list_styled_item:not(:last-child) {
   margin-bottom: 1em;
 }
-.list_styled_item:hover {
-  transform: scale(1.1) translateX(10%);
+
+#go_up.delayed_visibility {
+  visibility: hidden;
+}
+#go_up.delayed_visibility:hover {
+  visibility: visible;
 }
 
 #rome_decoration {
@@ -219,6 +222,9 @@
   background-image: url("../../resources/images/contact.svg");
 }
 
+#go_back {
+  visibility: visible;
+}
 #go_back_button {
   font-family: "Garamond-regular", "Granjon-Regular", serif;
   font-size: 1em;
@@ -231,8 +237,11 @@
   background-repeat: no-repeat;
 }
 
+#go_up {
+  visibility: visible;
+}
 #go_up_button {
-  background-color: #5E0101;
+  background-color: #330000;
   background-image: url("../../resources/images/go_up_button_arrow.svg");
   background-position: center;
   width: 30px;
@@ -264,7 +273,7 @@ abbr:hover {
 }
 
 h1, h2 {
-  background-color: #5E0101;
+  background-color: #330000;
 }
 
 header {
@@ -272,19 +281,19 @@ header {
   width: 100%;
   top: 0;
   z-index: 1;
-  background-color: #B50000;
+  background-color: #700000;
 }
 header.about_me_header_class {
-  background-color: #0081B4;
+  background-color: #00626F;
 }
 header.contact_header_class {
-  background-color: #C37400;
+  background-color: #704100;
 }
 header.projects_header_class {
-  background-color: #02A900;
+  background-color: #007002;
 }
 header.skills_header_class {
-  background-color: #A000BA;
+  background-color: #700069;
 }
 header #main_nav {
   padding: 1em;
@@ -311,8 +320,8 @@ header #main_nav #burger_menu {
   opacity: 0;
 }
 header #main_nav #burger_menu:checked ~ #main_nav_container {
-  background-color: #5E0101;
-  box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.1);
+  background-color: #330000;
+  box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.2);
   transform: translateX(-1em);
   bottom: -9em;
   display: flex;
@@ -324,16 +333,16 @@ header #main_nav #burger_menu:checked ~ #main_nav_container {
   transition: bottom 0.3s ease;
 }
 header #main_nav #burger_menu:checked ~ #main_nav_container.about_me_main_nav_container_class {
-  background-color: #003C53;
+  background-color: #003133;
 }
 header #main_nav #burger_menu:checked ~ #main_nav_container.contact_main_nav_container_class {
-  background-color: #4D2C00;
+  background-color: #331F00;
 }
 header #main_nav #burger_menu:checked ~ #main_nav_container.projects_main_nav_container_class {
-  background-color: #014E00;
+  background-color: #013400;
 }
 header #main_nav #burger_menu:checked ~ #main_nav_container.skills_main_nav_container_class {
-  background-color: #490055;
+  background-color: #310033;
 }
 header #main_nav #burger_menu:checked ~ label .line {
   background-color: transparent;
@@ -380,22 +389,22 @@ header #main_nav label[for=burger_menu] .line:after {
 
 #footer {
   transform: translateY(10em);
-  background-color: #B50000;
+  background-color: #700000;
   font-family: "Garamond-Regular", "Granjon-Regular", serif;
   font-size: 1.2em;
   padding: 1em;
 }
 #footer.about_me_footer_class {
-  background-color: #0081B4;
+  background-color: #00626F;
 }
 #footer.contact_footer_class {
-  background-color: #C37400;
+  background-color: #704100;
 }
 #footer.projects_footer_class {
-  background-color: #02A900;
+  background-color: #007002;
 }
 #footer.skills_footer_class {
-  background-color: #A000BA;
+  background-color: #700069;
 }
 #footer_container_pages_container li:not(:last-child) {
   margin-bottom: 1em;
@@ -453,6 +462,7 @@ main section#show_off #show_off_title {
   margin-bottom: 1.25em;
   font-size: 1.2em;
   font-family: "Garamond-Bold", "Granjon-Bold", serif;
+  background-color: #003133;
 }
 main section#show_off #show_off_title span {
   font-family: "Garamond-Regular", "Granjon-Regular", serif;
@@ -558,7 +568,7 @@ main section#cv_presentation div p, main section#instagram_presentation div p {
 main section#cv_presentation div a, main section#instagram_presentation div a {
   padding: 0.5em;
 }
-main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned, main section#instagram_presentation, main section#instagram_creations {
+main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned, main section#instagram_presentation, main section#instagram_creations, main section#kperform_presentation, main section#kperform_requests, main section#kperform_typography, main section#kperform_inspirations {
   font-family: "Garamond-regular", "Granjon-Regular", serif;
   font-size: 1em;
   line-height: 1.5em;
@@ -596,6 +606,25 @@ main section#instagram_creations .creation:not(:last-child) {
   margin-bottom: 1em;
 }
 main section#instagram_creations .creation_information {
+  margin-top: 1em;
+}
+main section#kperform_presentation figure, main section#kperform_inspirations figure {
+  text-align: center;
+}
+main section#kperform_presentation figure {
+  margin-top: 1em;
+  background-color: #fff;
+}
+main section#kperform_inspirations figure {
+  margin-bottom: 2em;
+}
+main section#kperform_inspirations p:not(:last-child) {
+  margin-bottom: 1em;
+}
+main section#kperform_typography span {
+  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+}
+main section#kperform_typography figure {
   margin-top: 1em;
 }
 
