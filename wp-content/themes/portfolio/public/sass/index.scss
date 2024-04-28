@@ -71,7 +71,7 @@
   background-position: center;
   position: fixed;
   z-index: -1;
-  top: 5.3em;
+  top: 7.4em;
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -248,7 +248,7 @@
 #go_up {
   visibility: visible;
   &_button {
-    background-color: $dark_red_color;
+    background-color: $base_red_color;
     background-image: url("../../resources/images/go_up_button_arrow.svg");
     background-position: center;
     width: 30px;
@@ -763,6 +763,21 @@ main {
       }
       figure {
         margin-top: 1em;
+      }
+    }
+    &#mail_contact {
+      form {
+        background-color: $dark_orange_color;
+        padding: 0.5em;
+        fieldset {
+          display: flex;
+          flex-direction: column;
+          color: $white_color;
+          input:not(:last-child) {
+            margin-top: 1em;
+            margin-bottom: 2em;
+          }
+        }
       }
     }
   }

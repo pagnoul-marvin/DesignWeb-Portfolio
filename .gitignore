@@ -58,6 +58,8 @@ wp-content/themes/*
 !wp-content/themes/portfolio/resources/components/*
 !wp-content/themes/portfolio/resources/components/home/*
 !wp-content/themes/portfolio/resources/components/global/*
+!wp-content/themes/portfolio/resources/components/global/labels_and_inputs
+!wp-content/themes/portfolio/resources/components/global/labels_and_inputs/*
 !wp-content/themes/portfolio/resources/fonts/*
 !wp-content/themes/portfolio/resources/fonts/garamond/*
 !wp-content/themes/portfolio/resources/fonts/trajan/*

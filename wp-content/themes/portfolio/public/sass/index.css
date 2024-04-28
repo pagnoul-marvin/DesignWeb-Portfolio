@@ -67,7 +67,7 @@
   background-position: center;
   position: fixed;
   z-index: -1;
-  top: 5.3em;
+  top: 7.4em;
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -241,7 +241,7 @@
   visibility: visible;
 }
 #go_up_button {
-  background-color: #330000;
+  background-color: #700000;
   background-image: url("../../resources/images/go_up_button_arrow.svg");
   background-position: center;
   width: 30px;
@@ -626,6 +626,19 @@ main section#kperform_typography span {
 }
 main section#kperform_typography figure {
   margin-top: 1em;
+}
+main section#mail_contact form {
+  background-color: #331F00;
+  padding: 0.5em;
+}
+main section#mail_contact form fieldset {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+main section#mail_contact form fieldset input:not(:last-child) {
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 /*# sourceMappingURL=index.css.map */
