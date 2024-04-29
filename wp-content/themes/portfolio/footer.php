@@ -1,6 +1,6 @@
 <footer class="<?php echo give_page_footer_class(); ?>" id="footer">
     <nav id="footer_container">
-        <?php component('global.second_title', [
+        <?php component('global.titles.second_title', [
                 'class' => 'hidden',
                 'text' => 'Navigation de pied de page'
         ]); ?>
@@ -21,7 +21,16 @@
                 </li>
             <?php endforeach; ?>
         </ul>
+
+        <div id="legal_notices" class="<?= give_legal_notices_class(); ?>">
+            <p>&copy; Marvin Pagnoul. Tout droits r&eacute;serv&eacute;s. Cr&eacute;&eacute; par Marvin Pagnoul.</p>
+            <a class="pages_button no_text_decoration" href="<?= go_to_other_pages(22); ?>" hreflang="fr" title="Aller vers la page des mentions légales">Mentions l&eacute;gales</a>
+        </div>
+
     </nav>
+
 </footer>
+
 </body>
+
 </html

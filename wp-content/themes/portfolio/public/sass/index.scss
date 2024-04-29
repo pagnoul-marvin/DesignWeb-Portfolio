@@ -62,6 +62,36 @@
   margin-bottom: 1em;
 }
 
+#legal_notices {
+  padding: 1em;
+  font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: $white_color;
+  background-color: $dark_red_color;
+
+  a {
+    padding: 0.5em;
+    width: initial;
+  }
+
+  &.about_me_legal_notices_class {
+    background-color: $dark_blue_color;
+  }
+
+  &.contact_legal_notices_class {
+    background-color: $dark_orange_color;
+  }
+
+  &.skills_legal_notices_class {
+    background-color: $dark_purple_color;
+  }
+
+  &.projects_legal_notices_class {
+    background-color: $dark_green_color;
+  }
+}
+
 .section {
   margin-top: 6em;
 }
@@ -185,7 +215,8 @@
 
 #go_up.delayed_visibility {
   visibility: hidden;
-  &:hover{
+
+  &:hover {
     visibility: visible;
   }
 }
@@ -232,6 +263,7 @@
 
 #go_back {
   visibility: visible;
+
   &_button {
     font-family: 'Garamond-regular', 'Granjon-Regular', serif;
     font-size: 1em;
@@ -247,6 +279,7 @@
 
 #go_up {
   visibility: visible;
+
   &_button {
     background-color: $base_red_color;
     background-image: url("../../resources/images/go_up_button_arrow.svg");
@@ -424,7 +457,6 @@ header {
   background-color: $base_red_color;
   font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
   font-size: 1.2em;
-  padding: 1em;
 
   &.about_me_footer_class {
     background-color: $base_blue_color;
@@ -443,15 +475,20 @@ header {
   }
 
   &_container {
-    &_pages_container li:not(:last-child) {
-      margin-bottom: 1em;
+    &_pages_container {
+      padding: 1em 1em 0 1em;
+
+      li:not(:last-child) {
+        margin-bottom: 1em;
+      }
     }
 
     &_socials_container {
-      margin-top: 2em;
+      margin: 2em 0;
       display: flex;
       justify-content: space-between;
       flex-direction: row;
+      padding: 0 1em;
 
       #Instagram, #Github, #Facebook {
         background-position: 10px 60px,
@@ -679,7 +716,7 @@ main {
       }
     }
 
-    &#cv_presentation, &#cv_language_chosen, &#cv_conclusion_and_comparison, &#jiri_presentation, &#jiri_learned, &#instagram_presentation, &#instagram_creations, &#kperform_presentation, &#kperform_requests, &#kperform_typography, &#kperform_inspirations {
+    &#cv_presentation, &#cv_language_chosen, &#cv_conclusion_and_comparison, &#jiri_presentation, &#jiri_learned, &#instagram_presentation, &#instagram_creations, &#kperform_presentation, &#kperform_requests, &#kperform_typography, &#kperform_inspirations, &#mail_contact {
       font-family: 'Garamond-regular', 'Granjon-Regular', serif;
       font-size: 1em;
       line-height: 1.5em;
@@ -761,21 +798,50 @@ main {
       span {
         font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
       }
+
       figure {
         margin-top: 1em;
       }
     }
+
     &#mail_contact {
       form {
         background-color: $dark_orange_color;
-        padding: 0.5em;
+        padding: 1em;
+
         fieldset {
           display: flex;
           flex-direction: column;
           color: $white_color;
-          input:not(:last-child) {
-            margin-top: 1em;
+
+          legend {
+            margin-bottom: 1em;
+            font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
+          }
+
+          p {
             margin-bottom: 2em;
+          }
+
+          label, input[type="submit"] {
+            font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
+          }
+
+          input:not(:last-child), textarea, select {
+            margin-top: 1em;
+            margin-bottom: 2.5em;
+          }
+
+          input, textarea, select {
+            background-color: transparent;
+            border: 1px solid $white_color;
+            color: $white_color;
+            height: 50px;
+            padding: 0.5em;
+          }
+
+          input[type="submit"] {
+            cursor: pointer;
           }
         }
       }

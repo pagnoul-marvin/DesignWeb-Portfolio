@@ -15,7 +15,7 @@
     <?php wp_head(); ?>
 </head>
 <body id="landing">
-    <?php component('global.main_title', [
+    <?php component('global.titles.main_title', [
         'text' => get_the_title()
     ]); ?>
 
@@ -41,7 +41,7 @@
         </nav>
     </header>
 
-    <?php component('global.go_up_button', [
+    <?php component('global.navigations.go_up_nav', [
         'link_href' => '#landing',
         'link_text' => 'Revenir en haut',
         'link_class' => give_go_up_button_class()

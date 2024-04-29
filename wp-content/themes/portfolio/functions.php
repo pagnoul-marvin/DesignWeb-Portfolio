@@ -112,7 +112,7 @@ function give_page_main_title_class() :string
         $main_title_class .= 'projects_main_title_class';
     } elseif ($page_id === 11) {
         $main_title_class .= 'skills_main_title_class';
-    } elseif ($page_id === 6) {
+    } elseif ($page_id === 6 || $page_id === 22) {
         $main_title_class .= 'main_title_class';
     } elseif ($page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $main_title_class .= 'projects_item_main_title_class';
@@ -177,4 +177,23 @@ function give_go_up_button_class() :string
     }
 
     return $go_up_button_class;
+}
+
+function give_legal_notices_class() :string
+{
+    $page_id = get_the_ID();
+
+    $legal_notices_class = '';
+
+    if ($page_id === 9) {
+        $legal_notices_class .= 'about_me_legal_notices_class';
+    } elseif ($page_id === 15) {
+        $legal_notices_class .= 'contact_legal_notices_class';
+    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+        $legal_notices_class .= 'projects_legal_notices_class';
+    } elseif ($page_id === 11) {
+        $legal_notices_class .= 'skills_legal_notices_class';
+    }
+
+    return $legal_notices_class;
 }

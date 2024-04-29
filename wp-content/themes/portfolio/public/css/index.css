@@ -58,6 +58,31 @@
   margin-bottom: 1em;
 }
 
+#legal_notices {
+  padding: 1em;
+  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #fff;
+  background-color: #330000;
+}
+#legal_notices a {
+  padding: 0.5em;
+  width: initial;
+}
+#legal_notices.about_me_legal_notices_class {
+  background-color: #003133;
+}
+#legal_notices.contact_legal_notices_class {
+  background-color: #331F00;
+}
+#legal_notices.skills_legal_notices_class {
+  background-color: #310033;
+}
+#legal_notices.projects_legal_notices_class {
+  background-color: #013400;
+}
+
 .section {
   margin-top: 6em;
 }
@@ -392,7 +417,6 @@ header #main_nav label[for=burger_menu] .line:after {
   background-color: #700000;
   font-family: "Garamond-Regular", "Granjon-Regular", serif;
   font-size: 1.2em;
-  padding: 1em;
 }
 #footer.about_me_footer_class {
   background-color: #00626F;
@@ -406,14 +430,18 @@ header #main_nav label[for=burger_menu] .line:after {
 #footer.skills_footer_class {
   background-color: #700069;
 }
+#footer_container_pages_container {
+  padding: 1em 1em 0 1em;
+}
 #footer_container_pages_container li:not(:last-child) {
   margin-bottom: 1em;
 }
 #footer_container_socials_container {
-  margin-top: 2em;
+  margin: 2em 0;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  padding: 0 1em;
 }
 #footer_container_socials_container #Instagram, #footer_container_socials_container #Github, #footer_container_socials_container #Facebook {
   background-position: 10px 60px, left;
@@ -568,7 +596,7 @@ main section#cv_presentation div p, main section#instagram_presentation div p {
 main section#cv_presentation div a, main section#instagram_presentation div a {
   padding: 0.5em;
 }
-main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned, main section#instagram_presentation, main section#instagram_creations, main section#kperform_presentation, main section#kperform_requests, main section#kperform_typography, main section#kperform_inspirations {
+main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned, main section#instagram_presentation, main section#instagram_creations, main section#kperform_presentation, main section#kperform_requests, main section#kperform_typography, main section#kperform_inspirations, main section#mail_contact {
   font-family: "Garamond-regular", "Granjon-Regular", serif;
   font-size: 1em;
   line-height: 1.5em;
@@ -629,16 +657,36 @@ main section#kperform_typography figure {
 }
 main section#mail_contact form {
   background-color: #331F00;
-  padding: 0.5em;
+  padding: 1em;
 }
 main section#mail_contact form fieldset {
   display: flex;
   flex-direction: column;
   color: #fff;
 }
-main section#mail_contact form fieldset input:not(:last-child) {
-  margin-top: 1em;
+main section#mail_contact form fieldset legend {
+  margin-bottom: 1em;
+  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+}
+main section#mail_contact form fieldset p {
   margin-bottom: 2em;
+}
+main section#mail_contact form fieldset label, main section#mail_contact form fieldset input[type=submit] {
+  font-family: "Trajan-Regular", "Jenson-Regular", serif;
+}
+main section#mail_contact form fieldset input:not(:last-child), main section#mail_contact form fieldset textarea, main section#mail_contact form fieldset select {
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+}
+main section#mail_contact form fieldset input, main section#mail_contact form fieldset textarea, main section#mail_contact form fieldset select {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  height: 50px;
+  padding: 0.5em;
+}
+main section#mail_contact form fieldset input[type=submit] {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

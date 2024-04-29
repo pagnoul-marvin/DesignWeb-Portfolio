@@ -58,8 +58,12 @@ wp-content/themes/*
 !wp-content/themes/portfolio/resources/components/*
 !wp-content/themes/portfolio/resources/components/home/*
 !wp-content/themes/portfolio/resources/components/global/*
-!wp-content/themes/portfolio/resources/components/global/labels_and_inputs
-!wp-content/themes/portfolio/resources/components/global/labels_and_inputs/*
+!wp-content/themes/portfolio/resources/components/global/forms/*
+!wp-content/themes/portfolio/resources/components/global/contact_me/*
+!wp-content/themes/portfolio/resources/components/global/decoration/*
+!wp-content/themes/portfolio/resources/components/global/navigations/*
+!wp-content/themes/portfolio/resources/components/global/titles/*
+!wp-content/themes/portfolio/resources/components/global/forms/labels_and_inputs/*
 !wp-content/themes/portfolio/resources/fonts/*
 !wp-content/themes/portfolio/resources/fonts/garamond/*
 !wp-content/themes/portfolio/resources/fonts/trajan/*

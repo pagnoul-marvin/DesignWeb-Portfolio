@@ -8,7 +8,7 @@ Template Name: Mes compétences
 
     <?php get_header(); ?>
 
-    <?php component('global.decoration', [
+    <?php component('global.decoration.decoration', [
         'id' => 'persian_decoration'
     ]); ?>
 

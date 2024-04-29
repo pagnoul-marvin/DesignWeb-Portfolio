@@ -6,7 +6,7 @@ Template Name: Accueil
 
 <?php get_header(); ?>
 
-<?php component('global.decoration', [
+<?php component('global.decoration.decoration', [
         'id' => 'rome_decoration'
 ]); ?>
 
@@ -14,7 +14,7 @@ Template Name: Accueil
 
         <section id="introduction">
 
-            <?php component('global.second_title', [
+            <?php component('global.titles.second_title', [
                     'class' => 'hidden',
                     'text' => 'Introduction'
             ]);
@@ -39,7 +39,7 @@ Template Name: Accueil
 
         <section id="go_to_other_pages" class="section">
 
-            <?php component('global.second_title', [
+            <?php component('global.titles.second_title', [
                     'class' => '',
                     'text' => 'Pour les impatiens ...'
             ]);
@@ -78,7 +78,7 @@ Template Name: Accueil
 
         <section id="more_over" class="section">
 
-            <?php component('global.second_title', [
+            <?php component('global.titles.second_title', [
                     'class' => '',
                     'text' => 'Aller voir aussi ...'
             ]);

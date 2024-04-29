@@ -8,7 +8,7 @@ Template Name: Me contacter
 
     <?php get_header(); ?>
 
-    <?php component('global.decoration', [
+    <?php component('global.decoration.decoration', [
         'id' => 'greece_decoration'
     ]); ?>
 
@@ -17,55 +17,64 @@ Template Name: Me contacter
 
         <section id="mail_contact" class="section">
 
-            <h2 class="contact_second_title_class">Par mail</h2>
+            <?php component('global.titles.second_title', [
+                    'class' => '',
+                    'text' => 'Par mail'
+            ]); ?>
 
             <form action="#" method="POST" id="mail_contact_form">
 
                 <fieldset>
 
-                    <legend>Formulaire de contact par email</legend>
+                    <legend>Formulaire de contact par mail</legend>
+                    <p>Les champs dot&eacute;s d'une &laquo;&ast;&raquo; sont requis.</p>
 
-                    <?php component('global.labels_and_inputs.text_input', [
+                    <?php component('global.forms.labels_and_inputs.text_input', [
                         'link' => 'firstname',
                         'label_text' => 'Votre prénom *',
                         'input_name' => 'firstname',
-                        'input_placeholder' => 'Exemple : Jules',
+                        'input_placeholder' => 'Exemple: Jules',
                         'required' => 'required',
                     ]); ?>
 
-                    <?php component('global.labels_and_inputs.text_input', [
+                    <?php component('global.forms.labels_and_inputs.text_input', [
                         'link' => 'lastname',
                         'label_text' => 'Votre nom *',
                         'input_name' => 'lastname',
-                        'input_placeholder' => 'Exemple : César',
+                        'input_placeholder' => 'Exemple: César',
                         'required' => 'required',
                     ]); ?>
 
-                    <?php component('global.labels_and_inputs.radio_input', [
+                    <?php component('global.forms.select_and_options', [
                         'link' => 'gender',
                         'label_text' => 'Votre genre',
-                        'input_name' => 'firstname',
-                        'input_placeholder' => '',
-                        'required' => '',
-                    ]); ?>
+                        'select_name' => 'gender',
+                        'options' => array(
+                            '' => 'Choisissez votre genre',
+                            'male' => 'Homme',
+                            'female' => 'Femme',
+                            'other' => 'Autre',
+                        )
+                    ]);
+                    ?>
 
-                    <?php component('global.labels_and_inputs.email_input', [
+                    <?php component('global.forms.labels_and_inputs.email_input', [
                         'link' => 'mail',
                         'label_text' => 'Votre adresse mail *',
                         'input_name' => 'mail',
-                        'input_placeholder' => 'Exemple : julescesar@mail.com',
+                        'input_placeholder' => 'Exemple: julescesar@mail.com',
                         'required' => 'required',
                     ]); ?>
 
-                    <?php component('global.labels_and_inputs.textarea', [
+                    <?php component('global.forms.textarea', [
                         'link' => 'subject',
-                        'label_text' => 'Pourquoi voulez-vous me contacter ? *',
+                        'label_text' => 'Pourquoi souhaitez-vous me contacter ? *',
                         'textarea_name' => 'subject',
-                        'textarea_placeholder' => 'Je souhaite vous contacter pour avoir des informations sur un potentiel futur projet.',
+                        'textarea_placeholder' => 'Exemple: Je souhaite vous contacter pour avoir des informations sur un potentiel futur projet.',
                         'required' => 'required',
                     ]); ?>
 
-                    <?php component('global.labels_and_inputs.submit_input', [
+                    <?php component('global.forms.labels_and_inputs.submit_input', [
                         'input_text' => 'Envoyer le formulaire'
                     ]); ?>
 

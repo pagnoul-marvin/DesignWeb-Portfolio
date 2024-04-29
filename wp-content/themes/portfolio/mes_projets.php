@@ -8,7 +8,7 @@ Template Name: Mes projets
 
     <?php get_header(); ?>
 
-    <?php component('global.decoration', [
+    <?php component('global.decoration.decoration', [
         'id' => 'celtic_decoration'
     ]); ?>
 
