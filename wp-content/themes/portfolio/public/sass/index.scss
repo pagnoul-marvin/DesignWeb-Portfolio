@@ -93,7 +93,7 @@
 }
 
 .section {
-  margin-top: 6em;
+  margin-top: 7em;
 }
 
 .decoration {
@@ -297,6 +297,12 @@
   }
 }
 
+#last_modification {
+  color: $white_color;
+  background-color: $dark_red_color;
+  padding: 1em;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -453,7 +459,7 @@ header {
 }
 
 #footer {
-  transform: translateY(10em);
+  margin-top: 7em;
   background-color: $base_red_color;
   font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
   font-size: 1.2em;
@@ -555,6 +561,14 @@ main {
     font-size: 1em;
     line-height: 1.5em;
     max-width: 100%;
+
+    &#website_owner, &#intellectual_property_rights, &#data_collection, &#data_security, &#rights_of_access_rectification_and_deletion, &#legal_notices_modification {
+      p {
+        background-color: $dark_red_color;
+        color: $white_color;
+        padding: 1em;
+      }
+    }
 
     &#show_off {
       #show_off_title {
@@ -836,8 +850,11 @@ main {
             background-color: transparent;
             border: 1px solid $white_color;
             color: $white_color;
-            height: 50px;
             padding: 0.5em;
+          }
+
+          input, select {
+            height: 2.5em;
           }
 
           input[type="submit"] {

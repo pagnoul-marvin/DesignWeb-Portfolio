@@ -47,8 +47,8 @@ wp-content/*
 wp-content/themes/*
 !wp-content/themes/portfolio
 !wp-content/themes/portfolio/*
-!wp-content/themes/portfolio/Core/*
-!wp-content/themes/portfolio/Core/helpers/*
+wp-content/themes/portfolio/.env.local.ini
+!wp-content/themes/portfolio/database/*
 !wp-content/themes/portfolio/php/*
 !wp-content/themes/portfolio/public/*
 !wp-content/themes/portfolio/public/css/*
