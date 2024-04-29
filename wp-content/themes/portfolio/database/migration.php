@@ -19,5 +19,9 @@ try {
 }
 
 if (isset($_POST['envoyer'])) {
-
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $gender = $_POST['gender'];
+    $mail = $_POST['mail'];
+    $subject = $_POST['subject'];
 }
