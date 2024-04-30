@@ -675,6 +675,11 @@ main section#mail_contact form fieldset {
   flex-direction: column;
   color: #fff;
 }
+main section#mail_contact form fieldset .validation_errors {
+  color: #FF9191;
+  font-family: "Garamond-Italic", serif;
+  font-style: italic;
+}
 main section#mail_contact form fieldset legend {
   margin-bottom: 1em;
   font-family: "Garamond-Bold", "Granjon-Bold", serif;

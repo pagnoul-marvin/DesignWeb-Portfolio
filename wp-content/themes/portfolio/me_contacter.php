@@ -37,13 +37,21 @@ Template Name: Me contacter
                         'required' => 'required',
                     ]); ?>
 
+                    <?php if (isset($errors['firstname'])) { ?>
+                        <p class="validation_errors"><?= $errors['firstname'] ?></p>
+                    <?php } ?>
+
                     <?php component('global.forms.labels_and_inputs.text_input', [
                         'link' => 'lastname',
-                        'label_text' => 'Votre nom *',
+                        'label_text' => 'Votre nom * <small>3 caract&egrave;res minimum sont requis.</small>',
                         'input_name' => 'lastname',
                         'input_placeholder' => 'Exemple: César',
                         'required' => 'required',
                     ]); ?>
+
+                    <?php if (isset($errors['lastname'])) { ?>
+                        <p class="validation_errors"><?= $errors['lastname'] ?></p>
+                    <?php } ?>
 
                     <?php component('global.forms.select_and_options', [
                         'link' => 'gender',
@@ -66,6 +74,10 @@ Template Name: Me contacter
                         'required' => 'required',
                     ]); ?>
 
+                    <?php if (isset($errors['email'])) { ?>
+                        <p class="validation_errors"><?= $errors['email'] ?></p>
+                    <?php } ?>
+
                     <?php component('global.forms.textarea', [
                         'link' => 'message',
                         'label_text' => 'Pourquoi souhaitez-vous me contacter ? *',
@@ -73,6 +85,10 @@ Template Name: Me contacter
                         'textarea_placeholder' => 'Exemple: Je souhaite vous contacter pour avoir des informations sur un potentiel futur projet.',
                         'required' => 'required',
                     ]); ?>
+
+                    <?php if (isset($errors['message'])) { ?>
+                        <p class="validation_errors"><?= $errors['message'] ?></p>
+                    <?php } ?>
 
                     <?php component('global.forms.labels_and_inputs.submit_input', [
                         'input_text' => 'Envoyer le formulaire'

@@ -15,6 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['firstname'] = 'Le prénom doit avoir une longueur minimale de 3 caractères.';
     }
 
+    if (!Validator::min('lastname', 3)) {
+        $errors['lastname'] = 'Le nom doit avoir une longueur minimale de 3 caractères.';
+    }
+
     if (!Validator::emailContainsAtSymbol($_REQUEST['email'])) {
         $errors['email'] = 'L\'adresse e-mail doit contenir un "@".';
     }

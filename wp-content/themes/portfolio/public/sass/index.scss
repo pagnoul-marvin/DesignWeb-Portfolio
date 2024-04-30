@@ -828,6 +828,12 @@ main {
           flex-direction: column;
           color: $white_color;
 
+          .validation_errors {
+            color: $error_color;
+            font-family: 'Garamond-Italic', serif;
+            font-style: italic;
+          }
+
           legend {
             margin-bottom: 1em;
             font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
