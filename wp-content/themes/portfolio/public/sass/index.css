@@ -682,6 +682,10 @@ main section#mail_contact form fieldset legend {
 main section#mail_contact form fieldset p {
   margin-bottom: 2em;
 }
+main section#mail_contact form fieldset label small {
+  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-size: 0.75em;
+}
 main section#mail_contact form fieldset label, main section#mail_contact form fieldset input[type=submit] {
   font-family: "Trajan-Regular", "Jenson-Regular", serif;
 }

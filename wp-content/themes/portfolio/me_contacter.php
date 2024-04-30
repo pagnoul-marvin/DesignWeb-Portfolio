@@ -22,7 +22,7 @@ Template Name: Me contacter
                     'text' => 'Par mail'
             ]); ?>
 
-            <form action="#" method="POST" id="mail_contact_form">
+            <form action="database/validation.php" method="POST" id="mail_contact_form">
 
                 <fieldset>
 
@@ -31,7 +31,7 @@ Template Name: Me contacter
 
                     <?php component('global.forms.labels_and_inputs.text_input', [
                         'link' => 'firstname',
-                        'label_text' => 'Votre prénom *',
+                        'label_text' => 'Votre pr&eacute;nom * <small>3 caract&egrave;res minimum sont requis.</small>',
                         'input_name' => 'firstname',
                         'input_placeholder' => 'Exemple: Jules',
                         'required' => 'required',
@@ -60,16 +60,16 @@ Template Name: Me contacter
 
                     <?php component('global.forms.labels_and_inputs.email_input', [
                         'link' => 'mail',
-                        'label_text' => 'Votre adresse mail *',
+                        'label_text' => 'Votre adresse mail * <small>Le caract&egrave;re &laquo;&commat;&raquo; est requis.</small>',
                         'input_name' => 'mail',
                         'input_placeholder' => 'Exemple: julescesar@mail.com',
                         'required' => 'required',
                     ]); ?>
 
                     <?php component('global.forms.textarea', [
-                        'link' => 'subject',
+                        'link' => 'message',
                         'label_text' => 'Pourquoi souhaitez-vous me contacter ? *',
-                        'textarea_name' => 'subject',
+                        'textarea_name' => 'message',
                         'textarea_placeholder' => 'Exemple: Je souhaite vous contacter pour avoir des informations sur un potentiel futur projet.',
                         'required' => 'required',
                     ]); ?>

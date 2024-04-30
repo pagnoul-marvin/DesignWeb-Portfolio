@@ -837,6 +837,11 @@ main {
             margin-bottom: 2em;
           }
 
+          label small {
+            font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+            font-size: 0.75em;
+          }
+
           label, input[type="submit"] {
             font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
           }
