@@ -4,6 +4,11 @@
                 'class' => 'hidden',
                 'text' => 'Navigation de pied de page'
         ]); ?>
+
+        <?php component('global.titles.third_title', [
+            'title_text' => 'Navigation',
+        ]); ?>
+
         <ul id="footer_container_pages_container">
             <?php foreach (dw_get_navigation_links('footer') as $link): ?>
                 <li class="footer_container_pages_container_item">
@@ -12,6 +17,10 @@
                 </li>
             <?php endforeach; ?>
         </ul>
+
+        <?php component('global.titles.third_title', [
+            'title_text' => 'Mes réseaux sociaux'
+        ]); ?>
 
         <ul id="footer_container_socials_container">
             <?php foreach (dw_get_navigation_links('socials') as $link): ?>

@@ -279,7 +279,6 @@
 
 #go_up {
   visibility: visible;
-
   &_button {
     background-color: $base_red_color;
     background-image: url("../../resources/images/go_up_button_arrow.svg");
@@ -290,7 +289,7 @@
     text-wrap: nowrap;
     padding: 1em;
     margin: 0;
-    right: 1em;
+    right: 1.2em;
     bottom: 1em;
     z-index: 2;
     position: fixed;
@@ -463,6 +462,14 @@ header {
   background-color: $base_red_color;
   font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
   font-size: 1.2em;
+  padding-top: 1em;
+
+  h3 {
+    color: $white_color;
+    padding-left: 1em;
+    font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
+    line-height: 1.2em;
+  }
 
   &.about_me_footer_class {
     background-color: $base_blue_color;
@@ -482,7 +489,9 @@ header {
 
   &_container {
     &_pages_container {
-      padding: 1em 1em 0 1em;
+      padding: 0 1em;
+      margin-bottom: 2em;
+      margin-top: 1em;
 
       li:not(:last-child) {
         margin-bottom: 1em;
@@ -490,7 +499,7 @@ header {
     }
 
     &_socials_container {
-      margin: 2em 0;
+      margin: 1em 0 2em 0;
       display: flex;
       justify-content: space-between;
       flex-direction: row;

@@ -275,7 +275,7 @@
   text-wrap: nowrap;
   padding: 1em;
   margin: 0;
-  right: 1em;
+  right: 1.2em;
   bottom: 1em;
   z-index: 2;
   position: fixed;
@@ -423,6 +423,13 @@ header #main_nav label[for=burger_menu] .line:after {
   background-color: #700000;
   font-family: "Garamond-Regular", "Granjon-Regular", serif;
   font-size: 1.2em;
+  padding-top: 1em;
+}
+#footer h3 {
+  color: #fff;
+  padding-left: 1em;
+  font-family: "Trajan-Regular", "Jenson-Regular", serif;
+  line-height: 1.2em;
 }
 #footer.about_me_footer_class {
   background-color: #00626F;
@@ -437,13 +444,15 @@ header #main_nav label[for=burger_menu] .line:after {
   background-color: #700069;
 }
 #footer_container_pages_container {
-  padding: 1em 1em 0 1em;
+  padding: 0 1em;
+  margin-bottom: 2em;
+  margin-top: 1em;
 }
 #footer_container_pages_container li:not(:last-child) {
   margin-bottom: 1em;
 }
 #footer_container_socials_container {
-  margin: 2em 0;
+  margin: 1em 0 2em 0;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
