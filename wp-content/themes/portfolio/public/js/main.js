@@ -19,5 +19,13 @@ window.addEventListener('scroll', () => {
     }, 300);
 });
 
-
-
+setTimeout(function() {
+    const validateDiv = document.getElementById('validate');
+    const notValidateDiv = document.getElementById('not_validate');
+    if (validateDiv) {
+        validateDiv.classList.add('disappear');
+    }
+    if (notValidateDiv) {
+        notValidateDiv.classList.add('disappear');
+    }
+}, 7000);

@@ -12,10 +12,13 @@ $dbname = $config['DB_NAME'];
 $username = $config['DB_USER'];
 $password = $config['DB_PASSWORD'];
 $host = $config['DB_HOST'];
+$formSubmittedSuccessfully = '';
 
 $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $formSubmittedSuccessfully = true;
 
     if (!Validator::min('firstname', 3)) {
         $errors['firstname'] = 'Le prénom doit avoir une longueur minimale de 3 caractères.';
@@ -37,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($errors)) {
+
         try {
             $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -69,6 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $headers = "From: $email\r\n";
             $headers .= "Reply-To: $email\r\n";
             $mailSent = mail($to, $subject, $message, $headers);
+
         } catch (PDOException $e) {
             echo "La connexion à la base de données a échoué: " . $e->getMessage();
         }
@@ -76,22 +81,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
-
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
     <?php get_header(); ?>
 
     <main>
 
-        <?php component('global.toggle_input.toggle_input', [
-            'label_text' => 'Aller vers la page Me contacter'
-        ]) ?>
+        <input type="checkbox" id="toggle" class="<?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">
+        <label for="toggle" class="pages_button no_text_decoration <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">Aller vers la page Me contacter</label>
 
-        <?php component('global.decoration.decoration', [
-            'id' => 'greece_decoration',
-            'title_text' => 'Bienvenue en Grèce !'
-        ]) ?>
+        <section id="decoration" class="decoration <?= give_decoration_class(); ?> <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">
+            <h2>Bienvenue en Gr&egrave;ce&nbsp;!</h2>
+            <div id="greece_decoration" class="decorate"></div>
+        </section>
 
         <?= get_the_content(); ?>
 
@@ -177,6 +179,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </fieldset>
 
             </form>
+
+            <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) { ?>
+                <div id="validate">
+                    <p>Votre mail a bien &eacute;t&eacute; envoy&eacute;&nbsp;! Je vous r&eacute;pondrais le plus
+                        rapidement possible.</p>
+                </div>
+            <?php } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($errors)) { ?>
+                <div id="not_validate">
+                    <p>Votre mail n&rsquo;a pas &eacute;t&eacute; envoy&eacute;&nbsp;! Un ou plusieurs champ(s) ne
+                        respecte(nt) pas les r&egrave;gles.</p>
+                </div>
+            <?php } ?>
 
         </section>
 

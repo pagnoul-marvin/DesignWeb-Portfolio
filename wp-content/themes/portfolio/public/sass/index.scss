@@ -9,6 +9,10 @@
   position: absolute;
 }
 
+.no_display {
+  display: none !important;
+}
+
 .no_text_decoration {
   text-decoration: underline transparent;
   transition: all 0.3s ease-in-out;
@@ -110,6 +114,9 @@ input#toggle {
     transform: translateX(-10000px);
   }
 
+  &:checked ~ label[for='toggle']:hover {
+    visibility: hidden;
+  }
 }
 
 .pages_button, #cv {
@@ -162,6 +169,10 @@ input#toggle {
 
 .align_left_text {
   text-align: left;
+}
+
+.disappear {
+  transform: translateX(10000px);
 }
 
 .list_styled {
@@ -604,11 +615,9 @@ main {
       color: $white_color;
     }
 
-    &#website_owner, &#intellectual_property_rights, &#data_collection, &#data_security, &#rights_of_access_rectification_and_deletion, &#legal_notices_modification {
-      p {
-        background-color: $dark_red_color;
-        color: $white_color;
-        padding: 1em;
+    &#website_owner {
+      p:not(:last-child) {
+        margin-bottom: 1em;
       }
     }
 
@@ -933,6 +942,21 @@ main {
             cursor: pointer;
           }
         }
+      }
+
+      div#not_validate, div#validate {
+        position: fixed;
+        padding: 1em;
+        top: 6em;
+        transition: transform 1s ease-in-out;
+      }
+
+      div#validate {
+        background-color: $base_green_color;
+      }
+
+      div#not_validate {
+        background-color: $base_red_color;
       }
     }
   }
