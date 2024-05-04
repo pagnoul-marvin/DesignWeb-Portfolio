@@ -76,38 +76,26 @@ h2 {
   margin-top: 7em;
 }
 
-.decoration {
-  background-color: #700000;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  width: 100vw;
-  height: 100vh;
-  color: #fff;
-  padding: 1em;
-}
-.decoration p {
+label[for=toggle] {
   padding: 0.5em;
+  z-index: 3;
+  color: #fff;
+  width: calc(100% - 3em);
+  position: fixed;
+  left: 1em;
+  transition: transform 2s ease-in-out;
 }
-.decoration .decorate {
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  width: 50%;
-  height: 50%;
+
+input#toggle {
+  visibility: hidden;
 }
-.decoration.projects_decoration_class {
-  background-color: #007002;
+input#toggle:checked ~ section#decoration {
+  transform: translateX(-10000px);
 }
-.decoration.skills_decoration_class {
-  background-color: #700069;
+input#toggle:checked ~ label[for=toggle] {
+  transform: translateX(-10000px);
 }
-.decoration.contact_decoration_class {
-  background-color: #704100;
-}
-.decoration.about_me_decoration_class {
-  background-color: #00626F;
-}
+
 .pages_button, #cv {
   border: 1px solid #fff;
   display: inline-block;
@@ -485,6 +473,42 @@ main section {
   border-radius: 1em;
   color: #fff;
   padding: 1em;
+}
+main section#decoration {
+  transition: 2s ease-in-out;
+}
+main section#decoration.decoration {
+  background-color: #700000;
+  max-width: unset;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: calc(100vw - 2em);
+  height: calc(100vh - 2em);
+  border: none;
+  border-radius: unset;
+  transform: translateX(-1em);
+  overflow: hidden;
+}
+main section#decoration.decoration .decorate {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+main section#decoration.decoration.projects_decoration_class {
+  background-color: #007002;
+}
+main section#decoration.decoration.skills_decoration_class {
+  background-color: #700069;
+}
+main section#decoration.decoration.contact_decoration_class {
+  background-color: #704100;
+}
+main section#decoration.decoration.about_me_decoration_class {
+  background-color: #00626F;
 }
 main section#go_to_other_pages, main section#introduction, main section#more_over {
   text-align: right;

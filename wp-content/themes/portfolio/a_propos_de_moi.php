@@ -8,6 +8,16 @@ Template Name: À propos de moi
     <?php get_header(); ?>
 
         <main>
+
+            <?php component('global.toggle_input.toggle_input', [
+                    'label_text' => 'Aller vers la page A propos de moi'
+            ]) ?>
+
+            <?php component('global.decoration.decoration', [
+                'id' => 'egypt_decoration',
+                'title_text' => 'Bienvenue en Egypte !'
+            ]) ?>
+
             <?= get_the_content(); ?>
         </main>
 

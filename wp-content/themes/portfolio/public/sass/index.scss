@@ -89,47 +89,27 @@ h2 {
   margin-top: 7em;
 }
 
-.decoration {
-  background-color: $base_red_color;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  width: 100vw;
-  height: 100vh;
+label[for='toggle'] {
+  padding: .5em;
+  z-index: 3;
   color: $white_color;
-  padding: 1em;
+  width: calc(100% - 3em);
+  position: fixed;
+  left: 1em;
+  transition: transform 2s ease-in-out;
+}
 
-  p{
-    padding: .5em;
+input#toggle {
+  visibility: hidden;
+
+  &:checked ~ section#decoration {
+    transform: translateX(-10000px);
   }
 
-  .decorate {
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    width: 50%;
-    height: 50%;
+  &:checked ~ label[for='toggle'] {
+    transform: translateX(-10000px);
   }
 
-  &.projects_decoration_class {
-    background-color: $base_green_color;
-  }
-
-  &.skills_decoration_class {
-    background-color: $base_purple_color;
-  }
-
-  &.contact_decoration_class {
-    background-color: $base_orange_color;
-  }
-
-  &.about_me_decoration_class {
-    background-color: $base_blue_color;
-  }
-
-  a {
-
-  }
 }
 
 .pages_button, #cv {
@@ -576,6 +556,48 @@ main {
     border-radius: 1em;
     color: $white_color;
     padding: 1em;
+
+    &#decoration {
+      transition: 2s ease-in-out;
+      &.decoration {
+        background-color: $base_red_color;
+        max-width: unset;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        width: calc(100vw - 2em);
+        height: calc(100vh - 2em);
+        border: none;
+        border-radius: unset;
+        transform: translateX(-1em);
+        overflow: hidden;
+
+        .decorate {
+          background-repeat: no-repeat;
+          background-position: center;
+          display: inline-block;
+          background-size: cover;
+          width: 100%;
+          height: 250px;
+        }
+
+        &.projects_decoration_class {
+          background-color: $base_green_color;
+        }
+
+        &.skills_decoration_class {
+          background-color: $base_purple_color;
+        }
+
+        &.contact_decoration_class {
+          background-color: $base_orange_color;
+        }
+
+        &.about_me_decoration_class {
+          background-color: $base_blue_color;
+        }
+      }
+    }
 
     &#go_to_other_pages, &#introduction, &#more_over {
       text-align: right;

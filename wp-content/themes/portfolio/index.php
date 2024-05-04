@@ -6,14 +6,23 @@ Template Name: Accueil
 
 <?php get_header(); ?>
 
-<?php component('global.decoration.decoration', [
-    'id' => 'rome_decoration',
-    'title_text' => 'Bienvenue à Rome'
-]) ?>
-
 <main>
 
+    <?php component('global.toggle_input.toggle_input', [
+        'label_text' => 'Aller vers la page Accueil'
+    ]) ?>
+
+    <?php component('global.decoration.decoration', [
+        'id' => 'rome_decoration',
+        'title_text' => 'Bienvenue à Rome !'
+    ]) ?>
+
     <section id="introduction">
+
+        <?php component('global.titles.second_title', [
+            'class' => 'hidden',
+            'text' => 'Introduction'
+        ]); ?>
 
         <div id="introduction_presentation">
 

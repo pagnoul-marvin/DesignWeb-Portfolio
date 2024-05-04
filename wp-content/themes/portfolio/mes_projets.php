@@ -9,6 +9,16 @@ Template Name: Mes projets
     <?php get_header(); ?>
 
     <main>
+
+        <?php component('global.toggle_input.toggle_input', [
+            'label_text' => 'Aller vers la page Mes projets/expériences'
+        ]) ?>
+
+        <?php component('global.decoration.decoration', [
+            'id' => 'celtic_decoration',
+            'title_text' => 'Bienvenue en Gaule !'
+        ]) ?>
+
         <?= get_the_content(); ?>
     </main>
 

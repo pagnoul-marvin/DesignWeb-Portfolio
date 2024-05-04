@@ -83,6 +83,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php get_header(); ?>
 
     <main>
+
+        <?php component('global.toggle_input.toggle_input', [
+            'label_text' => 'Aller vers la page Me contacter'
+        ]) ?>
+
+        <?php component('global.decoration.decoration', [
+            'id' => 'greece_decoration',
+            'title_text' => 'Bienvenue en Grèce !'
+        ]) ?>
+
         <?= get_the_content(); ?>
 
         <section id="mail_contact" class="section">
