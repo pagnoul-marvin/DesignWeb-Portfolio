@@ -62,6 +62,26 @@ function go_to_other_pages($page_id): string
     return esc_url($page_url);
 }
 
+function give_page_body_class() : string
+{
+    $page_id = get_the_ID();
+
+    $body_class = '';
+
+    if ($page_id === 9) {
+        $body_class .= 'about_me_body_class';
+    } elseif ($page_id === 15) {
+        $body_class .= 'contact_body_class';
+    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+        $body_class .= 'projects_body_class';
+    } elseif ($page_id === 11) {
+        $body_class .= 'skills_body_class';
+    }
+    return $body_class;
+}
+
+
+
 function give_page_header_class() : string
 {
     $page_id = get_the_ID();
@@ -97,48 +117,6 @@ function give_page_footer_class() :string
     }
 
     return $footer_class;
-}
-function give_page_main_title_class() :string
-{
-    $page_id = get_the_ID();
-
-    $main_title_class = '';
-
-    if ($page_id === 9) {
-        $main_title_class .= 'about_me_main_title_class';
-    } elseif ($page_id === 15) {
-        $main_title_class .= 'contact_main_title_class';
-    } elseif ($page_id === 13) {
-        $main_title_class .= 'projects_main_title_class';
-    } elseif ($page_id === 11) {
-        $main_title_class .= 'skills_main_title_class';
-    } elseif ($page_id === 6 || $page_id === 22) {
-        $main_title_class .= 'main_title_class';
-    } elseif ($page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
-        $main_title_class .= 'projects_item_main_title_class';
-    }
-
-    return $main_title_class;
-}
-function give_page_second_title_class() :string
-{
-    $page_id = get_the_ID();
-
-    $second_title_class = '';
-
-    if ($page_id === 9) {
-        $second_title_class .= 'about_me_second_title_class';
-    } elseif ($page_id === 15) {
-        $second_title_class .= 'contact_second_title_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
-        $second_title_class .= 'projects_second_title_class';
-    } elseif ($page_id === 11) {
-        $second_title_class .= 'skills_second_title_class';
-    } elseif ($page_id === 6) {
-        $second_title_class .= 'second_title_class';
-    }
-
-    return $second_title_class;
 }
 
 function give_page_main_nav_container_class() :string

@@ -7,10 +7,6 @@ Template Name: À propos de moi
 
     <?php get_header(); ?>
 
-    <?php component('global.decoration.decoration', [
-            'id' => 'egypt_decoration'
-    ]); ?>
-
         <main>
             <?= get_the_content(); ?>
         </main>

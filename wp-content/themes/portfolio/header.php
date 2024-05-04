@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" id="top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -14,7 +14,8 @@
     <script type="module" src="<?= dw_asset('js/main.js'); ?>"></script>
     <?php wp_head(); ?>
 </head>
-<body id="landing">
+<body class="<?= give_page_body_class(); ?>">
+
     <?php component('global.titles.main_title', [
         'text' => get_the_title()
     ]); ?>
@@ -23,7 +24,7 @@
         <nav id="main_nav">
             <h2 class="hidden">Navigation principale</h2>
 
-            <a id="logo" href="<?= go_to_other_pages(6) ?>">Accueil</a>
+            <a id="logo" hreflang="fr" title="Aller vers la page d'accueil" href="<?= go_to_other_pages(6) ?>">Accueil</a>
 
             <input type="checkbox" id="burger_menu">
             <label for="burger_menu">
@@ -42,7 +43,7 @@
     </header>
 
     <?php component('global.navigations.go_up_nav', [
-        'link_href' => '#landing',
+        'link_href' => '#top',
         'link_text' => 'Revenir en haut',
         'link_class' => give_go_up_button_class()
     ]); ?>

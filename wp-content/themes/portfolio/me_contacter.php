@@ -69,12 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $headers = "From: $email\r\n";
             $headers .= "Reply-To: $email\r\n";
             $mailSent = mail($to, $subject, $message, $headers);
-
-            if ($mailSent) {
-                echo "E-mail envoyé avec succès.";
-            } else {
-                echo "Échec de l'envoi de l'e-mail.";
-            }
         } catch (PDOException $e) {
             echo "La connexion à la base de données a échoué: " . $e->getMessage();
         }
@@ -87,10 +81,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
     <?php get_header(); ?>
-
-    <?php component('global.decoration.decoration', [
-        'id' => 'greece_decoration'
-    ]); ?>
 
     <main>
         <?= get_the_content(); ?>

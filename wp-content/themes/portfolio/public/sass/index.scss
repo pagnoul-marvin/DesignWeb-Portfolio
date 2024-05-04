@@ -18,53 +18,46 @@
   }
 }
 
-.main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_item_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
-  color: $white_color;
-  display: inline-block;
-  padding: 1em;
-  font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
+body {
+  background-color: $dark_red_color;
+
+  &.about_me_body_class {
+    background-color: $dark_blue_color;
+  }
+
+  &.contact_body_class {
+    background-color: $dark_orange_color;
+  }
+
+  &.skills_body_class {
+    background-color: $dark_purple_color;
+  }
+
+  &.projects_body_class {
+    background-color: $dark_green_color;
+  }
+}
+
+h1 {
   line-height: 1.2em;
-}
-
-.main_title_class, .second_title_class {
-  background-color: $base_red_color;
-}
-
-.about_me_main_title_class, .about_me_second_title_class, #go_up_button.about_me_go_up_button_class {
-  background-color: $base_blue_color;
-}
-
-.contact_main_title_class, .contact_second_title_class, #go_up_button.contact_go_up_button_class {
-  background-color: $base_orange_color;
-}
-
-.projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class, #go_up_button.projects_go_up_button_class {
-  background-color: $base_green_color;
-}
-
-.skills_main_title_class, .skills_second_title_class, #go_up_button.skills_go_up_button_class {
-  background-color: $base_purple_color;
-}
-
-.main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .projects_item_main_title_class, .skills_main_title_class, {
+  font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
   font-size: 2.3em;
-  margin: 3.75em 0 3.75em 0.5em;
-  max-width: 7.7em;
+  margin: 3.75em 0;
+  padding: 0 .5em;
+  color: $white_color;
 }
 
-.second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
+h2 {
+  font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
   font-size: 1.7em;
-  margin-bottom: 1.875em;
-  line-height: 1.5em;
-}
-
-.projects_item_main_title_class {
   margin-bottom: 1em;
+  line-height: 1.2em;
+  text-align: left;
 }
 
 #legal_notices {
   padding: 1em;
-  font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+  font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
   font-size: 1em;
   line-height: 1.5em;
   color: $white_color;
@@ -96,7 +89,7 @@
   margin-top: 7em;
 }
 
-.decoration {
+/*.decoration {
   background-repeat: no-repeat;
   background-position: center;
   position: fixed;
@@ -105,7 +98,7 @@
   width: 100vw;
   height: 100vh;
   background-size: cover;
-}
+}*/
 
 .pages_button, #cv {
   border: 1px solid $white_color;
@@ -141,7 +134,7 @@
 .pages_button {
   background-position: 1.5em center;
   padding: 0.5em 0 0.5em 1.5em;
-  width: 12em;
+  width: 13em;
   text-align: center;
 }
 
@@ -155,49 +148,8 @@
   display: block;
 }
 
-.red_background {
-  background-color: $dark_red_color;
-  text-align: right;
-  padding: 1em;
-  line-height: 1.5em;
-  color: $white_color;
-  font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
-  font-size: 1em;
-}
-
-.purple_background {
-  background-color: $dark_purple_color;
-  color: $white_color;
-  padding: 2em;
-  min-height: 150px;
-  text-align: center;
-  width: 170px;
-}
-
-.blue_background {
-  background-color: $dark_blue_color;
-  color: $white_color;
-  padding: 1em;
-}
-
-.orange_background {
-  background-color: $dark_orange_color;
-  color: $white_color;
-  padding: 1em;
-}
-
-.green_background {
-  background-color: $dark_green_color;
-  color: $white_color;
-  padding: 1em;
-}
-
 .align_left_text {
   text-align: left;
-}
-
-.opacity {
-  filter: brightness(40%);
 }
 
 .list_styled {
@@ -221,7 +173,7 @@
   }
 }
 
-#rome_decoration {
+/*#rome_decoration {
   background-image: url("../../resources/images/decors/decors_rome.svg");
 }
 
@@ -239,7 +191,7 @@
 
 #celtic_decoration {
   background-image: url("../../resources/images/decors/decors_gaule.svg");
-}
+}*/
 
 #footer_container_pages_container li:first-child a {
   background-image: url("../../resources/images/logo_icon.svg");
@@ -265,7 +217,7 @@
   visibility: visible;
 
   &_button {
-    font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+    font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
     font-size: 1em;
     margin-top: 0;
     width: initial;
@@ -279,6 +231,23 @@
 
 #go_up {
   visibility: visible;
+
+  &_button.about_me_go_up_button_class {
+    background-color: $base_blue_color;
+  }
+
+  &_button.contact_go_up_button_class {
+    background-color: $base_orange_color;
+  }
+
+  &_button.projects_go_up_button_class {
+    background-color: $base_green_color;
+  }
+
+  &_button.skills_go_up_button_class {
+    background-color: $base_purple_color;
+  }
+
   &_button {
     background-color: $base_red_color;
     background-image: url("../../resources/images/go_up_button_arrow.svg");
@@ -289,7 +258,7 @@
     text-wrap: nowrap;
     padding: 1em;
     margin: 0;
-    right: 1.2em;
+    right: 1em;
     bottom: 1em;
     z-index: 2;
     position: fixed;
@@ -298,8 +267,6 @@
 
 #last_modification {
   color: $white_color;
-  background-color: $dark_red_color;
-  padding: 1em;
 }
 
 html {
@@ -317,10 +284,6 @@ abbr {
   &:hover {
     text-decoration: underline dotted $white_color;
   }
-}
-
-h1, h2 {
-  background-color: $dark_red_color;
 }
 
 header {
@@ -351,7 +314,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
+    font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
     font-size: 1.2em;
 
     #logo {
@@ -360,13 +323,14 @@ header {
       text-indent: -100000px;
       display: inline-block;
       background-position: left;
-      width: 80px;
-      height: 80px;
+      width: 35px;
+      height: 29px;
     }
 
     &_container {
       position: absolute;
       bottom: 1000px;
+      border-bottom: 1px solid $white_color;
     }
 
     #burger_menu {
@@ -460,7 +424,7 @@ header {
 #footer {
   margin-top: 7em;
   background-color: $base_red_color;
-  font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
+  font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
   font-size: 1.2em;
   padding-top: 1em;
 
@@ -554,7 +518,13 @@ main {
 
   #go_to_other_pages {
     & > div:not(:last-child) {
-      margin-bottom: 1.875em;
+      margin-bottom: 2em;
+      border-bottom: 1px solid $white_color;
+      padding-bottom: 2em;
+    }
+
+    #projects_button {
+      background-position: .75em center;
     }
   }
 
@@ -566,10 +536,19 @@ main {
   }
 
   section {
-    font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
+    font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
     font-size: 1em;
     line-height: 1.5em;
     max-width: 100%;
+    border: 1px solid $white_color;
+    border-radius: 1em;
+    color: $white_color;
+    padding: 1em;
+
+    &#go_to_other_pages, &#introduction, &#more_over {
+      text-align: right;
+      color: $white_color;
+    }
 
     &#website_owner, &#intellectual_property_rights, &#data_collection, &#data_security, &#rights_of_access_rectification_and_deletion, &#legal_notices_modification {
       p {
@@ -583,11 +562,11 @@ main {
       #show_off_title {
         margin-bottom: 1.25em;
         font-size: 1.2em;
-        font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
+        font-family: 'Proxima-Bold', 'Gotham-Bold', sans-serif;
         background-color: $dark_blue_color;
 
         span {
-          font-family: 'Garamond-Regular', 'Granjon-Regular', serif;
+          font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
           font-size: 1.5em;
           display: block;
           margin-bottom: 0.5em;
@@ -604,7 +583,7 @@ main {
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
-        padding: 1em 1em 1em 3.7em;
+        padding: 0 1em 0 3.7em;
 
         .timeline_item {
           border: 1px solid $white_color;
@@ -621,6 +600,9 @@ main {
             top: 2.4em;
             left: -2em;
           }
+          &:nth-child(4):before {
+            top: 3.2em;
+          }
         }
       }
     }
@@ -630,7 +612,7 @@ main {
         h3 {
           font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
           font-size: 1.2em;
-          margin-bottom: 1.875em;
+          margin-bottom: .5em;
           background-image: url("../../resources/images/sword.svg");
           background-repeat: no-repeat;
           background-position: left;
@@ -639,12 +621,14 @@ main {
       }
 
       .hobbies_item:not(:last-child) {
-        margin-bottom: 1.875em;
+        margin-bottom: 2em;
+        border-bottom: 1px solid $white_color;
+        padding-bottom: 2em;
       }
     }
 
     .flex_container {
-      font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
+      font-family: 'Proxima-Bold', 'Gotham-Bold', sans-serif;
       font-size: 1.2em;
       display: flex;
       flex-wrap: wrap;
@@ -667,32 +651,45 @@ main {
     }
 
     &#project, &#experience {
-      article {
-        text-align: center;
-        width: 170px;
+      .flex_container {
+        &:hover article:not(:hover) {
+          filter: brightness(.40);
+        }
+        article {
+          width: 150px;
+          border: 1px solid $white_color;
+          border-radius: .5em;
+          padding: 1em;
+          text-align: center;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
 
-        a {
-          background-position: center 3em;
-          display: block;
-          height: 200px;
-          background-repeat: no-repeat;
-          background-size: contain;
+          a {
+            background-position: center 3em;
+            display: block;
+            height: 170px;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
         }
       }
     }
 
     &#project {
-      article:first-child {
-        a {
-          background-image: url("../../resources/images/logo_du_cv.svg");
-        }
-      }
 
-      article:last-child {
-        a {
-          background-image: url("../../resources/images/jiri.svg");
+        article:first-child {
+          a {
+            background-image: url("../../resources/images/logo_du_cv.svg");
+          }
         }
-      }
+
+        article:last-child {
+          a {
+            background-image: url("../../resources/images/jiri.svg");
+          }
+        }
     }
 
     &#experience {
@@ -709,22 +706,22 @@ main {
       }
     }
 
+    .flex_container {
+      .skills_2D_item_text, .skills_web_item_text {
+        text-align: center;
+      }
 
-    .skills_2D_item_text, .skills_web_item_text {
-      margin-bottom: 1em;
-    }
-
-    .skills_2D_item, .skills_web_item, .project_item, .experience_item {
-      transition: 0.3s ease-in-out;
-
-      &:hover, &:hover, &:hover, &:hover {
-        transform: scale(1.1);
+      .skills_2D_item, .skills_web_item, .project_item, .experience_item {
+        border: 1px solid $white_color;
+        border-radius: .5em;
+        width: 150px;
+        padding: 1em;
       }
     }
 
     &#cv_presentation, &#instagram_presentation {
       div {
-        font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+        font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
         font-size: 1em;
         line-height: 1.5em;
         text-align: right;
@@ -740,7 +737,7 @@ main {
     }
 
     &#cv_presentation, &#cv_language_chosen, &#cv_conclusion_and_comparison, &#jiri_presentation, &#jiri_learned, &#instagram_presentation, &#instagram_creations, &#kperform_presentation, &#kperform_requests, &#kperform_typography, &#kperform_inspirations, &#mail_contact {
-      font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+      font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
       font-size: 1em;
       line-height: 1.5em;
     }
@@ -751,11 +748,11 @@ main {
       line-height: 1.5em;
 
       & p:first-child {
-        font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+        font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
       }
 
       & p:nth-child(2) {
-        font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
+        font-family: 'Proxima-Bold', 'Gotham-Bold', sans-serif;
         font-size: 1.5em;
         margin: 0.5em 0 1em 0;
       }
@@ -784,7 +781,9 @@ main {
 
     &#instagram_creations {
       .creation:not(:last-child) {
-        margin-bottom: 1em;
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+        border-bottom: 1px solid $white_color;
       }
 
       .creation {
@@ -819,7 +818,7 @@ main {
 
     &#kperform_typography {
       span {
-        font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
+        font-family: 'Proxima-Bold', 'Gotham-Bold', sans-serif;
       }
 
       figure {
@@ -829,9 +828,6 @@ main {
 
     &#mail_contact {
       form {
-        background-color: $dark_orange_color;
-        padding: 1em;
-
         fieldset {
           display: flex;
           flex-direction: column;
@@ -839,13 +835,12 @@ main {
 
           .validation_errors {
             color: $error_color;
-            font-family: 'Garamond-Italic', serif;
-            font-style: italic;
+            font-family: 'Proxima-Italic', 'Gotham-Italic', sans-serif;
           }
 
           legend {
             margin-bottom: 1em;
-            font-family: 'Garamond-Bold', 'Granjon-Bold', serif;
+            font-family: 'Proxima-Bold', 'Gotham-Bold', sans-serif;
           }
 
           p {
@@ -853,7 +848,7 @@ main {
           }
 
           label small {
-            font-family: 'Garamond-regular', 'Granjon-Regular', serif;
+            font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
             font-size: 0.75em;
           }
 

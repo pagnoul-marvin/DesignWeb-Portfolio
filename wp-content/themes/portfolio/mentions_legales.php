@@ -7,10 +7,6 @@ Template Name: Mentions Légales
 
     <?php get_header(); ?>
 
-    <?php component('global.decoration.decoration', [
-        'id' => 'rome_decoration'
-    ]); ?>
-
     <main>
         <?= get_the_content(); ?>
     </main>

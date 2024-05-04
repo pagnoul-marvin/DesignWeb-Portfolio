@@ -7,7 +7,7 @@
 /** @var string $link_class */
 ?>
 
-<div class="red_background">
+<div>
     <p class="align_left_text"><?= $text ?></p>
     <a href="<?= $link_href ?>" id="<?= $link_id ?>" class="<?= $link_class; ?> pages_button no_text_decoration" title="<?= $link_title ?>"><?= $link_text ?></a>
 </div>

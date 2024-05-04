@@ -6,10 +6,6 @@ Template Name: Project and experience item
 
 <?php get_header(); ?>
 
-<?php component('global.decoration.decoration', [
-    'id' => 'celtic_decoration'
-]); ?>
-
     <main>
         <?php component('global.navigations.go_back_nav', [
             'second_title_text' => 'Revenir en arrière',

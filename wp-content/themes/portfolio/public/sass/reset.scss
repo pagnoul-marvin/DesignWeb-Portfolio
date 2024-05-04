@@ -138,37 +138,43 @@ table {
 }
 
 @font-face {
-  font-family: 'Garamond-Bold';
+  font-family: 'Proxima-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../resources/fonts/proxima/Mark Simonson  Proxima Nova Regular.otf') format('OpenType');
+}
+
+@font-face {
+  font-family: 'Proxima-Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../resources/fonts/proxima/Mark Simonson  Proxima Nova Regular Italic.otf') format('OpenType');
+}
+
+@font-face {
+  font-family: 'Proxima-Bold';
   font-style: normal;
   font-weight: bold;
-  src: url('../../resources/fonts/garamond/EBGaramond-Bold.ttf') format('TrueType');
+  src: url('../../resources/fonts/proxima/Mark Simonson  Proxima Nova Bold.otf') format('OpenType');
 }
 
 @font-face {
-  font-family: 'Garamond-Italic';
-  font-style: italic;
-  font-weight: normal;
-  src: url('../../resources/fonts/garamond/EBGaramond-Italic.ttf') format('TrueType');
-}
-
-@font-face {
-  font-family: 'Garamond-Regular';
+  font-family: 'Gotham-Regular';
   font-style: normal;
   font-weight: normal;
-  src: url('../../resources/fonts/garamond/EBGaramond-Regular.ttf') format('TrueType');
+  src: url('../../resources/fonts/gotham/GothamBook.ttf') format('TrueType');
 }
 
 @font-face {
-  font-family: 'Granjon-Regular';
+  font-family: 'Gotham-Italic';
   font-style: normal;
   font-weight: normal;
-  src: url('../../resources/fonts/granjon/GranjonLTStd.ttf') format('TrueType');
+  src: url('../../resources/fonts/gotham/GothamBookItalic.ttf') format('TrueType');
 }
 
 @font-face {
-  font-family: 'Granjon-Bold';
+  font-family: 'Gotham-Regular';
   font-style: normal;
   font-weight: bold;
-  src: url('../../resources/fonts/granjon/GranjonLTStd-Bold.ttf') format('TrueType');
+  src: url('../../resources/fonts/gotham/GothamBold.ttf') format('TrueType');
 }
-

@@ -6,25 +6,15 @@ Template Name: Accueil
 
 <?php get_header(); ?>
 
-<?php component('global.decoration.decoration', [
-        'id' => 'rome_decoration'
-]); ?>
-
     <main>
 
         <section id="introduction">
-
-            <?php component('global.titles.second_title', [
-                    'class' => 'hidden',
-                    'text' => 'Introduction'
-            ]);
-            ?>
 
             <div id="introduction_presentation">
 
                 <img src="<?= dw_get_image('http://site.test/wp-content/uploads/2024/04/photo_moi-1.png'); ?>" alt="Photo de Marvin Pagnoul">
 
-                <div id="introduction_presentation_text" class="red_background">
+                <div id="introduction_presentation_text">
                     <p class="align_left_text">Salut&nbsp;! Moi, c&rsquo;est Marvin Pagnoul. Voici mon portfolio&nbsp;! Dans celui&hyphen;ci, je vous partage plein d&rsquo;informations sur moi et mon m&eacute;tier de Web Developer tout en vous faisant plonger dans ma plus grande passion&nbsp;: l&rsquo;Histoire antique&nbsp;!</p>
 
                     <p class="align_left_text">Pour commencer en savoir plus sur moi, plongez dans l&rsquo;Egypte antique&nbsp;:</p>

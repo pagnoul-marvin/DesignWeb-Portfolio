@@ -14,53 +14,42 @@
   text-decoration: underline #fff;
 }
 
-.main_title_class, .second_title_class, .about_me_main_title_class, .about_me_second_title_class, .contact_main_title_class, .contact_second_title_class, .projects_main_title_class, .projects_item_main_title_class, .projects_second_title_class, .skills_main_title_class, .skills_second_title_class {
-  color: #fff;
-  display: inline-block;
-  padding: 1em;
-  font-family: "Trajan-Regular", "Jenson-Regular", serif;
+body {
+  background-color: #330000;
+}
+body.about_me_body_class {
+  background-color: #003133;
+}
+body.contact_body_class {
+  background-color: #331F00;
+}
+body.skills_body_class {
+  background-color: #310033;
+}
+body.projects_body_class {
+  background-color: #013400;
+}
+
+h1 {
   line-height: 1.2em;
-}
-
-.main_title_class, .second_title_class {
-  background-color: #700000;
-}
-
-.about_me_main_title_class, .about_me_second_title_class, #go_up_button.about_me_go_up_button_class {
-  background-color: #00626F;
-}
-
-.contact_main_title_class, .contact_second_title_class, #go_up_button.contact_go_up_button_class {
-  background-color: #704100;
-}
-
-.projects_main_title_class, .projects_second_title_class, .projects_item_main_title_class, #go_up_button.projects_go_up_button_class {
-  background-color: #007002;
-}
-
-.skills_main_title_class, .skills_second_title_class, #go_up_button.skills_go_up_button_class {
-  background-color: #700069;
-}
-
-.main_title_class, .about_me_main_title_class, .contact_main_title_class, .projects_main_title_class, .projects_item_main_title_class, .skills_main_title_class {
+  font-family: "Trajan-Regular", "Jenson-Regular", serif;
   font-size: 2.3em;
-  margin: 3.75em 0 3.75em 0.5em;
-  max-width: 7.7em;
+  margin: 3.75em 0;
+  padding: 0 0.5em;
+  color: #fff;
 }
 
-.second_title_class, .about_me_second_title_class, .contact_second_title_class, .projects_second_title_class, .skills_second_title_class {
+h2 {
+  font-family: "Trajan-Regular", "Jenson-Regular", serif;
   font-size: 1.7em;
-  margin-bottom: 1.875em;
-  line-height: 1.5em;
-}
-
-.projects_item_main_title_class {
   margin-bottom: 1em;
+  line-height: 1.2em;
+  text-align: left;
 }
 
 #legal_notices {
   padding: 1em;
-  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1em;
   line-height: 1.5em;
   color: #fff;
@@ -87,7 +76,7 @@
   margin-top: 7em;
 }
 
-.decoration {
+/*.decoration {
   background-repeat: no-repeat;
   background-position: center;
   position: fixed;
@@ -96,8 +85,7 @@
   width: 100vw;
   height: 100vh;
   background-size: cover;
-}
-
+}*/
 .pages_button, #cv {
   border: 1px solid #fff;
   display: inline-block;
@@ -130,7 +118,7 @@
 .pages_button {
   background-position: 1.5em center;
   padding: 0.5em 0 0.5em 1.5em;
-  width: 12em;
+  width: 13em;
   text-align: center;
 }
 
@@ -144,49 +132,8 @@
   display: block;
 }
 
-.red_background {
-  background-color: #330000;
-  text-align: right;
-  padding: 1em;
-  line-height: 1.5em;
-  color: #fff;
-  font-family: "Garamond-Regular", "Granjon-Regular", serif;
-  font-size: 1em;
-}
-
-.purple_background {
-  background-color: #310033;
-  color: #fff;
-  padding: 2em;
-  min-height: 150px;
-  text-align: center;
-  width: 170px;
-}
-
-.blue_background {
-  background-color: #003133;
-  color: #fff;
-  padding: 1em;
-}
-
-.orange_background {
-  background-color: #331F00;
-  color: #fff;
-  padding: 1em;
-}
-
-.green_background {
-  background-color: #013400;
-  color: #fff;
-  padding: 1em;
-}
-
 .align_left_text {
   text-align: left;
-}
-
-.opacity {
-  filter: brightness(40%);
 }
 
 .list_styled {
@@ -207,7 +154,7 @@
   visibility: visible;
 }
 
-#rome_decoration {
+/*#rome_decoration {
   background-image: url("../../resources/images/decors/decors_rome.svg");
 }
 
@@ -225,8 +172,7 @@
 
 #celtic_decoration {
   background-image: url("../../resources/images/decors/decors_gaule.svg");
-}
-
+}*/
 #footer_container_pages_container li:first-child a {
   background-image: url("../../resources/images/logo_icon.svg");
 }
@@ -251,7 +197,7 @@
   visibility: visible;
 }
 #go_back_button {
-  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1em;
   margin-top: 0;
   width: initial;
@@ -265,6 +211,18 @@
 #go_up {
   visibility: visible;
 }
+#go_up_button.about_me_go_up_button_class {
+  background-color: #00626F;
+}
+#go_up_button.contact_go_up_button_class {
+  background-color: #704100;
+}
+#go_up_button.projects_go_up_button_class {
+  background-color: #007002;
+}
+#go_up_button.skills_go_up_button_class {
+  background-color: #700069;
+}
 #go_up_button {
   background-color: #700000;
   background-image: url("../../resources/images/go_up_button_arrow.svg");
@@ -275,7 +233,7 @@
   text-wrap: nowrap;
   padding: 1em;
   margin: 0;
-  right: 1.2em;
+  right: 1em;
   bottom: 1em;
   z-index: 2;
   position: fixed;
@@ -283,8 +241,6 @@
 
 #last_modification {
   color: #fff;
-  background-color: #330000;
-  padding: 1em;
 }
 
 html {
@@ -301,10 +257,6 @@ abbr {
 }
 abbr:hover {
   text-decoration: underline dotted #fff;
-}
-
-h1, h2 {
-  background-color: #330000;
 }
 
 header {
@@ -331,7 +283,7 @@ header #main_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Garamond-Regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1.2em;
 }
 header #main_nav #logo {
@@ -340,12 +292,13 @@ header #main_nav #logo {
   text-indent: -100000px;
   display: inline-block;
   background-position: left;
-  width: 80px;
-  height: 80px;
+  width: 35px;
+  height: 29px;
 }
 header #main_nav_container {
   position: absolute;
   bottom: 1000px;
+  border-bottom: 1px solid #fff;
 }
 header #main_nav #burger_menu {
   opacity: 0;
@@ -421,7 +374,7 @@ header #main_nav label[for=burger_menu] .line:after {
 #footer {
   margin-top: 7em;
   background-color: #700000;
-  font-family: "Garamond-Regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1.2em;
   padding-top: 1em;
 }
@@ -489,17 +442,30 @@ main #introduction_presentation_text > p:first-child {
   margin-bottom: 1em;
 }
 main #go_to_other_pages > div:not(:last-child) {
-  margin-bottom: 1.875em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2em;
+}
+main #go_to_other_pages #projects_button {
+  background-position: 0.75em center;
 }
 main #more_over #cv {
   padding: 0.5em 2em;
   width: initial;
 }
 main section {
-  font-family: "Garamond-Regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1em;
   line-height: 1.5em;
   max-width: 100%;
+  border: 1px solid #fff;
+  border-radius: 1em;
+  color: #fff;
+  padding: 1em;
+}
+main section#go_to_other_pages, main section#introduction, main section#more_over {
+  text-align: right;
+  color: #fff;
 }
 main section#website_owner p, main section#intellectual_property_rights p, main section#data_collection p, main section#data_security p, main section#rights_of_access_rectification_and_deletion p, main section#legal_notices_modification p {
   background-color: #330000;
@@ -509,11 +475,11 @@ main section#website_owner p, main section#intellectual_property_rights p, main 
 main section#show_off #show_off_title {
   margin-bottom: 1.25em;
   font-size: 1.2em;
-  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+  font-family: "Proxima-Bold", "Gotham-Bold", sans-serif;
   background-color: #003133;
 }
 main section#show_off #show_off_title span {
-  font-family: "Garamond-Regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1.5em;
   display: block;
   margin-bottom: 0.5em;
@@ -526,7 +492,7 @@ main section#school_career .timeline {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 1em 1em 1em 3.7em;
+  padding: 0 1em 0 3.7em;
 }
 main section#school_career .timeline .timeline_item {
   border: 1px solid #fff;
@@ -543,20 +509,25 @@ main section#school_career .timeline .timeline_item:before {
   top: 2.4em;
   left: -2em;
 }
+main section#school_career .timeline .timeline_item:nth-child(4):before {
+  top: 3.2em;
+}
 main section#hobbies .hobbies_item h3 {
   font-family: "Trajan-Regular", "Jenson-Regular", serif;
   font-size: 1.2em;
-  margin-bottom: 1.875em;
+  margin-bottom: 0.5em;
   background-image: url("../../resources/images/sword.svg");
   background-repeat: no-repeat;
   background-position: left;
   text-indent: 1em;
 }
 main section#hobbies .hobbies_item:not(:last-child) {
-  margin-bottom: 1.875em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2em;
 }
 main section .flex_container {
-  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+  font-family: "Proxima-Bold", "Gotham-Bold", sans-serif;
   font-size: 1.2em;
   display: flex;
   flex-wrap: wrap;
@@ -572,14 +543,24 @@ main section#phone_contact article p {
 main section#phone_contact article a {
   padding: 0.5em;
 }
-main section#project article, main section#experience article {
-  text-align: center;
-  width: 170px;
+main section#project .flex_container:hover article:not(:hover), main section#experience .flex_container:hover article:not(:hover) {
+  filter: brightness(0.4);
 }
-main section#project article a, main section#experience article a {
+main section#project .flex_container article, main section#experience .flex_container article {
+  width: 150px;
+  border: 1px solid #fff;
+  border-radius: 0.5em;
+  padding: 1em;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+main section#project .flex_container article:hover, main section#experience .flex_container article:hover {
+  transform: scale(1.1);
+}
+main section#project .flex_container article a, main section#experience .flex_container article a {
   background-position: center 3em;
   display: block;
-  height: 200px;
+  height: 170px;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -595,17 +576,17 @@ main section#experience article:first-child a {
 main section#experience article:last-child a {
   background-image: url("../../resources/images/logo_kperform.svg");
 }
-main section .skills_2D_item_text, main section .skills_web_item_text {
-  margin-bottom: 1em;
+main section .flex_container .skills_2D_item_text, main section .flex_container .skills_web_item_text {
+  text-align: center;
 }
-main section .skills_2D_item, main section .skills_web_item, main section .project_item, main section .experience_item {
-  transition: 0.3s ease-in-out;
-}
-main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_2D_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .skills_web_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .project_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover, main section .experience_item:hover {
-  transform: scale(1.1);
+main section .flex_container .skills_2D_item, main section .flex_container .skills_web_item, main section .flex_container .project_item, main section .flex_container .experience_item {
+  border: 1px solid #fff;
+  border-radius: 0.5em;
+  width: 150px;
+  padding: 1em;
 }
 main section#cv_presentation div, main section#instagram_presentation div {
-  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1em;
   line-height: 1.5em;
   text-align: right;
@@ -617,7 +598,7 @@ main section#cv_presentation div a, main section#instagram_presentation div a {
   padding: 0.5em;
 }
 main section#cv_presentation, main section#cv_language_chosen, main section#cv_conclusion_and_comparison, main section#jiri_presentation, main section#jiri_learned, main section#instagram_presentation, main section#instagram_creations, main section#kperform_presentation, main section#kperform_requests, main section#kperform_typography, main section#kperform_inspirations, main section#mail_contact {
-  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1em;
   line-height: 1.5em;
 }
@@ -627,10 +608,10 @@ main section#contact_me {
   line-height: 1.5em;
 }
 main section#contact_me p:first-child {
-  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
 }
 main section#contact_me p:nth-child(2) {
-  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+  font-family: "Proxima-Bold", "Gotham-Bold", sans-serif;
   font-size: 1.5em;
   margin: 0.5em 0 1em 0;
 }
@@ -651,7 +632,9 @@ main section#cv_conclusion_and_comparison figure:nth-child(1):after {
   border-top: 20px solid #fff;
 }
 main section#instagram_creations .creation:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #fff;
 }
 main section#instagram_creations .creation_information {
   margin-top: 1em;
@@ -670,14 +653,10 @@ main section#kperform_inspirations p:not(:last-child) {
   margin-bottom: 1em;
 }
 main section#kperform_typography span {
-  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+  font-family: "Proxima-Bold", "Gotham-Bold", sans-serif;
 }
 main section#kperform_typography figure {
   margin-top: 1em;
-}
-main section#mail_contact form {
-  background-color: #331F00;
-  padding: 1em;
 }
 main section#mail_contact form fieldset {
   display: flex;
@@ -686,18 +665,17 @@ main section#mail_contact form fieldset {
 }
 main section#mail_contact form fieldset .validation_errors {
   color: #FF9191;
-  font-family: "Garamond-Italic", serif;
-  font-style: italic;
+  font-family: "Proxima-Italic", "Gotham-Italic", sans-serif;
 }
 main section#mail_contact form fieldset legend {
   margin-bottom: 1em;
-  font-family: "Garamond-Bold", "Granjon-Bold", serif;
+  font-family: "Proxima-Bold", "Gotham-Bold", sans-serif;
 }
 main section#mail_contact form fieldset p {
   margin-bottom: 2em;
 }
 main section#mail_contact form fieldset label small {
-  font-family: "Garamond-regular", "Granjon-Regular", serif;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 0.75em;
 }
 main section#mail_contact form fieldset label, main section#mail_contact form fieldset input[type=submit] {

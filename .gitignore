@@ -65,9 +65,9 @@ wp-content/themes/portfolio/.env.local.ini
 !wp-content/themes/portfolio/resources/components/global/titles/*
 !wp-content/themes/portfolio/resources/components/global/forms/labels_and_inputs/*
 !wp-content/themes/portfolio/resources/fonts/*
-!wp-content/themes/portfolio/resources/fonts/garamond/*
+!wp-content/themes/portfolio/resources/fonts/gotham/*
 !wp-content/themes/portfolio/resources/fonts/trajan/*
-!wp-content/themes/portfolio/resources/fonts/granjon/*
+!wp-content/themes/portfolio/resources/fonts/proxima/*
 !wp-content/themes/portfolio/resources/fonts/jenson/*
 !wp-content/themes/portfolio/resources/images/*
 !wp-content/themes/portfolio/resources/images/decors/*
