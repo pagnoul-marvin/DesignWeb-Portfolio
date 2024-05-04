@@ -89,16 +89,48 @@ h2 {
   margin-top: 7em;
 }
 
-/*.decoration {
-  background-repeat: no-repeat;
-  background-position: center;
+.decoration {
+  background-color: $base_red_color;
   position: fixed;
-  z-index: -1;
-  top: 7.4em;
+  top: 0;
+  z-index: 2;
   width: 100vw;
   height: 100vh;
-  background-size: cover;
-}*/
+  color: $white_color;
+  padding: 1em;
+
+  p{
+    padding: .5em;
+  }
+
+  .decorate {
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+  }
+
+  &.projects_decoration_class {
+    background-color: $base_green_color;
+  }
+
+  &.skills_decoration_class {
+    background-color: $base_purple_color;
+  }
+
+  &.contact_decoration_class {
+    background-color: $base_orange_color;
+  }
+
+  &.about_me_decoration_class {
+    background-color: $base_blue_color;
+  }
+
+  a {
+
+  }
+}
 
 .pages_button, #cv {
   border: 1px solid $white_color;
@@ -173,7 +205,7 @@ h2 {
   }
 }
 
-/*#rome_decoration {
+#rome_decoration {
   background-image: url("../../resources/images/decors/decors_rome.svg");
 }
 
@@ -191,7 +223,7 @@ h2 {
 
 #celtic_decoration {
   background-image: url("../../resources/images/decors/decors_gaule.svg");
-}*/
+}
 
 #footer_container_pages_container li:first-child a {
   background-image: url("../../resources/images/logo_icon.svg");
@@ -600,6 +632,7 @@ main {
             top: 2.4em;
             left: -2em;
           }
+
           &:nth-child(4):before {
             top: 3.2em;
           }
@@ -655,6 +688,7 @@ main {
         &:hover article:not(:hover) {
           filter: brightness(.40);
         }
+
         article {
           width: 150px;
           border: 1px solid $white_color;
@@ -662,6 +696,7 @@ main {
           padding: 1em;
           text-align: center;
           transition: 0.3s ease-in-out;
+
           &:hover {
             transform: scale(1.1);
           }
@@ -679,17 +714,17 @@ main {
 
     &#project {
 
-        article:first-child {
-          a {
-            background-image: url("../../resources/images/logo_du_cv.svg");
-          }
+      article:first-child {
+        a {
+          background-image: url("../../resources/images/logo_du_cv.svg");
         }
+      }
 
-        article:last-child {
-          a {
-            background-image: url("../../resources/images/jiri.svg");
-          }
+      article:last-child {
+        a {
+          background-image: url("../../resources/images/jiri.svg");
         }
+      }
     }
 
     &#experience {

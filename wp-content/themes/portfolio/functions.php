@@ -119,6 +119,25 @@ function give_page_footer_class() :string
     return $footer_class;
 }
 
+function give_decoration_class() :string
+{
+    $page_id = get_the_ID();
+
+    $decoration_class = '';
+
+    if ($page_id === 9) {
+        $decoration_class .= 'about_me_decoration_class';
+    } elseif ($page_id === 15) {
+        $decoration_class .= 'contact_decoration_class';
+    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+        $decoration_class .= 'projects_decoration_class';
+    } elseif ($page_id === 11) {
+        $decoration_class .= 'skills_decoration_class';
+    }
+
+    return $decoration_class;
+}
+
 function give_page_main_nav_container_class() :string
 {
     $page_id = get_the_ID();
