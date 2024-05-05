@@ -7,7 +7,7 @@ Template Name: Mentions Légales
 
     <?php get_header(); ?>
 
-    <main>
+    <main class="legal_notices_main_class">
         <?= get_the_content(); ?>
     </main>
 

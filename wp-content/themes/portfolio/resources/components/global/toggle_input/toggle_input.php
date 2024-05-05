@@ -1,4 +1,8 @@
-<?php /** @var string $label_text */ ?>
+<?php
+/** @var string $input_id */
+/** @var string $label_class */
+/** @var string $label_text */
+?>
 
-<input type="checkbox" id="toggle">
-<label for="toggle" class="pages_button no_text_decoration"><?= $label_text ?></label>
+<input type="checkbox" id="<?= $input_id ?>">
+<label for="<?= $input_id ?>" class="<?= $label_class ?>"><?= $label_text ?></label>

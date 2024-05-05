@@ -94,11 +94,37 @@
   body h1 {
     padding-left: 5.2em;
   }
+  body header {
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+  }
   body header #main_nav {
     padding: 1em 10em;
   }
   body main {
     padding: 0 calc(12em + 2px);
+    overflow: hidden;
+  }
+  body main.legal_notices_main_class section {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+  body main.legal_notices_main_class section:not(:nth-child(2)) {
+    opacity: 0 !important;
+    transform: translateX(1000px) !important;
+    transition: all 0.7s ease-in-out !important;
+  }
+  body main.legal_notices_main_class section:not(:nth-child(2)).appear {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+  body main section:not(:nth-child(3)):not(:nth-child(4)) {
+    opacity: 0;
+    transform: translateX(1000px);
+    transition: all 0.7s ease-in-out;
+  }
+  body main section.appear {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
   }
   body main section#decoration.decoration {
     transform: translateX(-12em);
@@ -205,6 +231,7 @@ label[for=toggle] {
 
 input#toggle {
   visibility: hidden;
+  clip: rect(0 0 0 0);
 }
 input#toggle:checked ~ section#decoration {
   transform: translateX(-10000px);
@@ -375,7 +402,16 @@ input#toggle:checked ~ label[for=toggle]:hover {
 }
 
 #last_modification {
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   color: #fff;
+}
+
+#progress_bar {
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
 }
 
 html {
@@ -574,6 +610,34 @@ header #main_nav label[for=burger_menu] .line:after {
 
 main {
   padding: 0 1em;
+  color: #fff;
+}
+main #no_js_message #banner input {
+  visibility: hidden;
+  clip: rect(0 0 0 0);
+}
+main #no_js_message #banner label {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+main #no_js_message #banner label:before, main #no_js_message #banner label:after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+}
+main #no_js_message #banner label:before {
+  transform: rotate(45deg);
+  left: 12.5px;
+}
+main #no_js_message #banner label:after {
+  transform: rotate(-45deg);
+  left: 12.5px;
 }
 main #introduction_presentation img {
   width: 100%;

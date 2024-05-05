@@ -8,7 +8,11 @@ Template Name: Accueil
 
 <main>
 
+    <?php component('global.no_js_banner.banner') ?>
+
     <?php component('global.toggle_input.toggle_input', [
+        'input_id' => 'toggle',
+        'label_class' => 'pages_button no_text_decoration',
         'label_text' => 'Aller vers la page Accueil'
     ]) ?>
 
@@ -34,7 +38,8 @@ Template Name: Accueil
                     celui&hyphen;ci, je vous partage plein d&rsquo;informations sur moi et mon m&eacute;tier de Web
                     Developer tout en vous faisant plonger dans ma plus grande passion&nbsp;: l&rsquo;Histoire antique&nbsp;!</p>
 
-                <p class="align_left_text">Pour commencer &agrave; en savoir plus sur moi, je vous invite &agrave; plonger dans l&rsquo;Egypte antique&nbsp;:</p>
+                <p class="align_left_text">Pour commencer &agrave; en savoir plus sur moi, je vous invite &agrave;
+                    plonger dans l&rsquo;Egypte antique&nbsp;:</p>
 
                 <a id="introduction_presentation_text_link" class="pages_button no_text_decoration"
                    title="Se diriger vers la page À propos de moi" href="<?= go_to_other_pages(9) ?>">&Agrave; propos de

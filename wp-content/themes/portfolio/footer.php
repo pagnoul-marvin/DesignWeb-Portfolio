@@ -44,6 +44,8 @@
 
 </footer>
 
+<div id="progress_bar"></div>
+
 </body>
 
 </html

@@ -185,11 +185,14 @@
 
 @media (width >= 1200px) {
   body {
+
     h1 {
       padding-left: 5.2em;
     }
 
     header {
+      box-shadow: 0 5px 6px $shadow_color;
+
       #main_nav {
         padding: 1em 10em;
       }
@@ -197,8 +200,38 @@
 
     main {
       padding: 0 calc(10em + 2em + 2px);
+      overflow: hidden;
+
+      &.legal_notices_main_class {
+        section {
+          opacity: 1 !important;
+          transform: translateX(0) !important;
+
+          &:not(:nth-child(2)) {
+            opacity: 0 !important;
+            transform: translateX(1000px) !important;
+            transition: all 0.7s ease-in-out !important;
+
+            &.appear {
+              opacity: 1 !important;
+              transform: translateX(0) !important;
+            }
+          }
+        }
+      }
 
       section {
+        &:not(:nth-child(3)):not(:nth-child(4)) {
+          opacity: 0;
+          transform: translateX(1000px);
+          transition: all 0.7s ease-in-out;
+        }
+
+        &.appear {
+          opacity: 1 !important;
+          transform: translateX(0) !important;
+        }
+
         &#decoration.decoration {
           transform: translateX(-12em);
         }
@@ -322,6 +355,7 @@ label[for='toggle'] {
 
 input#toggle {
   visibility: hidden;
+  clip: rect(0 0 0 0);
 
   &:checked ~ section#decoration {
     transform: translateX(-10000px);
@@ -506,7 +540,16 @@ input#toggle {
 }
 
 #last_modification {
+  font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
   color: $white_color;
+}
+
+#progress_bar {
+  width: 0;
+  height: 3px;
+  background-color: $white_color;
+  position: fixed;
+  bottom: 0;
 }
 
 html {
@@ -746,6 +789,42 @@ header {
 
 main {
   padding: 0 1em;
+  color: $white_color;
+
+  #no_js_message {
+    #banner {
+      input {
+        visibility: hidden;
+        clip: rect(0 0 0 0);
+      }
+
+      label {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        &:before, &:after {
+          content: '';
+          width: 5px;
+          height: 100%;
+          background-color: $white_color;
+          position: absolute;
+          top: 0;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+          left: 12.5px;
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+          left: 12.5px;
+        }
+      }
+    }
+  }
 
   #introduction {
     &_presentation {
