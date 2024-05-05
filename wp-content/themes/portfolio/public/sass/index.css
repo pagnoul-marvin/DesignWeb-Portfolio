@@ -1,4 +1,115 @@
 @import "../../../../../node_modules/animate.css/animate.css";
+@media (width >= 406px) {
+  body main section#school_career .timeline_item:nth-child(4):before {
+    top: 2.4em !important;
+  }
+}
+@media (width >= 531px) {
+  body main section#school_career .timeline_item:nth-child(3):before {
+    top: 1.7em !important;
+  }
+}
+@media (width >= 533px) {
+  body main section#school_career .timeline_item:last-child:before {
+    top: 1.7em !important;
+  }
+}
+@media (width >= 550px) {
+  body main section#school_career .timeline_item:nth-child(2):before {
+    top: 1.7em !important;
+  }
+  body main section#school_career .timeline_item:nth-child(4):before {
+    top: 2.4em !important;
+  }
+}
+@media (width >= 600px) {
+  body main section#introduction #introduction_presentation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  body main section#introduction #introduction_presentation img {
+    max-height: 20em;
+    width: unset;
+  }
+  body main section#introduction #introduction_presentation_text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1em;
+  }
+  body main section#introduction #introduction_presentation_text p:first-child {
+    margin: 0;
+  }
+  body main section#introduction #introduction_presentation_text a {
+    align-self: flex-end;
+  }
+  body main section#skills_web .flex_container, body main section#skills_2D .flex_container {
+    gap: 2em;
+  }
+}
+@media (width >= 621px) {
+  body main section#school_career .timeline_item:nth-child(4):before {
+    top: 1.7em !important;
+  }
+}
+@media (width >= 1000px) {
+  body header #main_nav_container {
+    position: initial;
+    border: unset;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  body header #main_nav_container .main_nav_container_item:not(:last-child) {
+    border-right: 1px solid #fff;
+    padding-right: 1em;
+  }
+  body header #main_nav input, body header #main_nav label {
+    display: none;
+  }
+  body main > label[for=toggle] {
+    left: 7em;
+    width: calc(100% - 14em - 2px);
+  }
+  body #footer_container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1em;
+    gap: 2em;
+  }
+  body #footer_container > nav {
+    padding: 0;
+  }
+  body #footer_container > nav:nth-child(2) {
+    border-right: 1px solid #fff;
+    padding-right: 2em;
+    flex-grow: 1;
+  }
+  body #footer_container > nav:last-child {
+    flex-grow: 2;
+  }
+}
+@media (width >= 1200px) {
+  body h1 {
+    padding-left: 5.2em;
+  }
+  body header #main_nav {
+    padding: 1em 10em;
+  }
+  body main {
+    padding: 0 calc(12em + 2px);
+  }
+  body main section#decoration.decoration {
+    transform: translateX(-12em);
+  }
+  body #footer_container {
+    padding: 0 10em;
+  }
+  body #footer #legal_notices {
+    padding: 1em 10em;
+  }
+}
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;
@@ -84,9 +195,11 @@ label[for=toggle] {
   padding: 0.5em;
   z-index: 3;
   color: #fff;
-  width: calc(100% - 3em);
   position: fixed;
-  left: 1em;
+  left: 2em;
+  margin: 0;
+  width: calc(100% - 5em - 2px);
+  bottom: 5em;
   transition: transform 2s ease-in-out;
 }
 
@@ -400,12 +513,6 @@ header #main_nav label[for=burger_menu] .line:after {
   font-size: 1.2em;
   padding-top: 1em;
 }
-#footer h3 {
-  color: #fff;
-  padding-left: 1em;
-  font-family: "Trajan-Regular", "Jenson-Regular", serif;
-  line-height: 1.2em;
-}
 #footer.about_me_footer_class {
   background-color: #00626F;
 }
@@ -418,16 +525,30 @@ header #main_nav label[for=burger_menu] .line:after {
 #footer.skills_footer_class {
   background-color: #700069;
 }
-#footer_container_pages_container {
+#footer #legal_notices {
+  margin-top: 2em;
+}
+#footer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+#footer_container > nav {
   padding: 0 1em;
-  margin-bottom: 2em;
-  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1em;
+}
+#footer_container > nav h3 {
+  color: #fff;
+  font-family: "Trajan-Regular", "Jenson-Regular", serif;
+  line-height: 1.2em;
 }
 #footer_container_pages_container li:not(:last-child) {
   margin-bottom: 1em;
 }
 #footer_container_socials_container {
-  margin: 1em 0 2em 0;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -486,7 +607,14 @@ main section {
   padding: 1em;
 }
 main section#decoration {
-  transition: 2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  transition: transform 2s ease-in-out;
+  gap: 1em;
+}
+main section#decoration h2 {
+  text-align: center;
+  margin-bottom: 0;
 }
 main section#decoration.decoration {
   background-color: #700000;
@@ -503,11 +631,11 @@ main section#decoration.decoration {
 }
 main section#decoration.decoration .decorate {
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
   display: inline-block;
-  background-size: cover;
-  width: 100%;
-  height: 250px;
+  flex-grow: 1;
+  max-height: calc(100% - 10em - 2px);
 }
 main section#decoration.decoration.projects_decoration_class {
   background-color: #007002;
@@ -634,6 +762,11 @@ main section#experience article:last-child a {
 }
 main section .flex_container .skills_2D_item_text, main section .flex_container .skills_web_item_text {
   text-align: center;
+}
+main section .flex_container .skills_2D_item, main section .flex_container .skills_web_item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 main section .flex_container .skills_2D_item, main section .flex_container .skills_web_item, main section .flex_container .project_item, main section .flex_container .experience_item {
   border: 1px solid #fff;

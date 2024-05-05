@@ -2,6 +2,221 @@
 @import "variables";
 @import "../../../../../node_modules/animate.css/animate.css";
 
+@media (width >= 406px) {
+  body {
+    main {
+      section {
+        &#school_career {
+          .timeline {
+            &_item:nth-child(4):before {
+              top: 2.4em !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 531px) {
+  body {
+    main {
+      section {
+        &#school_career {
+          .timeline {
+            &_item:nth-child(3):before {
+              top: 1.7em !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 533px) {
+  body {
+    main {
+      section {
+        &#school_career {
+          .timeline {
+            &_item:last-child:before {
+              top: 1.7em !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 550px) {
+  body {
+    main {
+      section {
+        &#school_career {
+          .timeline {
+            &_item:nth-child(2):before {
+              top: 1.7em !important;
+            }
+
+            &_item:nth-child(4):before {
+              top: 2.4em !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 600px) {
+  body {
+    main {
+      section {
+        &#introduction {
+          #introduction_presentation {
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+
+            img {
+              max-height: 20em;
+              width: unset;
+            }
+
+            &_text {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+              gap: 1em;
+
+              & p:first-child {
+                margin: 0;
+              }
+
+              & a {
+                align-self: flex-end;
+              }
+            }
+          }
+        }
+
+        &#skills_web, &#skills_2D {
+          .flex_container {
+            gap: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 621px) {
+  body {
+    main {
+      section {
+        &#school_career {
+          .timeline {
+            &_item:nth-child(4):before {
+              top: 1.7em !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 1000px) {
+  body {
+    header {
+      #main_nav {
+        &_container {
+          position: initial;
+          border: unset;
+          display: flex;
+          justify-content: space-between;
+          gap: 1em;
+
+          .main_nav_container_item:not(:last-child) {
+            border-right: 1px solid $white_color;
+            padding-right: 1em;
+          }
+        }
+
+        input, label {
+          display: none;
+        }
+      }
+    }
+
+    main {
+      & > label[for='toggle'] {
+        left: 7em;
+        width: calc(100% - 14em - 2px);
+      }
+    }
+
+    #footer {
+      &_container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 1em;
+        gap: 2em;
+
+        & > nav {
+          padding: 0;
+
+          &:nth-child(2) {
+            border-right: 1px solid $white_color;
+            padding-right: 2em;
+            flex-grow: 1;
+          }
+
+          &:last-child {
+            flex-grow: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 1200px) {
+  body {
+    h1 {
+      padding-left: 5.2em;
+    }
+
+    header {
+      #main_nav {
+        padding: 1em 10em;
+      }
+    }
+
+    main {
+      padding: 0 calc(10em + 2em + 2px);
+
+      section {
+        &#decoration.decoration {
+          transform: translateX(-12em);
+        }
+      }
+    }
+
+    #footer {
+      &_container {
+        padding: 0 10em;
+      }
+
+      #legal_notices {
+        padding: 1em 10em;
+      }
+    }
+  }
+}
+
 .hidden {
   overflow: hidden !important;
   font-size: 0 !important;
@@ -97,9 +312,11 @@ label[for='toggle'] {
   padding: .5em;
   z-index: 3;
   color: $white_color;
-  width: calc(100% - 3em);
   position: fixed;
-  left: 1em;
+  left: 2em;
+  margin: 0;
+  width: calc(100% - 5em - 2px);
+  bottom: 5em;
   transition: transform 2s ease-in-out;
 }
 
@@ -451,13 +668,6 @@ header {
   font-size: 1.2em;
   padding-top: 1em;
 
-  h3 {
-    color: $white_color;
-    padding-left: 1em;
-    font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
-    line-height: 1.2em;
-  }
-
   &.about_me_footer_class {
     background-color: $base_blue_color;
   }
@@ -474,19 +684,36 @@ header {
     background-color: $base_purple_color;
   }
 
-  &_container {
-    &_pages_container {
-      padding: 0 1em;
-      margin-bottom: 2em;
-      margin-top: 1em;
+  #legal_notices {
+    margin-top: 2em;
+  }
 
+  &_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    & > nav {
+      padding: 0 1em;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 1em;
+
+      h3 {
+        color: $white_color;
+        font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
+        line-height: 1.2em;
+      }
+    }
+
+    &_pages_container {
       li:not(:last-child) {
         margin-bottom: 1em;
       }
     }
 
     &_socials_container {
-      margin: 1em 0 2em 0;
       display: flex;
       justify-content: space-between;
       flex-direction: row;
@@ -569,7 +796,16 @@ main {
     padding: 1em;
 
     &#decoration {
-      transition: 2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      transition: transform 2s ease-in-out;
+      gap: 1em;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 0;
+      }
+
       &.decoration {
         background-color: $base_red_color;
         max-width: unset;
@@ -585,11 +821,11 @@ main {
 
         .decorate {
           background-repeat: no-repeat;
+          background-size: contain;
           background-position: center;
           display: inline-block;
-          background-size: cover;
-          width: 100%;
-          height: 250px;
+          flex-grow: 1;
+          max-height: calc(100% - 10em - 2px);
         }
 
         &.projects_decoration_class {
@@ -775,6 +1011,12 @@ main {
     .flex_container {
       .skills_2D_item_text, .skills_web_item_text {
         text-align: center;
+      }
+
+      .skills_2D_item, .skills_web_item {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
       }
 
       .skills_2D_item, .skills_web_item, .project_item, .experience_item {
