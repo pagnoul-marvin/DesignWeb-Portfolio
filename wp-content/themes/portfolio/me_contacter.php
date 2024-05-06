@@ -87,6 +87,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <main>
 
+        <?php component('global.no_js_banner.banner') ?>
+
         <input type="checkbox" id="toggle" class="<?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">
         <label for="toggle" class="pages_button no_text_decoration <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">Aller vers la page Me contacter</label>
 
@@ -104,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'text' => 'Par mail'
             ]); ?>
 
-            <form action="" method="POST" id="mail_contact_form">
+            <form action="http://site.test/me_contacter/" method="POST" id="mail_contact_form">
 
                 <fieldset>
 
@@ -180,19 +182,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             </form>
 
-            <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) { ?>
-                <div id="validate">
-                    <p>Votre mail a bien &eacute;t&eacute; envoy&eacute;&nbsp;! Je vous r&eacute;pondrais le plus
-                        rapidement possible.</p>
-                </div>
-            <?php } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($errors)) { ?>
-                <div id="not_validate">
-                    <p>Votre mail n&rsquo;a pas &eacute;t&eacute; envoy&eacute;&nbsp;! Un ou plusieurs champ(s) ne
-                        respecte(nt) pas les r&egrave;gles.</p>
-                </div>
-            <?php } ?>
-
         </section>
+
+        <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) { ?>
+            <div id="validate">
+                <p>Votre mail a bien &eacute;t&eacute; envoy&eacute;&nbsp;! Je vous recontacterai dans le plus bref délais.</p>
+            </div>
+        <?php } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($errors)) { ?>
+            <div id="not_validate">
+                <p>Votre mail n&rsquo;a pas &eacute;t&eacute; envoy&eacute;&nbsp;! Un ou plusieurs champ(s) ne
+                    respecte(nt) pas les r&egrave;gles.</p>
+            </div>
+        <?php } ?>
 
     </main>
 

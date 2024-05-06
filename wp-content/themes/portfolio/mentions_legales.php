@@ -8,6 +8,8 @@ Template Name: Mentions Légales
     <?php get_header(); ?>
 
     <main class="legal_notices_main_class">
+        <?php component('global.no_js_banner.banner') ?>
+
         <?= get_the_content(); ?>
     </main>
 

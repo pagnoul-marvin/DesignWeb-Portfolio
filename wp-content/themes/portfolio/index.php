@@ -79,7 +79,7 @@ Template Name: Accueil
         ]);
 
         component('home.div', [
-            'text' => 'À l’époque de l’antiquité c’était si long pour pouvoir contacter une personne lointaine, ici il vous suffit d’appuyer sur petit bouton qui vous fera voyager vers la Grèce antique :',
+            'text' => 'À l’époque de l’antiquité c’était si long pour pouvoir contacter une personne lointaine, à notre époque, pour me contacter, il vous suffit d’appuyer sur petit bouton qui vous fera voyager vers la Grèce antique :',
             'link_href' => go_to_other_pages(15),
             'link_id' => 'contact_button',
             'link_title' => 'Aller vers la page Me contacter',

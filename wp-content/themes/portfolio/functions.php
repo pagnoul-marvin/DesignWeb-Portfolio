@@ -2,6 +2,8 @@
 
 require_once 'View.php';
 
+add_filter('use_block_editor_for_post', '__return_false');
+
 register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
 register_nav_menu('socials', 'Navigation de réseaux sociaux');
@@ -136,6 +138,25 @@ function give_decoration_class() :string
     }
 
     return $decoration_class;
+}
+
+function give_banner_class() :string
+{
+    $page_id = get_the_ID();
+
+    $banner_class = '';
+
+    if ($page_id === 9) {
+        $banner_class .= 'about_me_banner_class';
+    } elseif ($page_id === 15) {
+        $banner_class .= 'contact_banner_class';
+    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+        $banner_class .= 'projects_banner_class';
+    } elseif ($page_id === 11) {
+        $banner_class .= 'skills_banner_class';
+    }
+
+    return $banner_class;
 }
 
 function give_page_main_nav_container_class() :string

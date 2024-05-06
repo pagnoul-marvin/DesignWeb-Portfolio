@@ -2,7 +2,7 @@
 ?>
 
 
-<div id="no_js_message">
+<div id="no_js_message" class="<?= give_banner_class() ?>">
 
     <div id="banner">
 

@@ -103,21 +103,26 @@
   body main {
     padding: 0 calc(12em + 2px);
     overflow: hidden;
+    position: relative;
+  }
+  body main div#not_validate, body main div#validate {
+    right: 12em;
+    max-width: unset;
   }
   body main.legal_notices_main_class section {
     opacity: 1 !important;
     transform: translateX(0) !important;
   }
-  body main.legal_notices_main_class section:not(:nth-child(2)) {
+  body main.legal_notices_main_class section:not(:nth-child(3)) {
     opacity: 0 !important;
     transform: translateX(1000px) !important;
     transition: all 0.7s ease-in-out !important;
   }
-  body main.legal_notices_main_class section:not(:nth-child(2)).appear {
+  body main.legal_notices_main_class section:not(:nth-child(3)).appear {
     opacity: 1 !important;
     transform: translateX(0) !important;
   }
-  body main section:not(:nth-child(3)):not(:nth-child(4)) {
+  body main section:not(:nth-child(4)):not(:nth-child(5)) {
     opacity: 0;
     transform: translateX(1000px);
     transition: all 0.7s ease-in-out;
@@ -230,16 +235,17 @@ label[for=toggle] {
 }
 
 input#toggle {
-  visibility: hidden;
   clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
 }
 input#toggle:checked ~ section#decoration {
   transform: translateX(-10000px);
 }
 input#toggle:checked ~ label[for=toggle] {
   transform: translateX(-10000px);
-}
-input#toggle:checked ~ label[for=toggle]:hover {
   visibility: hidden;
 }
 
@@ -612,9 +618,42 @@ main {
   padding: 0 1em;
   color: #fff;
 }
+main #no_js_message {
+  background-color: #700000;
+  font-size: 1.2em;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
+  line-height: 1.5em;
+  border-radius: 1em;
+}
+main #no_js_message.about_me_banner_class {
+  background-color: #00626F;
+}
+main #no_js_message.projects_banner_class {
+  background-color: #007002;
+}
+main #no_js_message.skills_banner_class {
+  background-color: #700069;
+}
+main #no_js_message.contact_banner_class {
+  background-color: #704100;
+}
+main #no_js_message #banner {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
 main #no_js_message #banner input {
-  visibility: hidden;
   clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+}
+main #no_js_message #banner #cross[type=checkbox]:checked + label + p, main #no_js_message #banner #cross[type=checkbox]:checked + label, main #no_js_message #banner #cross[type=checkbox]:checked {
+  display: none;
+}
+main #no_js_message #banner p {
+  margin: 1em 0 1em 1em;
 }
 main #no_js_message #banner label {
   width: 30px;
@@ -622,22 +661,42 @@ main #no_js_message #banner label {
   display: inline-block;
   position: relative;
   cursor: pointer;
+  margin: 1em 1em 0 0;
 }
 main #no_js_message #banner label:before, main #no_js_message #banner label:after {
   content: "";
-  width: 5px;
+  width: 3px;
   height: 100%;
   background-color: #fff;
   position: absolute;
   top: 0;
+  left: 12.5px;
 }
 main #no_js_message #banner label:before {
   transform: rotate(45deg);
-  left: 12.5px;
 }
 main #no_js_message #banner label:after {
   transform: rotate(-45deg);
-  left: 12.5px;
+}
+main div#not_validate, main div#validate {
+  border: 1px solid #fff;
+  border-radius: 1em;
+  font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
+  font-size: 1em;
+  position: fixed;
+  padding: 1em;
+  line-height: 1.5em;
+  top: 10.5em;
+  right: 1em;
+  transition: transform 1s ease-in-out;
+  z-index: 1;
+  max-width: 83%;
+}
+main div#validate {
+  background-color: #007002;
+}
+main div#not_validate {
+  background-color: #700000;
 }
 main #introduction_presentation img {
   width: 100%;
@@ -949,18 +1008,6 @@ main section#mail_contact form fieldset input, main section#mail_contact form fi
 }
 main section#mail_contact form fieldset input[type=submit] {
   cursor: pointer;
-}
-main section#mail_contact div#not_validate, main section#mail_contact div#validate {
-  position: fixed;
-  padding: 1em;
-  top: 6em;
-  transition: transform 1s ease-in-out;
-}
-main section#mail_contact div#validate {
-  background-color: #007002;
-}
-main section#mail_contact div#not_validate {
-  background-color: #700000;
 }
 
 /*# sourceMappingURL=index.css.map */

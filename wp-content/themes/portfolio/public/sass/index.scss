@@ -201,13 +201,19 @@
     main {
       padding: 0 calc(10em + 2em + 2px);
       overflow: hidden;
+      position: relative;
+
+      div#not_validate, div#validate {
+        right: 12em;
+        max-width: unset;
+      }
 
       &.legal_notices_main_class {
         section {
           opacity: 1 !important;
           transform: translateX(0) !important;
 
-          &:not(:nth-child(2)) {
+          &:not(:nth-child(3)) {
             opacity: 0 !important;
             transform: translateX(1000px) !important;
             transition: all 0.7s ease-in-out !important;
@@ -221,7 +227,7 @@
       }
 
       section {
-        &:not(:nth-child(3)):not(:nth-child(4)) {
+        &:not(:nth-child(4)):not(:nth-child(5)) {
           opacity: 0;
           transform: translateX(1000px);
           transition: all 0.7s ease-in-out;
@@ -354,8 +360,11 @@ label[for='toggle'] {
 }
 
 input#toggle {
-  visibility: hidden;
   clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
 
   &:checked ~ section#decoration {
     transform: translateX(-10000px);
@@ -363,11 +372,9 @@ input#toggle {
 
   &:checked ~ label[for='toggle'] {
     transform: translateX(-10000px);
-  }
-
-  &:checked ~ label[for='toggle']:hover {
     visibility: hidden;
   }
+
 }
 
 .pages_button, #cv {
@@ -792,10 +799,48 @@ main {
   color: $white_color;
 
   #no_js_message {
+    background-color: $base_red_color;
+    font-size: 1.2em;
+    font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
+    line-height: 1.5em;
+    border-radius: 1em;
+
+    &.about_me_banner_class {
+      background-color: $base_blue_color;
+    }
+
+    &.projects_banner_class {
+      background-color: $base_green_color;
+    }
+
+    &.skills_banner_class {
+      background-color: $base_purple_color;
+    }
+
+    &.contact_banner_class {
+      background-color: $base_orange_color;
+    }
+
     #banner {
+
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+
       input {
-        visibility: hidden;
         clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        width: 1px;
+        visibility: hidden;
+      }
+
+      #cross[type="checkbox"]:checked + label + p, #cross[type="checkbox"]:checked + label, #cross[type="checkbox"]:checked {
+        display: none;
+      }
+
+      p {
+        margin: 1em 0 1em 1em;
       }
 
       label {
@@ -804,26 +849,50 @@ main {
         display: inline-block;
         position: relative;
         cursor: pointer;
+        margin: 1em 1em 0 0;
+
         &:before, &:after {
           content: '';
-          width: 5px;
+          width: 3px;
           height: 100%;
           background-color: $white_color;
           position: absolute;
           top: 0;
+          left: 12.5px;
         }
 
         &:before {
           transform: rotate(45deg);
-          left: 12.5px;
         }
 
         &:after {
           transform: rotate(-45deg);
-          left: 12.5px;
         }
       }
     }
+  }
+
+  div#not_validate, div#validate {
+    border:1px solid $white_color;
+    border-radius: 1em;
+    font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
+    font-size: 1em;
+    position: fixed;
+    padding: 1em;
+    line-height: 1.5em;
+    top: 10.5em;
+    right: 1em;
+    transition: transform 1s ease-in-out;
+    z-index: 1;
+    max-width: 83%;
+  }
+
+  div#validate {
+    background-color: $base_green_color;
+  }
+
+  div#not_validate {
+    background-color: $base_red_color;
   }
 
   #introduction {
@@ -1263,21 +1332,6 @@ main {
             cursor: pointer;
           }
         }
-      }
-
-      div#not_validate, div#validate {
-        position: fixed;
-        padding: 1em;
-        top: 6em;
-        transition: transform 1s ease-in-out;
-      }
-
-      div#validate {
-        background-color: $base_green_color;
-      }
-
-      div#not_validate {
-        background-color: $base_red_color;
       }
     }
   }

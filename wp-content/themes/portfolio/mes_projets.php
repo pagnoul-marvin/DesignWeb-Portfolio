@@ -10,7 +10,11 @@ Template Name: Mes projets
 
     <main>
 
+        <?php component('global.no_js_banner.banner') ?>
+
         <?php component('global.toggle_input.toggle_input', [
+            'input_id' => 'toggle',
+            'label_class' => 'pages_button no_text_decoration',
             'label_text' => 'Aller vers la page Mes projets/expériences'
         ]) ?>
 
