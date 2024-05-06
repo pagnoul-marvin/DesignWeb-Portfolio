@@ -2,8 +2,6 @@
 
 require_once 'View.php';
 
-add_filter('use_block_editor_for_post', '__return_false');
-
 register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
 register_nav_menu('socials', 'Navigation de réseaux sociaux');
@@ -64,7 +62,7 @@ function go_to_other_pages($page_id): string
     return esc_url($page_url);
 }
 
-function give_page_body_class() : string
+function give_page_body_class(): string
 {
     $page_id = get_the_ID();
 
@@ -83,8 +81,7 @@ function give_page_body_class() : string
 }
 
 
-
-function give_page_header_class() : string
+function give_page_header_class(): string
 {
     $page_id = get_the_ID();
 
@@ -102,7 +99,7 @@ function give_page_header_class() : string
     return $header_class;
 }
 
-function give_page_footer_class() :string
+function give_page_footer_class(): string
 {
     $page_id = get_the_ID();
 
@@ -121,7 +118,7 @@ function give_page_footer_class() :string
     return $footer_class;
 }
 
-function give_decoration_class() :string
+function give_decoration_class(): string
 {
     $page_id = get_the_ID();
 
@@ -140,7 +137,7 @@ function give_decoration_class() :string
     return $decoration_class;
 }
 
-function give_banner_class() :string
+function give_banner_class(): string
 {
     $page_id = get_the_ID();
 
@@ -159,7 +156,7 @@ function give_banner_class() :string
     return $banner_class;
 }
 
-function give_page_main_nav_container_class() :string
+function give_page_main_nav_container_class(): string
 {
     $page_id = get_the_ID();
 
@@ -178,7 +175,7 @@ function give_page_main_nav_container_class() :string
     return $main_nav_container_class;
 }
 
-function give_go_up_button_class() :string
+function give_go_up_button_class(): string
 {
     $page_id = get_the_ID();
 
@@ -197,7 +194,7 @@ function give_go_up_button_class() :string
     return $go_up_button_class;
 }
 
-function give_legal_notices_class() :string
+function give_legal_notices_class(): string
 {
     $page_id = get_the_ID();
 
