@@ -2,6 +2,15 @@
 
 class Validator
 {
+
+    public static function validateEmail($email): bool
+    {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return false;
+        }
+        return true;
+    }
+
     public static function emailContainsAtSymbol(string $email): bool
     {
 

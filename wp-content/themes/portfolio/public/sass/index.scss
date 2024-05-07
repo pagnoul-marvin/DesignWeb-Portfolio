@@ -183,7 +183,7 @@
   }
 }
 
-@media (width >= 1200px) {
+@media (width >= 1300px) {
   body {
 
     h1 {
@@ -873,7 +873,7 @@ main {
   }
 
   div#not_validate, div#validate {
-    border:1px solid $white_color;
+    border: 1px solid $white_color;
     border-radius: 1em;
     font-family: 'Proxima-Regular', 'Gotham-Regular', sans-serif;
     font-size: 1em;
@@ -952,6 +952,7 @@ main {
       h2 {
         text-align: center;
         margin-bottom: 0;
+        font-size: 3em;
       }
 
       &.decoration {
@@ -973,7 +974,7 @@ main {
           background-position: center;
           display: inline-block;
           flex-grow: 1;
-          max-height: calc(100% - 10em - 2px);
+          max-height: calc(100% - 12em - 2px);
         }
 
         &.projects_decoration_class {
@@ -1310,26 +1311,29 @@ main {
 
           label, input[type="submit"] {
             font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
+            font-size: 1.2em;
           }
 
           input:not(:last-child), textarea, select {
             margin-top: 1em;
-            margin-bottom: 2.5em;
+            margin-bottom: 3em;
           }
 
           input, textarea, select {
             background-color: transparent;
             border: 1px solid $white_color;
             color: $white_color;
-            padding: 0.5em;
-          }
+            padding: 1.5em 0.5em;
+            border-radius: .5em;
 
-          input, select {
-            height: 2.5em;
+            &:focus, &:focus, &:focus {
+              outline: 3px solid $white_color;
+            }
           }
 
           input[type="submit"] {
             cursor: pointer;
+            font-size: 1.5em;
           }
         }
       }

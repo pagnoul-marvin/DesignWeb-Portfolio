@@ -90,7 +90,7 @@
     flex-grow: 2;
   }
 }
-@media (width >= 1200px) {
+@media (width >= 1300px) {
   body h1 {
     padding-left: 5.2em;
   }
@@ -738,6 +738,7 @@ main section#decoration {
 main section#decoration h2 {
   text-align: center;
   margin-bottom: 0;
+  font-size: 3em;
 }
 main section#decoration.decoration {
   background-color: #700000;
@@ -758,7 +759,7 @@ main section#decoration.decoration .decorate {
   background-position: center;
   display: inline-block;
   flex-grow: 1;
-  max-height: calc(100% - 10em - 2px);
+  max-height: calc(100% - 12em - 2px);
 }
 main section#decoration.decoration.projects_decoration_class {
   background-color: #007002;
@@ -992,22 +993,25 @@ main section#mail_contact form fieldset label small {
 }
 main section#mail_contact form fieldset label, main section#mail_contact form fieldset input[type=submit] {
   font-family: "Trajan-Regular", "Jenson-Regular", serif;
+  font-size: 1.2em;
 }
 main section#mail_contact form fieldset input:not(:last-child), main section#mail_contact form fieldset textarea, main section#mail_contact form fieldset select {
   margin-top: 1em;
-  margin-bottom: 2.5em;
+  margin-bottom: 3em;
 }
 main section#mail_contact form fieldset input, main section#mail_contact form fieldset textarea, main section#mail_contact form fieldset select {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
-  padding: 0.5em;
+  padding: 1.5em 0.5em;
+  border-radius: 0.5em;
 }
-main section#mail_contact form fieldset input, main section#mail_contact form fieldset select {
-  height: 2.5em;
+main section#mail_contact form fieldset input:focus, main section#mail_contact form fieldset input:focus, main section#mail_contact form fieldset input:focus, main section#mail_contact form fieldset textarea:focus, main section#mail_contact form fieldset textarea:focus, main section#mail_contact form fieldset textarea:focus, main section#mail_contact form fieldset select:focus, main section#mail_contact form fieldset select:focus, main section#mail_contact form fieldset select:focus {
+  outline: 3px solid #fff;
 }
 main section#mail_contact form fieldset input[type=submit] {
   cursor: pointer;
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=index.css.map */

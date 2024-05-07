@@ -28,6 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['lastname'] = 'Le nom doit avoir une longueur minimale de 3 caractères.';
     }
 
+    if (!Validator::validateEmail($_POST['mail'])) {
+        $errors['mail'] = 'L\'adresse e-mail n\'est pas valide.';
+    }
+
     if (!Validator::emailContainsAtSymbol($_REQUEST['mail'])) {
         $errors['mail'] = 'L\'adresse e-mail doit contenir un "@".';
     }
@@ -45,10 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $firstname = $_POST['firstname'];
-            $lastname = $_POST['lastname'];
-            $gender = $_POST['gender'];
-            $email = $_POST['mail'];
+            $firstname = htmlspecialchars($_POST['firstname']); //htmlspecialchars() permet d'échapper les caractères spéciaux pour éviter toutes injections potentielles.
+            $lastname = htmlspecialchars($_POST['lastname']);
+            $gender = htmlspecialchars($_POST['gender']);
+            $email = htmlspecialchars($_POST['mail']);
             $message = $_POST['message'];
 
             $sql = "INSERT INTO `wp_contact_form_entries` (`firstname`, `lastname`, `gender`, `email`, `message`) VALUES (:firstname, :lastname, :gender, :email, :message)";
@@ -64,15 +68,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Envoyer l'email
             $to = "marvinpagnoul@icloud.com";
             $subject = "Nouveau formulaire de contact soumis";
-            $message = "Un nouveau formulaire de contact a été soumis avec les informations suivantes:\n\n";
-            $message .= "Prénom: $firstname\n";
-            $message .= "Nom: $lastname\n";
-            $message .= "Genre: $gender\n";
-            $message .= "E-mail: $email\n";
-            $message .= "Sujet: $subject\n";
+            $body = "Un nouveau formulaire de contact a été soumis avec les informations suivantes:\n\n";
+            $body .= "Prénom: $firstname\n";
+            $body .= "Nom: $lastname\n";
+            $body .= "Genre: $gender\n";
+            $body .= "E-mail: $email\n";
+            $body .= "Sujet: $message\n";
             $headers = "From: $email\r\n";
             $headers .= "Reply-To: $email\r\n";
-            $mailSent = mail($to, $subject, $message, $headers);
+            wp_mail($to, $subject, $body, $headers);
 
         } catch (PDOException $e) {
             echo "La connexion à la base de données a échoué: " . $e->getMessage();
@@ -90,9 +94,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php component('global.no_js_banner.banner') ?>
 
         <input type="checkbox" id="toggle" class="<?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">
-        <label for="toggle" class="pages_button no_text_decoration <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">Aller vers la page Me contacter</label>
+        <label for="toggle"
+               class="pages_button no_text_decoration <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">Aller vers
+            la page Me contacter</label>
 
-        <section id="decoration" class="decoration <?= give_decoration_class(); ?> <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">
+        <section id="decoration"
+                 class="decoration <?= give_decoration_class(); ?> <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">
             <h2>Bienvenue en Gr&egrave;ce&nbsp;!</h2>
             <div id="greece_decoration" class="decorate"></div>
         </section>
@@ -108,6 +115,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <form action="http://site.test/me_contacter/" method="POST" id="mail_contact_form">
 
+                <?php
+                $firstname_input_value = '';
+                $lastname_input_value = '';
+                $mail_input_value = '';
+                $message_textarea_value = '';
+                if (isset($errors['firstname'])) {
+                    $firstname_input_value = $_POST['firstname'];
+                    $lastname_input_value = $_POST['lastname'];
+                    $mail_input_value = $_POST['mail'];
+                    $message_textarea_value = $_POST['message'];
+                }
+                if (isset($errors['lastname'])) {
+                    $firstname_input_value = $_POST['firstname'];
+                    $lastname_input_value = $_POST['lastname'];
+                    $mail_input_value = $_POST['mail'];
+                    $message_textarea_value = $_POST['message'];
+                }
+                if (isset($errors['mail'])) {
+                    $firstname_input_value = $_POST['firstname'];
+                    $lastname_input_value = $_POST['lastname'];
+                    $mail_input_value = $_POST['mail'];
+                    $message_textarea_value = $_POST['message'];
+                }
+                if (isset($errors['message'])) {
+                    $firstname_input_value = $_POST['firstname'];
+                    $lastname_input_value = $_POST['lastname'];
+                    $mail_input_value = $_POST['mail'];
+                    $message_textarea_value = $_POST['message'];
+                }
+                ?>
+
                 <fieldset>
 
                     <legend>Formulaire de contact par mail</legend>
@@ -119,6 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         'input_name' => 'firstname',
                         'input_placeholder' => 'Exemple: Jules',
                         'required' => 'required',
+                        'input_value' => $firstname_input_value
                     ]); ?>
 
                     <?php if (isset($errors['firstname'])) { ?>
@@ -131,6 +170,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         'input_name' => 'lastname',
                         'input_placeholder' => 'Exemple: César',
                         'required' => 'required',
+                        'input_value' => $lastname_input_value
                     ]); ?>
 
                     <?php if (isset($errors['lastname'])) { ?>
@@ -156,6 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         'input_name' => 'mail',
                         'input_placeholder' => 'Exemple: julescesar@mail.com',
                         'required' => 'required',
+                        'input_value' => $mail_input_value
                     ]); ?>
 
                     <?php if (isset($errors['email'])) { ?>
@@ -168,6 +209,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         'textarea_name' => 'message',
                         'textarea_placeholder' => 'Exemple: Je souhaite vous contacter pour avoir des informations sur un potentiel futur projet.',
                         'required' => 'required',
+                        'message_text_if_error' => $message_textarea_value
                     ]); ?>
 
                     <?php if (isset($errors['message'])) { ?>
@@ -186,7 +228,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($errors)) { ?>
             <div id="validate">
-                <p>Votre mail a bien &eacute;t&eacute; envoy&eacute;&nbsp;! Je vous recontacterai dans le plus bref délais.</p>
+                <p>Votre mail a bien &eacute;t&eacute; envoy&eacute;&nbsp;! Je vous recontacterai dans le plus bref
+                    délais.</p>
             </div>
         <?php } elseif ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($errors)) { ?>
             <div id="not_validate">
