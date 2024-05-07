@@ -19,5 +19,27 @@ $shadow_color: rgba(0, 0, 0, 0.2);
 //padding
 
 $base_padding: 1em;
+$medium_padding: $base_padding*1.5;
 $big_padding: $base_padding*2;
 $small_padding: $base_padding/2;
+$desktop_padding: $base_padding*10;
+
+
+//margin
+
+$base_margin: 1em;
+$medium_margin: $base_margin*1.5;
+$big_margin: $base_margin*2;
+$small_margin: $base_margin/2;
+$section_margin: $base_margin*7;
+
+
+//font-size
+
+$base_font_size: 1em;
+$medium_font_size: $base_font_size*1.2;
+$big_font_size: $base_font_size*1.5;
+$small_font_size: $base_font_size*0.75;
+$main_title_font_size: $base_font_size*2.3;
+$second_title_font_size: $base_font_size*1.7;
+$xl_font_size: $base_font_size*3;
