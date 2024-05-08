@@ -63,19 +63,16 @@ const portfolio = {
 
     appearSectionElementsOnScroll() {
 
-        if (window.location.href.includes("mentions-legales")) {
+        if (window.location.href.includes(settings.legalNoticesInURL)) {
             settings.sectionElements = document.querySelectorAll('main section:not(:nth-child(3))');
+        } else if (window.location.href.includes(settings.twoDimensionsInURL) || window.location.href.includes(settings.jiriInURL) || window.location.href.includes(settings.kPerformInURL) || window.location.href.includes(settings.curriculumVitaeInURL)) {
+            settings.sectionElements = document.querySelectorAll('main section:not(:nth-child(2))');
         }
 
         settings.sectionElements.forEach(section => {
-            const scrollPositionY = window.scrollY;
             const windowHeight = window.innerHeight;
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionBottom = sectionTop + sectionHeight;
-
-
-            if (scrollPositionY > sectionTop - windowHeight + settings.additionForWindowHeight && scrollPositionY < sectionBottom) {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop <= windowHeight) {
                 section.classList.add(settings.appearClass);
             }
         });

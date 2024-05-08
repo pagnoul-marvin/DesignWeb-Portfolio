@@ -6,7 +6,7 @@ Template Name: Project and experience item
 
 <?php get_header(); ?>
 
-    <main>
+    <main class="projects_item_main_class">
 
         <?php component('global.no_js_banner.banner') ?>
 

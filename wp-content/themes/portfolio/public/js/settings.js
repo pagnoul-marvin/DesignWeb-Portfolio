@@ -12,6 +12,10 @@ export const settings = {
 
     //Strings
     legalNoticesInURL: 'mentions-legales',
+    jiriInURL: 'jiri-2',
+    curriculumVitaeInURL: 'mon-curriculum-vitae',
+    twoDimensionsInURL: 'mon-compte-instagram-sur-la-2d',
+    kPerformInURL: 'logo-kperform',
 
 
     //Classes
@@ -29,6 +33,5 @@ export const settings = {
     //Numbers
     timeBeforeGoUpElementDisappear: 300,
     timeBeforeDivElementsDisappear: 7000,
-    additionForWindowHeight: 200,
     multiplicationScrolled: 100,
 }

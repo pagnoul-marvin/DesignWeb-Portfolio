@@ -77,6 +77,7 @@ function give_page_body_class(): string
     } elseif ($page_id === 11) {
         $body_class .= 'skills_body_class';
     }
+
     return $body_class;
 }
 

@@ -231,7 +231,8 @@
         max-width: unset;
       }
 
-      &.legal_notices_main_class {
+
+      &.legal_notices_main_class, &.projects_item_main_class {
         section {
           opacity: 1 !important;
           -ms-transform: translateX(0) !important;
@@ -239,17 +240,17 @@
 
           &:not(:nth-child(3)) {
             opacity: 0 !important;
-            -ms-transform: translateX(1000px) !important;
-            transform: translateX(1000px) !important;
-            -webkit-transition: all 0.7s ease-in-out !important;
-            -o-transition: all 0.7s ease-in-out !important;
-            transition: all 0.7s ease-in-out !important;
+            -ms-transform: translateX(3000px) !important;
+            transform: translateX(3000px) !important;
+            -webkit-transition: all 1s ease-out !important;
+            -o-transition: all 1s ease-out !important;
+            transition: all 1s ease-out !important;
+          }
 
-            &.appear {
-              opacity: 1 !important;
-              -ms-transform: translateX(0) !important;
-              transform: translateX(0) !important;
-            }
+          &.appear {
+            opacity: 1 !important;
+            -ms-transform: translateX(0) !important;
+            transform: translateX(0) !important;
           }
         }
       }
@@ -257,11 +258,11 @@
       section {
         &:not(:nth-child(4)):not(:nth-child(5)) {
           opacity: 0;
-          -ms-transform: translateX(1000px);
-          transform: translateX(1000px);
-          -webkit-transition: all 0.7s ease-in-out;
-          -o-transition: all 0.7s ease-in-out;
-          transition: all 0.7s ease-in-out;
+          -ms-transform: translateX(3000px);
+          transform: translateX(3000px);
+          -webkit-transition: all 1s ease-out;
+          -o-transition: all 1s ease-out;
+          transition: all 1s ease-out;
         }
 
         &.appear {
@@ -1175,7 +1176,7 @@ main {
     }
 
     .hobbies, .soft_skills {
-      &_item, &_item{
+      &_item, &_item {
         h3 {
           font-family: 'Trajan-Regular', 'Jenson-Regular', serif;
           font-size: $medium_font_size;

@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $lastname = htmlspecialchars($_POST['lastname']);
             $gender = htmlspecialchars($_POST['gender']);
             $email = htmlspecialchars($_POST['mail']);
-            $message = $_POST['message'];
+            $message = htmlspecialchars($_POST['message']);
 
             $sql = "INSERT INTO `wp_contact_form_entries` (`firstname`, `lastname`, `gender`, `email`, `message`) VALUES (:firstname, :lastname, :gender, :email, :message)";
             $stmt = $conn->prepare($sql);
@@ -66,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
 
             // Envoyer l'email
+            $message = htmlspecialchars_decode($message);
             $to = "marvinpagnoul@icloud.com";
             $subject = "Nouveau formulaire de contact soumis";
             $body = "Un nouveau formulaire de contact a été soumis avec les informations suivantes:\n\n";
