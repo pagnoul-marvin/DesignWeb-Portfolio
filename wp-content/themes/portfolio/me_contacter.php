@@ -8,7 +8,8 @@ Template Name: Me contacter
 if (file_exists(__DIR__ . '/database/database.php')) {
     require_once(__DIR__ . '/database/database.php');
 } else {
-    die('Un problème est apparu');
+    wp_redirect(home_url('me_contacter/un-probleme-est-survenu'));
+    die();
 }
 ?>
 

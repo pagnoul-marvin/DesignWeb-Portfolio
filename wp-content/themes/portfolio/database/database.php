@@ -1,10 +1,12 @@
 <?php
+
 if (file_exists(__DIR__ . '/Validator.php')) {
     require_once(__DIR__ . '/Validator.php');
 } else {
     die('Un problème est apparu');
     //renvoyer à une page qui invite à contacter l'admin
 }
+
 if (file_exists(__DIR__ . '/../.env.local.ini')) {
     $config = parse_ini_file(__DIR__ . '/../.env.local.ini');
 } else {
