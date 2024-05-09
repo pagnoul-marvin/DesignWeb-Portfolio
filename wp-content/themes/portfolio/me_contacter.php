@@ -5,11 +5,10 @@ Template Name: Me contacter
 ?>
 
 <?php
-if (file_exists('database/database.php')) {
-    require_once 'database/database.php';
+if (file_exists(__DIR__ . '/database/database.php')) {
+    require_once(__DIR__ . '/database/database.php');
 } else {
-    die('Un problème est survenu');
-    //renvoyer à une page qui permet de contacter l'admin
+    die('Un problème est apparu');
 }
 ?>
 
