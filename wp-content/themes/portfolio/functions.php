@@ -72,10 +72,12 @@ function give_page_body_class(): string
         $body_class .= 'about_me_body_class';
     } elseif ($page_id === 15) {
         $body_class .= 'contact_body_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 13) {
         $body_class .= 'projects_body_class';
     } elseif ($page_id === 11) {
         $body_class .= 'skills_body_class';
+    } elseif ($page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+        $body_class .= 'projects_item_body_class';
     }
 
     return $body_class;

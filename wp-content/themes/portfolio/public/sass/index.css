@@ -115,6 +115,7 @@
 @media (width >= 1300px) {
   body h1 {
     padding-left: 5.2em;
+    margin-bottom: 3em;
   }
   body header {
     -webkit-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
@@ -125,8 +126,11 @@
   }
   body main {
     padding: 0 calc(12em + 2px);
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+  }
+  body main #go_back {
+    margin-top: 0.75em;
   }
   body main div#not_validate, body main div#validate {
     right: 12em;
@@ -207,7 +211,7 @@ body.contact_body_class {
 body.skills_body_class {
   background-color: #310033;
 }
-body.projects_body_class {
+body.projects_body_class, body.projects_item_body_class {
   background-color: #013400;
 }
 
@@ -404,9 +408,6 @@ input#toggle:checked ~ label[for=toggle] {
   background-image: url("../../resources/images/contact.svg");
 }
 
-#go_back {
-  visibility: visible;
-}
 #go_back_button {
   font-family: "Proxima-Regular", "Gotham-Regular", sans-serif;
   font-size: 1em;
@@ -1069,8 +1070,8 @@ main section#cv_conclusion_and_comparison figure:nth-child(1) {
 main section#cv_conclusion_and_comparison figure:nth-child(1):after {
   content: "";
   position: absolute;
-  bottom: -20%;
-  left: 45%;
+  bottom: -2em;
+  left: 50%;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 20px solid #fff;
