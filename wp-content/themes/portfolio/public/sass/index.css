@@ -113,6 +113,17 @@
   }
 }
 @media (width >= 1300px) {
+  body.error_body_class main div#no_js_message {
+    margin-bottom: 1em;
+  }
+  body.error_body_class main section {
+    transform: unset !important;
+    opacity: 1 !important;
+    text-align: right;
+  }
+  body.error_body_class main section a {
+    padding: 0.5em;
+  }
   body h1 {
     padding-left: 5.2em;
     margin-bottom: 3em;
@@ -1063,14 +1074,16 @@ main section#contact_me p:nth-child(2) {
 main section#cv_conclusion_and_comparison p {
   margin-bottom: 1.5em;
 }
-main section#cv_conclusion_and_comparison figure:nth-child(1) {
-  margin-bottom: 3em;
+main section#cv_conclusion_and_comparison div#comparaison {
   position: relative;
 }
-main section#cv_conclusion_and_comparison figure:nth-child(1):after {
+main section#cv_conclusion_and_comparison div#comparaison img:nth-child(1) {
+  margin-bottom: 3em;
+}
+main section#cv_conclusion_and_comparison div#comparaison:after {
   content: "";
   position: absolute;
-  bottom: -2em;
+  bottom: 49.5%;
   left: 50%;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
@@ -1084,14 +1097,15 @@ main section#instagram_creations .creation:not(:last-child) {
 main section#instagram_creations .creation_information {
   margin-top: 2em;
 }
-main section#kperform_presentation figure, main section#kperform_inspirations figure {
+main section#kperform_inspirations, main section#kperform_presentation {
   text-align: center;
 }
-main section#kperform_presentation figure {
+main section#kperform_presentation img {
+  padding: 1em;
   margin-top: 1em;
   background-color: #fff;
 }
-main section#kperform_inspirations figure {
+main section#kperform_inspirations img {
   margin-bottom: 2em;
 }
 main section#kperform_inspirations p:not(:last-child) {
@@ -1100,7 +1114,7 @@ main section#kperform_inspirations p:not(:last-child) {
 main section#kperform_typography span {
   font-family: "Proxima-Bold", "Gotham-Bold", sans-serif;
 }
-main section#kperform_typography figure {
+main section#kperform_typography img {
   margin-top: 1em;
 }
 main section#mail_contact form fieldset {

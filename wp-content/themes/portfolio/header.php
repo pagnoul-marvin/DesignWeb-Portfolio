@@ -16,34 +16,34 @@
 </head>
 <body class="<?= give_page_body_class(); ?>">
 
-    <?php component('global.titles.main_title', [
-        'text' => get_the_title()
-    ]); ?>
+<?php component('global.titles.main_title', [
+    'text' => get_the_title()
+]); ?>
 
-    <header class="<?php echo give_page_header_class(); ?>">
-        <nav id="main_nav">
-            <h2 class="hidden">Navigation principale</h2>
+<header class="<?php echo give_page_header_class(); ?>">
+    <nav id="main_nav">
+        <h2 class="hidden">Navigation principale</h2>
 
-            <a id="logo" hreflang="fr" title="Aller vers la page d'accueil" href="<?= go_to_other_pages(6) ?>">Accueil</a>
+        <a id="logo" hreflang="fr" title="Aller vers la page d'accueil" href="<?= go_to_other_pages(6) ?>">Accueil</a>
 
-            <input type="checkbox" id="burger_menu">
-            <label for="burger_menu">
-                <span class="line"></span>
-            </label>
+        <input type="checkbox" id="burger_menu">
+        <label for="burger_menu">
+            <span class="line"></span>
+        </label>
 
-            <ul class="<?php echo give_page_main_nav_container_class(); ?>" id="main_nav_container">
-                <?php foreach (dw_get_navigation_links('main') as $link): ?>
-                    <li class="main_nav_container_item">
-                        <a class="nav_icon no_text_decoration" href="<?= $link->url ?>"
-                           title="Aller vers la page <?= $link->label ?>"><?= $link->label ?></a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </nav>
-    </header>
+        <ul class="<?php echo give_page_main_nav_container_class(); ?>" id="main_nav_container">
+            <?php foreach (dw_get_navigation_links('main') as $link): ?>
+                <li class="main_nav_container_item">
+                    <a class="nav_icon no_text_decoration" href="<?= $link->url ?>"
+                       title="Aller vers la page <?= $link->label ?>"><?= $link->label ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </nav>
+</header>
 
-    <?php component('global.navigations.go_up_nav', [
-        'link_href' => '#top',
-        'link_text' => 'Revenir en haut',
-        'link_class' => give_go_up_button_class()
-    ]); ?>
+<?php component('global.navigations.go_up_nav', [
+    'link_href' => '#top',
+    'link_text' => 'Revenir en haut',
+    'link_class' => give_go_up_button_class()
+]); ?>

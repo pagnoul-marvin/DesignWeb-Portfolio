@@ -78,6 +78,8 @@ function give_page_body_class(): string
         $body_class .= 'skills_body_class';
     } elseif ($page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $body_class .= 'projects_item_body_class';
+    } elseif ($page_id === 471) {
+        $body_class .= 'error_body_class';
     }
 
     return $body_class;

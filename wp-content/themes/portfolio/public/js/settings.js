@@ -16,6 +16,7 @@ export const settings = {
     curriculumVitaeInURL: 'mon-curriculum-vitae',
     twoDimensionsInURL: 'mon-compte-instagram-sur-la-2d',
     kPerformInURL: 'logo-kperform',
+    errorInURL : 'un-probleme-est-survenu',
 
 
     //Classes

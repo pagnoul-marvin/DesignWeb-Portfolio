@@ -208,6 +208,24 @@
 @media (width >= 1300px) {
   body {
 
+    &.error_body_class {
+      main {
+        div#no_js_message {
+          margin-bottom: $base_margin;
+        }
+
+        section {
+          transform: unset !important;
+          opacity: 1 !important;
+          text-align: right;
+
+          a {
+            padding: $small_padding;
+          }
+        }
+      }
+    }
+
     h1 {
       padding-left: 5.2em;
       margin-bottom: 3em;
@@ -1357,14 +1375,16 @@ main {
         margin-bottom: $medium_margin;
       }
 
-      figure:nth-child(1) {
-        margin-bottom: 3em;
+      div#comparaison {
         position: relative;
+        img:nth-child(1) {
+          margin-bottom: 3em;
+        }
 
         &:after {
           content: '';
           position: absolute;
-          bottom: -2em;
+          bottom: 49.5%;
           left: 50%;
           border-left: 10px solid transparent;
           border-right: 10px solid transparent;
@@ -1387,21 +1407,20 @@ main {
       }
     }
 
-    &#kperform_presentation, &#kperform_inspirations {
-      figure {
-        text-align: center;
-      }
+    &#kperform_inspirations, &#kperform_presentation {
+      text-align: center;
     }
 
     &#kperform_presentation {
-      figure {
+      img {
+        padding: $base_padding;
         margin-top: $base_margin;
         background-color: $white_color;
       }
     }
 
     &#kperform_inspirations {
-      figure {
+      img {
         margin-bottom: $big_margin;
       }
 
@@ -1415,7 +1434,7 @@ main {
         font-family: 'Proxima-Bold', 'Gotham-Bold', sans-serif;
       }
 
-      figure {
+      img {
         margin-top: $base_margin;
       }
     }

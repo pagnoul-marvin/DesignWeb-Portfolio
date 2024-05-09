@@ -3,11 +3,17 @@ import {settings} from "./settings.js";
 const portfolio = {
 
     init() {
-        this.jsEnabled();
-        this.animationForPagesButtonElements();
-        this.disappearGoUpElement();
-        this.appearAndDisappearDivElements();
-        this.scrollAnimations();
+        if (window.location.href.includes(settings.errorInURL)) {
+            this.jsEnabled();
+            this.animationForPagesButtonElements();
+        } else {
+            this.jsEnabled();
+            this.animationForPagesButtonElements();
+            this.disappearGoUpElement();
+            this.appearAndDisappearDivElements();
+            this.scrollAnimations();
+        }
+
     },
 
     jsEnabled() {
