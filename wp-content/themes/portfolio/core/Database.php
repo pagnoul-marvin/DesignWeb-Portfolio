@@ -7,7 +7,7 @@ use PDO;
 use PDOException;
 use Validator\Validator;
 
-class Database
+class Database extends PDO
 {
     private string $database_name;
     private bool $formSubmittedSuccessfully;
@@ -73,7 +73,8 @@ class Database
             if (empty($this->errors)) {
 
                 try {
-                    $this->conn = new PDO($dsn, $username, $password);
+                    parent::__construct($dsn, $username, $password);
+                    $this->conn = $this;
                     $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     $firstname = htmlspecialchars($_POST['firstname']); //htmlspecialchars() permet d'échapper les caractères spéciaux pour éviter toutes injections potentielles.
@@ -105,7 +106,6 @@ class Database
                     $headers = "From: $email\r\n";
                     $headers .= "Reply-To: $email\r\n";
                     wp_mail($to, $subject, $body, $headers);
-
                 } catch (PDOException) {
                     $this->redirectToErrorPage();
                 }
