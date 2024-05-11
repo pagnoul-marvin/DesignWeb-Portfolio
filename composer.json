@@ -1,0 +1,21 @@
+{
+    "name": "marvinpagnoul/site",
+    "description": "Marvin's portfolio",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+      "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "wp-content/themes/portfolio/core/",
+            "Validator\\": "wp-content/themes/portfolio/validator"
+        }
+    },
+    "authors": [
+        {
+            "name": "pagnoul-marvin",
+            "email": "marvin.pagnoul@student.hepl.be"
+        }
+    ]
+}

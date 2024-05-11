@@ -2,14 +2,17 @@
 /*
 Template Name: Me contacter
 */
-?>
 
-<?php
-if (file_exists(__DIR__ . '/database/database.php')) {
-    require_once(__DIR__ . '/database/database.php');
-} else {
-    wp_redirect(home_url('me_contacter/un-probleme-est-survenu'));
-    die();
+require BASE_PATH . '../../../vendor/autoload.php';
+
+use Core\Database;
+
+try {
+    $db = new Database(BASE_PATH . '/.env.local.ini');
+    $formSubmittedSuccessfully = $db->getFormSubmittedSuccessfully();
+    $errors = $db->getErrors();
+} catch (PDOException) {
+    die(wp_redirect(home_url('me_contacter/un-probleme-est-survenu')));
 }
 ?>
 

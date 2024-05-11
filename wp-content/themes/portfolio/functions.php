@@ -5,7 +5,7 @@ require_once 'View.php';
 register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
 register_nav_menu('socials', 'Navigation de réseaux sociaux');
-const BASE_PATH = __DIR__;
+const BASE_PATH = __DIR__.'/';
 
 function dw_asset(string $file): string
 {
@@ -48,7 +48,7 @@ function dw_get_image(string $file)
 
 function base_path(string $path = ''): string
 {
-    return BASE_PATH . "/{$path}";
+    return BASE_PATH . "{$path}";
 }
 
 function component(string $path, array $data = []): void
