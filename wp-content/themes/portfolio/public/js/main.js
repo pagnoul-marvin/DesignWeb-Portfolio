@@ -89,7 +89,7 @@ const portfolio = {
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * settings.multiplicationScrolled;
         settings.progressBarElement.style.width = `${scrolled}%`;
-    }
+    },
 }
 
 portfolio.init();

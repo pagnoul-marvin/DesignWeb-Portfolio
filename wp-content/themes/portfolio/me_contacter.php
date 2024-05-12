@@ -2,7 +2,8 @@
 /*
 Template Name: Me contacter
 */
-
+session_start();
+$displayClass = isset($_SESSION['greece_decoration_activated']) ? 'no_display' : '';
 require BASE_PATH . '../../../vendor/autoload.php';
 
 use Core\Database;
@@ -24,17 +25,16 @@ try {
 
         <?php component('global.no_js_banner.banner') ?>
 
-        <input type="checkbox" id="toggle" class="<?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">
-        <label for="toggle"
-               class="pages_button no_text_decoration <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">Aller vers
+        <input type="checkbox" id="toggle" class="<?= $formSubmittedSuccessfully ? 'no_display' : ''; ?> <?= $displayClass; ?>">
+        <label for="toggle" class="pages_button no_text_decoration <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?> <?= $displayClass; ?>">Aller vers
             la page Me contacter</label>
 
-        <section id="decoration"
-                 class="decoration <?= give_decoration_class(); ?> <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?>">
+        <section id="decoration" class="decoration <?= give_decoration_class(); ?> <?= $formSubmittedSuccessfully ? 'no_display' : ''; ?> <?= $displayClass; ?>">
             <h2>Bienvenue en Gr&egrave;ce&nbsp;!</h2>
             <div id="greece_decoration" class="decorate"></div>
         </section>
 
+        <?php $_SESSION['greece_decoration_activated'] = true; ?>
         <?= get_the_content(); ?>
 
         <section id="mail_contact" class="section">

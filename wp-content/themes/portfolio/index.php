@@ -3,23 +3,34 @@
 Template Name: Accueil
 */
 ?>
-
+<?php
+session_start();
+?>
 <?php get_header(); ?>
 
 <main>
 
     <?php component('global.no_js_banner.banner') ?>
 
-    <?php component('global.toggle_input.toggle_input', [
+    <?php
+    $displayClass = isset($_SESSION['rome_decoration_activated']) ? 'no_display' : '';
+
+    component('global.toggle_input.toggle_input', [
         'input_id' => 'toggle',
         'label_class' => 'pages_button no_text_decoration',
-        'label_text' => 'Aller vers la page Accueil'
-    ]) ?>
+        'label_text' => 'Aller vers la page Accueil',
+        'display_class' => $displayClass
+    ]);
 
-    <?php component('global.decoration.decoration', [
+    component('global.decoration.decoration', [
         'id' => 'rome_decoration',
-        'title_text' => 'Bienvenue à Rome !'
-    ]) ?>
+        'title_text' => 'Bienvenue à Rome !',
+        'display_class' => $displayClass
+    ]);
+
+    $_SESSION['rome_decoration_activated'] = true;
+
+    ?>
 
     <section id="introduction">
 
