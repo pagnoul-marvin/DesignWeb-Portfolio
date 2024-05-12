@@ -3,7 +3,7 @@
     "description": "Marvin's portfolio",
     "type": "project",
     "require": {
-        "php": "^8.2",
+        "php": "^8.1",
       "ext-pdo": "*"
     },
     "autoload": {
