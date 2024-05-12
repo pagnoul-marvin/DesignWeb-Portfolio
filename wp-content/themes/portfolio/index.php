@@ -41,7 +41,7 @@ session_start();
 
         <div id="introduction_presentation">
 
-            <img src="<?= dw_get_image('http://site.test/wp-content/uploads/2024/04/photo_moi-1.png'); ?>"
+            <img src="https://portfolio.marvinpagnoul.be/wp-content/uploads/2024/05/photo_moi-1.png"
                  alt="Photo de Marvin Pagnoul">
 
             <div id="introduction_presentation_text">
