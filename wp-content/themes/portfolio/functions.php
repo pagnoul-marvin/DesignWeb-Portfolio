@@ -37,15 +37,6 @@ function dw_get_navigation_links(string $location): array
     return $items;
 }
 
-function dw_get_image(string $file)
-{
-    $media_id = attachment_url_to_postid($file);
-
-    $image_info = wp_get_attachment_image_src($media_id, 'full');
-
-    return $image_info[0];
-}
-
 function base_path(string $path = ''): string
 {
     return BASE_PATH . "{$path}";
@@ -68,13 +59,13 @@ function give_page_body_class(): string
 
     $body_class = '';
 
-    if ($page_id === 9) {
+    if ($page_id === 12) {
         $body_class .= 'about_me_body_class';
     } elseif ($page_id === 15) {
         $body_class .= 'contact_body_class';
-    } elseif ($page_id === 13) {
+    } elseif ($page_id === 14) {
         $body_class .= 'projects_body_class';
-    } elseif ($page_id === 11) {
+    } elseif ($page_id === 13) {
         $body_class .= 'skills_body_class';
     } elseif ($page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $body_class .= 'projects_item_body_class';
@@ -92,13 +83,13 @@ function give_page_header_class(): string
 
     $header_class = '';
 
-    if ($page_id === 9) {
+    if ($page_id === 12) {
         $header_class .= 'about_me_header_class';
     } elseif ($page_id === 15) {
         $header_class .= 'contact_header_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 14 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $header_class .= 'projects_header_class';
-    } elseif ($page_id === 11) {
+    } elseif ($page_id === 13) {
         $header_class .= 'skills_header_class';
     }
     return $header_class;
@@ -110,13 +101,13 @@ function give_page_footer_class(): string
 
     $footer_class = '';
 
-    if ($page_id === 9) {
+    if ($page_id === 12) {
         $footer_class .= 'about_me_footer_class';
     } elseif ($page_id === 15) {
         $footer_class .= 'contact_footer_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 14 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $footer_class .= 'projects_footer_class';
-    } elseif ($page_id === 11) {
+    } elseif ($page_id === 13) {
         $footer_class .= 'skills_footer_class';
     }
 
@@ -129,13 +120,13 @@ function give_decoration_class(): string
 
     $decoration_class = '';
 
-    if ($page_id === 9) {
+    if ($page_id === 12) {
         $decoration_class .= 'about_me_decoration_class';
     } elseif ($page_id === 15) {
         $decoration_class .= 'contact_decoration_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 14 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $decoration_class .= 'projects_decoration_class';
-    } elseif ($page_id === 11) {
+    } elseif ($page_id === 13) {
         $decoration_class .= 'skills_decoration_class';
     }
 
@@ -148,13 +139,13 @@ function give_banner_class(): string
 
     $banner_class = '';
 
-    if ($page_id === 9) {
+    if ($page_id === 12) {
         $banner_class .= 'about_me_banner_class';
     } elseif ($page_id === 15) {
         $banner_class .= 'contact_banner_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 14 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $banner_class .= 'projects_banner_class';
-    } elseif ($page_id === 11) {
+    } elseif ($page_id === 13) {
         $banner_class .= 'skills_banner_class';
     }
 
@@ -167,13 +158,13 @@ function give_page_main_nav_container_class(): string
 
     $main_nav_container_class = '';
 
-    if ($page_id === 9) {
+    if ($page_id === 12) {
         $main_nav_container_class .= 'about_me_main_nav_container_class';
     } elseif ($page_id === 15) {
         $main_nav_container_class .= 'contact_main_nav_container_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 14 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $main_nav_container_class .= 'projects_main_nav_container_class';
-    } elseif ($page_id === 11) {
+    } elseif ($page_id === 13) {
         $main_nav_container_class .= 'skills_main_nav_container_class';
     }
 
@@ -186,13 +177,13 @@ function give_go_up_button_class(): string
 
     $go_up_button_class = '';
 
-    if ($page_id === 9) {
+    if ($page_id === 12) {
         $go_up_button_class .= 'about_me_go_up_button_class';
     } elseif ($page_id === 15) {
         $go_up_button_class .= 'contact_go_up_button_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 14 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $go_up_button_class .= 'projects_go_up_button_class';
-    } elseif ($page_id === 11) {
+    } elseif ($page_id === 13) {
         $go_up_button_class .= 'skills_go_up_button_class';
     }
 
@@ -205,15 +196,26 @@ function give_legal_notices_class(): string
 
     $legal_notices_class = '';
 
-    if ($page_id === 9) {
+    if ($page_id === 12) {
         $legal_notices_class .= 'about_me_legal_notices_class';
     } elseif ($page_id === 15) {
         $legal_notices_class .= 'contact_legal_notices_class';
-    } elseif ($page_id === 13 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
+    } elseif ($page_id === 14 || $page_id === 248 || $page_id === 240 || $page_id === 250 || $page_id === 252) {
         $legal_notices_class .= 'projects_legal_notices_class';
-    } elseif ($page_id === 11) {
+    } elseif ($page_id === 13) {
         $legal_notices_class .= 'skills_legal_notices_class';
     }
 
     return $legal_notices_class;
 }
+
+//add_action('init', 'redirect_wp_admin_and_login'); enlever pour éviter que les utilisateurs puissent arriver à wp-admin/login
+
+function redirect_wp_admin_and_login(): void
+{
+    if (str_contains($_SERVER['REQUEST_URI'], 'wp-admin') || str_contains($_SERVER['REQUEST_URI'], 'wp-login.php')) {
+        wp_redirect(home_url());
+        exit;
+    }
+}
+

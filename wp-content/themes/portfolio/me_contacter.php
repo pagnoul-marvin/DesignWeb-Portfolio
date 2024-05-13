@@ -7,9 +7,8 @@ $displayClass = isset($_SESSION['greece_decoration_activated']) ? 'no_display' :
 require BASE_PATH . '../../../vendor/autoload.php';
 
 use Core\Database;
-
 try {
-    $db = new Database(BASE_PATH . '/.env.local.ini');
+    $db = new Database(BASE_PATH . '.env.local.ini');
     $formSubmittedSuccessfully = $db->getFormSubmittedSuccessfully();
     $errors = $db->getErrors();
 } catch (PDOException) {
