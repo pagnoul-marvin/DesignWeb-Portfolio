@@ -1,5 +1,6 @@
 <?php
 
+namespace Core;
 class View
 {
     public static function component(string $path, array $data = []): void

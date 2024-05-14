@@ -1,6 +1,8 @@
 <?php
 
-require_once 'View.php';
+use Core\View;
+
+require_once 'core/View.php';
 
 register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
