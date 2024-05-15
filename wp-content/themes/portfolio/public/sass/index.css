@@ -1,4 +1,4 @@
-@import "../../../../../node_modules/animate.css/animate.css";
+@import "../../../../../node_modules/animate.css/animate.min.css";
 @media (width >= 406px) {
   body main section#school_career .timeline_item:nth-child(4):before {
     top: 2.4em !important;
@@ -152,7 +152,7 @@
     -ms-transform: translateX(0) !important;
     transform: translateX(0) !important;
   }
-  body main.legal_notices_main_class section:not(:nth-child(3)), body main.projects_item_main_class section:not(:nth-child(3)) {
+  body main.legal_notices_main_class section.translated, body main.projects_item_main_class section.translated {
     opacity: 0 !important;
     -ms-transform: translateX(3000px) !important;
     transform: translateX(3000px) !important;
@@ -165,7 +165,7 @@
     -ms-transform: translateX(0) !important;
     transform: translateX(0) !important;
   }
-  body main section:not(:nth-child(4)):not(:nth-child(5)) {
+  body main section.translated {
     opacity: 0;
     -ms-transform: translateX(3000px);
     transform: translateX(3000px);
@@ -173,7 +173,7 @@
     -o-transition: all 1s ease-out;
     transition: all 1s ease-out;
   }
-  body main section.appear {
+  body main section.translated.appear {
     opacity: 1 !important;
     -ms-transform: translateX(0) !important;
     transform: translateX(0) !important;

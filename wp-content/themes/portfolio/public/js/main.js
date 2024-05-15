@@ -18,6 +18,10 @@ const portfolio = {
 
     jsEnabled() {
         settings.noJsMessageElement.classList.add(settings.noDisplayClass);
+        this.changeSectionsSelector();
+        settings.sectionElements.forEach(section => {
+            section.classList.add(settings.translatedClass);
+        });
     },
 
     animationForPagesButtonElements() {
@@ -69,11 +73,7 @@ const portfolio = {
 
     appearSectionElementsOnScroll() {
 
-        if (window.location.href.includes(settings.legalNoticesInURL)) {
-            settings.sectionElements = document.querySelectorAll('main section:not(:nth-child(3))');
-        } else if (window.location.href.includes(settings.twoDimensionsInURL) || window.location.href.includes(settings.jiriInURL) || window.location.href.includes(settings.kPerformInURL) || window.location.href.includes(settings.curriculumVitaeInURL)) {
-            settings.sectionElements = document.querySelectorAll('main section:not(:nth-child(2))');
-        }
+        this.changeSectionsSelector();
 
         settings.sectionElements.forEach(section => {
             const windowHeight = window.innerHeight;
@@ -90,6 +90,14 @@ const portfolio = {
         const scrolled = (winScroll / height) * settings.multiplicationScrolled;
         settings.progressBarElement.style.width = `${scrolled}%`;
     },
+
+    changeSectionsSelector() {
+        if (window.location.href.includes(settings.legalNoticesInURL)) {
+            settings.sectionElements = document.querySelectorAll('main section:not(:nth-child(3))');
+        } else if (window.location.href.includes(settings.twoDimensionsInURL) || window.location.href.includes(settings.jiriInURL) || window.location.href.includes(settings.kPerformInURL) || window.location.href.includes(settings.curriculumVitaeInURL)) {
+            settings.sectionElements = document.querySelectorAll('main section:not(:nth-child(2))');
+        }
+    }
 }
 
 portfolio.init();

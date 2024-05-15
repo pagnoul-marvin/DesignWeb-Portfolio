@@ -1,6 +1,6 @@
 //sass --watch index.scss:../css/index.css
 @import "variables";
-@import "../../../../../node_modules/animate.css/animate.css";
+@import "../../../../../node_modules/animate.css/animate.min.css";
 
 @media (width >= 406px) {
   body {
@@ -261,7 +261,7 @@
           -ms-transform: translateX(0) !important;
           transform: translateX(0) !important;
 
-          &:not(:nth-child(3)) {
+          &.translated {
             opacity: 0 !important;
             -ms-transform: translateX(3000px) !important;
             transform: translateX(3000px) !important;
@@ -279,20 +279,21 @@
       }
 
       section {
-        &:not(:nth-child(4)):not(:nth-child(5)) {
+        &.translated {
           opacity: 0;
           -ms-transform: translateX(3000px);
           transform: translateX(3000px);
           -webkit-transition: all 1s ease-out;
           -o-transition: all 1s ease-out;
           transition: all 1s ease-out;
+
+          &.appear {
+            opacity: 1 !important;
+            -ms-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+          }
         }
 
-        &.appear {
-          opacity: 1 !important;
-          -ms-transform: translateX(0) !important;
-          transform: translateX(0) !important;
-        }
 
         &#decoration.decoration {
           -ms-transform: translateX(-12em);

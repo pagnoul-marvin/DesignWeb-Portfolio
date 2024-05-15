@@ -29,6 +29,7 @@ export const settings = {
     disappearClass: 'disappear',
     appearClass: 'appear',
     noDisplayClass: 'no_display',
+    translatedClass: 'translated',
 
 
     //Numbers
