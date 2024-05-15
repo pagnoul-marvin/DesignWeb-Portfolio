@@ -154,8 +154,8 @@
   }
   body main.legal_notices_main_class section.translated, body main.projects_item_main_class section.translated {
     opacity: 0 !important;
-    -ms-transform: translateX(3000px) !important;
-    transform: translateX(3000px) !important;
+    -ms-transform: translateX(10000px) !important;
+    transform: translateX(10000px) !important;
     -webkit-transition: all 1s ease-out !important;
     -o-transition: all 1s ease-out !important;
     transition: all 1s ease-out !important;
@@ -167,8 +167,8 @@
   }
   body main section.translated {
     opacity: 0;
-    -ms-transform: translateX(3000px);
-    transform: translateX(3000px);
+    -ms-transform: translateX(10000px);
+    transform: translateX(10000px);
     -webkit-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     transition: all 1s ease-out;

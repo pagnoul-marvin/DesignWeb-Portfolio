@@ -92,10 +92,8 @@ const portfolio = {
     },
 
     changeSectionsSelector() {
-        if (window.location.href.includes(settings.legalNoticesInURL)) {
-            settings.sectionElements = document.querySelectorAll('main section:not(:nth-child(3))');
-        } else if (window.location.href.includes(settings.twoDimensionsInURL) || window.location.href.includes(settings.jiriInURL) || window.location.href.includes(settings.kPerformInURL) || window.location.href.includes(settings.curriculumVitaeInURL)) {
-            settings.sectionElements = document.querySelectorAll('main section:not(:nth-child(2))');
+        if (window.location.href.includes(settings.legalNoticesInURL) || window.location.href.includes(settings.twoDimensionsInURL) || window.location.href.includes(settings.jiriInURL) || window.location.href.includes(settings.kPerformInURL) || window.location.href.includes(settings.curriculumVitaeInURL)) {
+            settings.sectionElements = settings.childrenPagesSectionElements;
         }
     }
 }

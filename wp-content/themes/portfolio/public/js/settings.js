@@ -6,6 +6,7 @@ export const settings = {
     validateDiv: document.getElementById('validate'),
     notValidateDiv: document.getElementById('not_validate'),
     sectionElements: document.querySelectorAll('main section:not(:nth-child(4)):not(:nth-child(5))'),
+    childrenPagesSectionElements: document.querySelectorAll('main section:not(:nth-child(3))'),
     progressBarElement: document.getElementById('progress_bar'),
     noJsMessageElement: document.getElementById('no_js_message'),
 
